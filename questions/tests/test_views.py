@@ -24,6 +24,12 @@ class PageTests(TestCase):
             with self.subTest(url=url):
                 self.assertEqual(self.client.get(url).status_code, 200)
 
+    def test_topic_page_has_no_year_filter(self):
+        r = self.client.get(reverse("topic", args=["t"]))
+        self.assertContains(r, "v-01")
+        self.assertNotContains(r, "Year group")
+        self.assertNotContains(r, "?year=")
+
     def test_print_has_answer_key(self):
         r = self.client.get(reverse("print", args=["topic", "t"]))
         self.assertContains(r, "Answer key")

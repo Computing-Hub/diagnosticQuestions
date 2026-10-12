@@ -16,7 +16,7 @@ from django.db.models import Count
 from django.template.loader import render_to_string
 
 from questions.export import questions_js, topics_data
-from questions.models import STRANDS, YEAR_GROUPS, Question, Topic
+from questions.models import STRANDS, Question, Topic
 
 MARKER = ".ks3-maths-usb"
 PAGES = ["present.html", "print.html", "sets.html", "game.html"]
@@ -72,9 +72,8 @@ class Command(BaseCommand):
                     {"strands": [(s, ts) for s, ts in grouped if ts], "total": total})
         for topic in Topic.objects.annotate(n=Count("questions")).filter(n__gt=0):
             questions = list(topic.questions.select_related("topic"))
-            counts = {y: sum(1 for q in questions if q.year_group == y) for y in YEAR_GROUPS}
             self._write(out / f"topic-{topic.slug}.html", "static_site/topic.html",
-                        {"topic": topic, "questions": questions, "years": list(counts.items())})
+                        {"topic": topic, "questions": questions})
         for page in PAGES:
             self._write(out / page, f"static_site/{page}", {"think": settings.DQ_THINKING_SECONDS})
 

@@ -63,15 +63,7 @@ def home(request):
 
 def topic_detail(request, slug):
     topic = get_object_or_404(Topic, slug=slug)
-    year = _year(request)
-    counts = dict(topic.questions.values_list("year_group").annotate(n=Count("id")))
-    return render(request, "questions/topic.html", {
-        "topic": topic,
-        "questions": _topic_questions(topic, year),
-        "year": year,
-        "years": [(y, counts.get(y, 0)) for y in YEAR_GROUPS],
-        "query": f"?year={year}" if year else "",
-    })
+    return render(request, "questions/topic.html", {"topic": topic, "questions": _topic_questions(topic)})
 
 
 # --- present & print ------------------------------------------------------------

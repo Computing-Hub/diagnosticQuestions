@@ -132,8 +132,7 @@ const slug = await js(`window.TOPICS.find(t => t.slug === "angle-facts")?.slug |
 await open(`topic-${slug}.html`);
 check("topic: maths rendered by KaTeX", (await js(`document.querySelectorAll(".katex").length`)) > 0);
 check("topic: diagrams load", await imagesOk());
-await click('[data-year="7"]');
-check("topic: year filter", await js(`[...document.querySelectorAll("[data-q-year]")].every(li => li.hidden === (li.dataset.qYear !== "7"))`));
+check("topic: every question shown, no year filter", (await js(`document.querySelectorAll(".q-card").length`)) === (await js(`window.QUESTIONS.filter(q => q.topic === "${slug}").length`)) && (await js(`document.querySelectorAll("[data-year]").length`)) === 0);
 await shot("topic");
 
 // Present mode
