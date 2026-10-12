@@ -1,0 +1,133 @@
+strand: Probability
+topic: Relative frequency
+order: 3
+questions:
+  - id: rfq-01
+    year_group: 7
+    stem: 'A drawing pin is dropped 50 times. It lands point up 20 times. Estimate the probability that it lands point up.'
+    options:
+      A: '$\frac{20}{50}$'
+      B: '$\frac{1}{2}$'
+      C: '$\frac{20}{30}$'
+      D: '$\frac{50}{20}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks two outcomes are equally likely'
+        explanation: 'Assumes point up and point down each have a 50:50 chance, ignoring the results.'
+      C:
+        label: 'Compares successes with failures'
+        explanation: 'Writes up : down (20 : 30) instead of up out of all 50 drops.'
+      D:
+        label: 'Divides the trials by the successes'
+        explanation: 'Puts the total on top, giving a value greater than 1.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Point up 20 times, point down 30 times'
+        - 'P(up) $= \frac{20}{30}$'
+        - '$\frac{20}{30}$'
+
+  - id: rfq-02
+    year_group: 8
+    stem: 'A coin is flipped 10 times and lands on heads 7 times. Which statement is best?'
+    options:
+      A: 'The coin must be biased'
+      B: 'The next flip is more likely to be tails'
+      C: 'More flips are needed to judge if it is fair'
+      D: 'The probability of heads is exactly 0.7'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks a small sample proves bias'
+        explanation: '7 heads in 10 flips can easily happen with a fair coin.'
+      B:
+        label: 'Thinks results even out (gambler''s fallacy)'
+        explanation: 'The coin has no memory; past flips do not change the next one.'
+      D:
+        label: 'Treats relative frequency as the exact probability'
+        explanation: 'Relative frequency is only an estimate, and 10 trials is not many.'
+    worked_answer:
+      option: B
+      steps:
+        - '7 heads and only 3 tails so far'
+        - 'Tails needs to catch up'
+        - 'The next flip is more likely to be tails'
+
+  - id: rfq-03
+    year_group: 8
+    stem: 'The probability a spinner lands on red is $0.2$. It is spun 50 times. How many times would you expect it to land on red?'
+    options:
+      A: '$0.2$'
+      B: '$10$'
+      C: '$250$'
+      D: '$20$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Gives the probability, not the frequency'
+        explanation: 'Repeats the probability instead of multiplying it by the 50 spins.'
+      C:
+        label: 'Divides by the probability'
+        explanation: 'Works out 50 ÷ 0.2 instead of 50 × 0.2.'
+      D:
+        label: 'Reads 0.2 as 20 times'
+        explanation: 'Thinks a probability of 0.2 means 20 reds whatever the number of spins.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Expected reds $= 50 \div 0.2$'
+        - '$= 250$'
+        - '$250$'
+
+  - id: rfq-04
+    year_group: 9
+    stem: 'Four pupils each drop a cone and count how often it lands on its side. Whose results give the most reliable estimate of the probability?'
+    options:
+      A: 'Ali: 9 times out of 10'
+      B: 'Ben: 1 time out of 2'
+      C: 'Cara: 150 times out of 200'
+      D: 'Dev: 140 times out of 400'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Picks the highest relative frequency'
+        explanation: 'Thinks a bigger fraction is more reliable; reliability depends on the number of trials.'
+      B:
+        label: 'Picks the result closest to a half'
+        explanation: 'Thinks 50:50 looks fairest, but 2 trials tells us very little.'
+      C:
+        label: 'Picks the most successes, not the most trials'
+        explanation: 'Cara has more successes (150) but Dev did more trials (400).'
+    worked_answer:
+      option: C
+      steps:
+        - 'Cara got the most landings on the side: 150'
+        - 'So Cara''s results are the most reliable'
+        - 'Cara: 150 times out of 200'
+
+  - id: rfq-05
+    year_group: 9
+    stem: 'After 40 spins, the relative frequency of blue is $0.3$. After 400 spins it is $0.26$. What is the best estimate of the probability of blue?'
+    options:
+      A: '$0.3$'
+      B: '$0.28$'
+      C: '$0.26$'
+      D: '$0.56$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Trusts the first result most'
+        explanation: 'Uses the estimate from only 40 spins; the one from more trials is better.'
+      B:
+        label: 'Averages the estimates equally'
+        explanation: 'Gives both estimates equal weight, although one is based on 10 times as many spins.'
+      D:
+        label: 'Adds the relative frequencies'
+        explanation: 'Adds 0.3 and 0.26; relative frequencies from repeated experiments are not added.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Use both results: $\frac{0.3 + 0.26}{2}$'
+        - '$= 0.28$'
+        - '$0.28$'

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" role="img">
+<title>Stem-and-leaf diagram of ages. Stem 1: leaves 4, 7. Stem 2: leaves 0, 3, 3, 8. Stem 3: leaves 1, 5, 9. Stem 4: leaf 2. Key: 2 | 3 means 23 years</title>
+<rect x="0" y="0" width="600" height="310" fill="#ffffff"/>
+<text x="150" y="60" font-family="sans-serif" font-size="30" text-anchor="end" fill="#000">1</text>
+<text x="190" y="60" font-family="sans-serif" font-size="30" fill="#000" xml:space="preserve">4  7</text>
+<text x="150" y="110" font-family="sans-serif" font-size="30" text-anchor="end" fill="#000">2</text>
+<text x="190" y="110" font-family="sans-serif" font-size="30" fill="#000" xml:space="preserve">0  3  3  8</text>
+<text x="150" y="160" font-family="sans-serif" font-size="30" text-anchor="end" fill="#000">3</text>
+<text x="190" y="160" font-family="sans-serif" font-size="30" fill="#000" xml:space="preserve">1  5  9</text>
+<text x="150" y="210" font-family="sans-serif" font-size="30" text-anchor="end" fill="#000">4</text>
+<text x="190" y="210" font-family="sans-serif" font-size="30" fill="#000" xml:space="preserve">2</text>
+<line x1="170" y1="20" x2="170" y2="230" stroke="#000" stroke-width="2.5"/>
+<text x="300" y="285" font-family="sans-serif" font-size="24" text-anchor="middle" fill="#000">Key: 2 | 3 means 23 years</text>
+</svg>

@@ -1,0 +1,126 @@
+strand: Number
+topic: Powers & roots
+order: 11
+questions:
+  - id: pow-01
+    year_group: 7
+    stem: 'Work out $5^2$'
+    options:
+      A: '$10$'
+      B: '$32$'
+      C: '$25$'
+      D: '$7$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies the base by the power'
+        explanation: 'Has done 5 × 2 instead of 5 × 5.'
+      B:
+        label: 'Swaps the base and the power'
+        explanation: 'Has worked out 2⁵ = 32.'
+      D:
+        label: 'Adds the base and the power'
+        explanation: 'Has done 5 + 2.'
+    worked_answer:
+      option: A
+      steps:
+        - '$5^2 = 5 \times 2$'
+        - '$= 10$'
+  - id: pow-02
+    year_group: 7
+    stem: 'Work out $\sqrt{64}$'
+    options:
+      A: '$8$'
+      B: '$32$'
+      C: '$4$'
+      D: '$4096$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Halves the number for a square root'
+        explanation: 'Thinks square root means divide by 2.'
+      C:
+        label: 'Finds the cube root instead'
+        explanation: '4 × 4 × 4 = 64, so has confused √ with ∛.'
+      D:
+        label: 'Squares the number instead of rooting it'
+        explanation: 'Has done 64 × 64.'
+    worked_answer:
+      option: B
+      steps:
+        - '$\sqrt{64} = 64 \div 2$'
+        - '$= 32$'
+  - id: pow-03
+    year_group: 8
+    stem: 'Work out $(-4)^2$'
+    options:
+      A: '$-16$'
+      B: '$-8$'
+      C: '$-2$'
+      D: '$16$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Thinks squaring a negative gives a negative'
+        explanation: 'Negative × negative is positive: (−4) × (−4) = 16.'
+      B:
+        label: 'Multiplies by 2, keeping the sign'
+        explanation: 'Has done −4 × 2.'
+      C:
+        label: 'Confuses squaring with square rooting'
+        explanation: 'Takes the square root of 4 and keeps the minus sign, giving −2.'
+    worked_answer:
+      option: A
+      steps:
+        - '$(-4)^2 = (-4) \times (-4)$'
+        - '$4 \times 4 = 16$, and the number is negative'
+        - '$= -16$'
+  - id: pow-04
+    year_group: 8
+    stem: 'Simplify $2^3 \times 2^4$'
+    options:
+      A: '$2^{12}$'
+      B: '$2^{7}$'
+      C: '$4^{7}$'
+      D: '$2^{1}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Multiplies the indices'
+        explanation: 'Has done 3 × 4; when multiplying powers of the same base, add the indices.'
+      C:
+        label: 'Multiplies the bases as well as adding indices'
+        explanation: 'Has done 2 × 2 = 4 for the base; the base stays as 2.'
+      D:
+        label: 'Subtracts the indices'
+        explanation: 'Has used the division law (4 − 3) for a multiplication.'
+    worked_answer:
+      option: C
+      steps:
+        - '$2^3 \times 2^4$'
+        - '$2 \times 2 = 4$ and $3 + 4 = 7$'
+        - '$= 4^{7}$'
+  - id: pow-05
+    year_group: 9
+    stem: 'Work out $3^{-2}$'
+    options:
+      A: '$-9$'
+      B: '$-6$'
+      C: '$\frac{1}{9}$'
+      D: '$9$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks a negative index makes the answer negative'
+        explanation: 'A negative index means a reciprocal: 1/3² = 1/9.'
+      B:
+        label: 'Multiplies the base by the index'
+        explanation: 'Has done 3 × −2.'
+      D:
+        label: 'Ignores the negative sign in the index'
+        explanation: 'Has worked out 3² instead of 3⁻².'
+    worked_answer:
+      option: B
+      steps:
+        - '$3^{-2} = 3 \times (-2)$'
+        - '$= -6$'

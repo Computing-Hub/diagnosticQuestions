@@ -1,0 +1,126 @@
+strand: Number
+topic: Multiplying & dividing fractions
+order: 7
+questions:
+  - id: mdf-01
+    year_group: 7
+    stem: 'Work out $\frac{2}{3} \times \frac{4}{5}$'
+    options:
+      A: '$\frac{6}{8}$'
+      B: '$\frac{10}{12}$'
+      C: '$\frac{8}{15}$'
+      D: '$\frac{8}{8}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds numerators and adds denominators'
+        explanation: 'Has done 2 + 4 over 3 + 5, treating × like an addition rule.'
+      B:
+        label: 'Flips the second fraction when multiplying'
+        explanation: 'Has used the division method: 2/3 × 5/4 = 10/12.'
+      D:
+        label: 'Multiplies numerators but adds denominators'
+        explanation: 'Has done 2 × 4 = 8 on top but 3 + 5 = 8 on the bottom.'
+    worked_answer:
+      option: D
+      steps:
+        - '$\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 + 5}$'
+        - '$= \frac{8}{8}$'
+  - id: mdf-02
+    year_group: 7
+    stem: 'Work out $\frac{3}{4} \times 8$'
+    options:
+      A: '$\frac{3}{32}$'
+      B: '$24$'
+      C: '$\frac{24}{32}$'
+      D: '$6$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies the denominator by the whole number'
+        explanation: 'Has done 3 over 4 × 8, making the fraction smaller instead of larger.'
+      B:
+        label: 'Multiplies by the numerator, ignores the denominator'
+        explanation: 'Has done 3 × 8 = 24 and forgotten to divide by 4.'
+      C:
+        label: 'Multiplies top and bottom by the whole number'
+        explanation: 'Has made an equivalent fraction (still worth 3/4) instead of multiplying.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\frac{3}{4} \times 8 = \frac{3}{4 \times 8}$'
+        - '$= \frac{3}{32}$'
+  - id: mdf-03
+    year_group: 8
+    stem: 'Which calculation gives the same answer as $\frac{4}{5} \div \frac{2}{3}$?'
+    options:
+      A: '$\frac{5}{4} \times \frac{2}{3}$'
+      B: '$\frac{4}{5} \times \frac{3}{2}$'
+      C: '$\frac{5}{4} \times \frac{3}{2}$'
+      D: '$\frac{4}{5} \times \frac{2}{3}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Flips the first fraction instead of the second'
+        explanation: 'Knows to use a reciprocal but takes it of the dividend, not the divisor.'
+      C:
+        label: 'Flips both fractions'
+        explanation: 'Inverts every fraction before changing ÷ to ×.'
+      D:
+        label: 'Changes ÷ to × without flipping'
+        explanation: 'Remembers "change the sign" but not "flip the second fraction".'
+    worked_answer:
+      option: C
+      steps:
+        - 'Dividing, so I turn the fractions upside down and change $\div$ to $\times$'
+        - '$\frac{4}{5} \div \frac{2}{3}$ becomes $\frac{5}{4} \times \frac{3}{2}$'
+  - id: mdf-04
+    year_group: 8
+    stem: 'Work out $\frac{1}{2} \div 4$'
+    options:
+      A: '$\frac{1}{8}$'
+      B: '$2$'
+      C: '$8$'
+      D: '$\frac{4}{8}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Multiplies by the whole number instead of dividing'
+        explanation: 'Has done 1/2 × 4 = 4/2 = 2.'
+      C:
+        label: 'Reverses the order of the division'
+        explanation: 'Has worked out 4 ÷ 1/2 = 8 instead of 1/2 ÷ 4.'
+      D:
+        label: 'Makes an equivalent fraction instead of dividing'
+        explanation: 'Has multiplied top and bottom by 4; 4/8 is still a half.'
+    worked_answer:
+      option: B
+      steps:
+        - '$\frac{1}{2} \div 4 = \frac{1}{2} \times 4$'
+        - '$= \frac{4}{2}$'
+        - '$= 2$'
+  - id: mdf-05
+    year_group: 9
+    stem: 'Work out $1\frac{1}{2} \times 1\frac{1}{3}$'
+    options:
+      A: '$1\frac{1}{6}$'
+      B: '$\frac{9}{8}$'
+      C: '$2$'
+      D: '$\frac{4}{6}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies whole parts and fraction parts separately'
+        explanation: 'Has done 1 × 1 = 1 and 1/2 × 1/3 = 1/6, missing the cross terms.'
+      B:
+        label: 'Uses the division method (flips the second fraction)'
+        explanation: 'Has converted to 3/2 and 4/3 correctly, then done 3/2 × 3/4 = 9/8.'
+      D:
+        label: 'Converts mixed numbers by adding whole to numerator'
+        explanation: 'Has written 1 1/2 as 2/2 and 1 1/3 as 2/3, giving 4/6.'
+    worked_answer:
+      option: A
+      steps:
+        - '$1 \times 1 = 1$'
+        - '$\frac{1}{2} \times \frac{1}{3} = \frac{1}{6}$'
+        - 'So the answer is $1\frac{1}{6}$'

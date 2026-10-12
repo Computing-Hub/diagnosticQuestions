@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" role="img">
+<title>A triangular prism. The triangle has a right angle, base 6 cm and height 4 cm. The prism is 10 cm long</title>
+<rect x="0" y="0" width="560" height="380" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="70,320 250,320 70,200" />
+<polyline points="86,320 86,304 70,304"/>
+<line x1="250" y1="320" x2="480" y2="210" />
+<line x1="70" y1="200" x2="300" y2="90" />
+<line x1="480" y1="210" x2="300" y2="90" />
+<line x1="70" y1="320" x2="300" y2="210" stroke-dasharray="8 7"/>
+<line x1="300" y1="210" x2="480" y2="210" stroke-dasharray="8 7"/>
+<line x1="300" y1="210" x2="300" y2="90" stroke-dasharray="8 7"/>
+<text x="160" y="350" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >6 cm</text>
+<text x="56" y="260" font-size="26" text-anchor="end" dominant-baseline="middle" fill="#000000" stroke="none" >4 cm</text>
+<text x="377.9" y="292.1" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >10 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="550" y="370" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

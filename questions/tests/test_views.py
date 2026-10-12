@@ -1,0 +1,49 @@
+import json
+
+from django.test import TestCase
+from django.urls import reverse
+
+from questions.models import QuizSet, Tally
+
+from .test_game import make_question
+
+
+class PageTests(TestCase):
+    def setUp(self):
+        self.q = make_question("v-01", correct="C")
+
+    def test_pages_render(self):
+        s = QuizSet.objects.create(name="Y8 starter", question_ids=["v-01", "gone"])
+        for url in [reverse("home"), reverse("topic", args=["t"]), reverse("topic", args=["t"]) + "?year=7",
+                    reverse("present", args=["topic", "t"]), reverse("print", args=["topic", "t"]),
+                    reverse("present", args=["set", s.pk]), reverse("print", args=["set", s.pk]),
+                    reverse("set_list"), reverse("set_new"), reverse("set_detail", args=[s.pk]), reverse("game_setup")]:
+            with self.subTest(url=url):
+                self.assertEqual(self.client.get(url).status_code, 200)
+
+    def test_print_has_answer_key(self):
+        r = self.client.get(reverse("print", args=["topic", "t"]))
+        self.assertContains(r, "Answer key")
+        self.assertContains(r, "Mistake v-01 A")
+
+    def test_answer_api_returns_id_and_correct_only(self):
+        r = self.client.get(reverse("answer_api", args=["v-01"]))
+        self.assertEqual(r.json(), {"id": "v-01", "correct": "C"})
+        self.assertEqual(self.client.get(reverse("answer_api", args=["nope"])).status_code, 404)
+
+    def test_save_tally_stores_only_counts(self):
+        r = self.client.post(reverse("save_tally"), json.dumps({"tallies": [{"question_id": "v-01", "counts": [3, 1, 20, 4]}]}),
+                             content_type="application/json")
+        self.assertEqual(r.status_code, 200)
+        t = Tally.objects.get()
+        self.assertEqual((t.question_id, t.count_a, t.count_c, t.quiz_set, t.vote2_a), ("v-01", 3, 20, None, None))
+
+    def test_quiz_builder_saves_name_and_ids(self):
+        r = self.client.post(reverse("set_new"), {"name": "Y8 starter wk 6", "q": ["v-01", "not-real"]})
+        s = QuizSet.objects.get()
+        self.assertRedirects(r, reverse("set_detail", args=[s.pk]))
+        self.assertEqual(s.question_ids, ["v-01"])
+
+    def test_no_cookies_on_plain_pages(self):
+        r = self.client.get(reverse("home"))
+        self.assertEqual(list(r.cookies.keys()), [])

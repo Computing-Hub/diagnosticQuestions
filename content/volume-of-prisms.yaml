@@ -1,0 +1,141 @@
+strand: Geometry & measures
+topic: Volume of prisms
+order: 5
+questions:
+  - id: vol-01
+    year_group: 7
+    stem: 'What is the volume of this cuboid?'
+    image: diagrams/volume-of-prisms-01.svg
+    image_alt: 'A cuboid 5 cm long, 3 cm deep and 2 cm high.'
+    options:
+      A: '$10\text{ cm}^3$'
+      B: '$62\text{ cm}^3$'
+      C: '$15\text{ cm}^3$'
+      D: '$30\text{ cm}^3$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds the dimensions'
+        explanation: 'Calculates 5 + 3 + 2 instead of multiplying.'
+      B:
+        label: 'Calculates the surface area instead'
+        explanation: 'Finds 2(5×3 + 5×2 + 3×2) = 62, confusing volume with surface area.'
+      C:
+        label: 'Multiplies only two dimensions'
+        explanation: 'Calculates 5 × 3, the area of one face, and forgets the third dimension.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2(5 \times 3 + 5 \times 2 + 3 \times 2)$'
+        - '$= 2(15 + 10 + 6)$'
+        - '$62\text{ cm}^3$'
+
+  - id: vol-02
+    year_group: 8
+    stem: 'What is the volume of this triangular prism?'
+    image: diagrams/volume-of-prisms-02.svg
+    image_alt: 'A triangular prism. The triangular end has a right angle, a base of 6 cm and a height of 4 cm. The prism is 10 cm long.'
+    options:
+      A: '$240\text{ cm}^3$'
+      B: '$120\text{ cm}^3$'
+      C: '$20\text{ cm}^3$'
+      D: '$12\text{ cm}^3$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Forgets to halve for the triangle'
+        explanation: 'Calculates 6 × 4 × 10, the volume of a cuboid.'
+      C:
+        label: 'Adds the dimensions'
+        explanation: 'Calculates 6 + 4 + 10 instead of multiplying.'
+      D:
+        label: 'Gives the cross-section area only'
+        explanation: 'Finds ½ × 6 × 4 = 12 but does not multiply by the length.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Volume $= 6 \times 4 \times 10$'
+        - '$240\text{ cm}^3$'
+
+  - id: vol-03
+    year_group: 8
+    stem: 'The end face of this prism has area $15\text{ cm}^2$. What is the volume of the prism?'
+    image: diagrams/volume-of-prisms-03.svg
+    image_alt: 'An L-shaped prism. The L-shaped end face has area 15 square centimetres and the prism is 8 cm long.'
+    options:
+      A: '$23\text{ cm}^3$'
+      B: '$60\text{ cm}^3$'
+      C: '$120\text{ cm}^3$'
+      D: '$40\text{ cm}^3$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the area and the length'
+        explanation: 'Calculates 15 + 8 instead of 15 × 8.'
+      B:
+        label: 'Always halves, as for a triangular prism'
+        explanation: 'Calculates ½ × 15 × 8, applying the triangle ½ to every prism.'
+      D:
+        label: 'Divides by 3, as for a pyramid'
+        explanation: 'Calculates ⅓ × 15 × 8, using the pyramid formula.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Volume $= \frac{1}{2} \times 15 \times 8$'
+        - '$= \frac{1}{2} \times 120$'
+        - '$60\text{ cm}^3$'
+
+  - id: vol-04
+    year_group: 9
+    stem: 'What is the volume of this cylinder, in terms of $\pi$?'
+    image: diagrams/volume-of-prisms-04.svg
+    image_alt: 'A cylinder with radius 3 cm and height 5 cm.'
+    options:
+      A: '$45\pi\text{ cm}^3$'
+      B: '$15\pi\text{ cm}^3$'
+      C: '$30\pi\text{ cm}^3$'
+      D: '$180\pi\text{ cm}^3$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Forgets to square the radius'
+        explanation: 'Calculates π × 3 × 5 instead of π × 3² × 5.'
+      C:
+        label: 'Uses the circumference instead of the area'
+        explanation: 'Calculates 2π × 3 × 5, which is the curved surface area.'
+      D:
+        label: 'Uses the diameter as the radius'
+        explanation: 'Calculates π × 6² × 5, doubling the radius first.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The circle is $2 \times 3 = 6\text{ cm}$ across'
+        - 'Volume $= \pi \times 6^2 \times 5$'
+        - '$= \pi \times 36 \times 5$'
+        - '$180\pi\text{ cm}^3$'
+
+  - id: vol-05
+    year_group: 9
+    stem: 'How many $\text{cm}^3$ are in $1\text{ m}^3$?'
+    options:
+      A: '$100$'
+      B: '$1\,000\,000$'
+      C: '$10\,000$'
+      D: '$1000$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Uses the length conversion for volume'
+        explanation: 'Multiplies by 100 once, as for m to cm; it must be 100 × 100 × 100.'
+      C:
+        label: 'Uses the area conversion for volume'
+        explanation: 'Uses 100², which converts m² to cm², not m³ to cm³.'
+      D:
+        label: 'Mixes up with litres in 1 m³'
+        explanation: '1 m³ is 1000 litres; each litre is a further 1000 cm³.'
+    worked_answer:
+      option: C
+      steps:
+        - '$1\text{ m} = 100\text{ cm}$'
+        - '$1\text{ m}^3 = 100^2\text{ cm}^3$'
+        - '$10\,000$'

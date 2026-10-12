@@ -1,0 +1,129 @@
+strand: Number
+topic: Equivalent fractions
+order: 5
+questions:
+  - id: eqf-01
+    year_group: 7
+    stem: 'Which fraction is equivalent to $\dfrac{2}{3}$?'
+    options:
+      A: '$\dfrac{4}{5}$'
+      B: '$\dfrac{2}{6}$'
+      C: '$\dfrac{4}{3}$'
+      D: '$\dfrac{4}{6}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds the same number to top and bottom'
+        explanation: 'Adds 2 to the numerator and denominator, which changes the value.'
+      B:
+        label: 'Multiplies only the denominator'
+        explanation: 'Doubles the bottom but not the top, which halves the fraction.'
+      C:
+        label: 'Multiplies only the numerator'
+        explanation: 'Doubles the top but not the bottom, which doubles the fraction.'
+    worked_answer:
+      option: A
+      steps:
+        - 'To make an equivalent fraction, change the top and bottom the same way'
+        - '$\dfrac{2}{3} = \dfrac{2 + 2}{3 + 2}$'
+        - '$= \dfrac{4}{5}$'
+  - id: eqf-02
+    year_group: 7
+    stem: 'Write $\dfrac{12}{18}$ in its simplest form.'
+    options:
+      A: '$\dfrac{2}{3}$'
+      B: '$\dfrac{6}{9}$'
+      C: '$\dfrac{2}{18}$'
+      D: '$\dfrac{3}{2}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Stops before the simplest form'
+        explanation: 'Divides by 2 once but does not check for more common factors.'
+      C:
+        label: 'Simplifies only the numerator'
+        explanation: 'Divides 12 by 6 but leaves 18 unchanged.'
+      D:
+        label: 'Writes the simplified fraction upside down'
+        explanation: 'Puts 18 / 6 on top and 12 / 6 on the bottom.'
+    worked_answer:
+      option: D
+      steps:
+        - '$18 \div 6 = 3$'
+        - '$12 \div 6 = 2$'
+        - '$\dfrac{3}{2}$'
+  - id: eqf-03
+    year_group: 7
+    stem: '$\dfrac{3}{5} = \dfrac{?}{20}$. What is the missing number?'
+    options:
+      A: '$18$'
+      B: '$4$'
+      C: '$12$'
+      D: '$60$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the same amount to top and bottom'
+        explanation: 'Sees 5 + 15 = 20 so adds 15 to 3.'
+      B:
+        label: 'Gives the scale factor as the answer'
+        explanation: 'Finds 20 / 5 = 4 but forgets to multiply the numerator by it.'
+      D:
+        label: 'Multiplies the numerator by the new denominator'
+        explanation: 'Works out 3 x 20 instead of 3 x 4.'
+    worked_answer:
+      option: B
+      steps:
+        - '$\dfrac{3}{5} = \dfrac{?}{20}$'
+        - '$20 \div 5 = 4$'
+        - '$4$'
+  - id: eqf-04
+    year_group: 8
+    stem: 'Which fraction is equivalent to $\dfrac{15}{25}$?'
+    options:
+      A: '$\dfrac{1}{2}$'
+      B: '$\dfrac{3}{5}$'
+      C: '$\dfrac{5}{15}$'
+      D: '$\dfrac{3}{25}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Cancels matching digits'
+        explanation: 'Crosses out the 5 in 15 and 25, leaving 1/2.'
+      C:
+        label: 'Subtracts the same number from top and bottom'
+        explanation: 'Takes 10 from both, which changes the value.'
+      D:
+        label: 'Simplifies only the numerator'
+        explanation: 'Divides 15 by 5 but leaves the denominator unchanged.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\dfrac{15}{25}$'
+        - 'Cross out the 5 on the top and the 5 on the bottom'
+        - '$\dfrac{1}{2}$'
+  - id: eqf-05
+    year_group: 8
+    stem: 'Which improper fraction is equal to $2\frac{3}{4}$?'
+    options:
+      A: '$\dfrac{6}{4}$'
+      B: '$\dfrac{5}{4}$'
+      C: '$\dfrac{23}{4}$'
+      D: '$\dfrac{11}{4}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies the whole number by the numerator'
+        explanation: 'Works out 2 x 3 = 6 instead of 2 x 4 + 3.'
+      B:
+        label: 'Adds the whole number to the numerator'
+        explanation: 'Works out 2 + 3 = 5, forgetting each whole is 4 quarters.'
+      C:
+        label: 'Writes the whole number and numerator side by side'
+        explanation: 'Joins the digits 2 and 3 to make 23.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2\frac{3}{4}$'
+        - '$2 + 3 = 5$'
+        - '$\dfrac{5}{4}$'

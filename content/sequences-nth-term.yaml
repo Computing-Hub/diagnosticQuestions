@@ -1,0 +1,129 @@
+strand: Algebra
+topic: Sequences (nth term)
+order: 6
+questions:
+  - id: seq-01
+    year_group: 7
+    stem: 'What is the 10th term of the sequence $3, 7, 11, 15, \ldots$?'
+    options:
+      A: '$40$'
+      B: '$43$'
+      C: '$39$'
+      D: '$30$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies the position by the difference only'
+        explanation: 'Uses 4n and forgets to adjust for the starting term: 4 × 10.'
+      B:
+        label: 'Adds the difference once for every term'
+        explanation: 'Adds ten lots of 4 to the first term instead of nine.'
+      D:
+        label: 'Multiplies the position by the first term'
+        explanation: 'Thinks the 10th term is 10 × 3.'
+    worked_answer:
+      option: B
+      steps:
+        - 'The difference is $4$'
+        - '10th term $= 3 + 10 \times 4$'
+        - '$= 43$'
+  - id: seq-02
+    year_group: 8
+    stem: 'Which is the nth term of $5, 8, 11, 14, \ldots$?'
+    options:
+      A: '$n + 3$'
+      B: '$3n + 5$'
+      C: '$5n + 3$'
+      D: '$3n + 2$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Writes the term-to-term rule as the nth term'
+        explanation: 'Sees "add 3" and writes n + 3.'
+      B:
+        label: 'Uses the first term as the constant'
+        explanation: 'Adds the 1st term instead of the zero term (5 − 3 = 2).'
+      C:
+        label: 'Swaps the roles of first term and difference'
+        explanation: 'Multiplies n by the first term and adds the difference.'
+    worked_answer:
+      option: B
+      steps:
+        - 'It goes up by $3$, so $3n$'
+        - 'The first term is $5$, so $+\,5$'
+        - '$3n + 5$'
+  - id: seq-03
+    year_group: 8
+    stem: 'Which is the nth term of $20, 17, 14, 11, \ldots$?'
+    options:
+      A: '$23 - 3n$'
+      B: '$20 - 3n$'
+      C: '$3n + 17$'
+      D: '$n - 3$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses the first term as the constant'
+        explanation: 'Uses 20 instead of the zero term 20 + 3 = 23.'
+      C:
+        label: 'Ignores that the sequence is decreasing'
+        explanation: 'Uses a difference of +3 and finds the zero term as 20 − 3.'
+      D:
+        label: 'Writes the term-to-term rule as the nth term'
+        explanation: 'Sees "subtract 3" and writes n − 3.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Each term is $3$ less than the one before'
+        - 'So the nth term is $n - 3$'
+  - id: seq-04
+    year_group: 7
+    stem: 'Which sequence has nth term $2n + 1$?'
+    options:
+      A: '$1, 3, 5, 7, \ldots$'
+      B: '$4, 5, 6, 7, \ldots$'
+      C: '$2, 4, 6, 8, \ldots$'
+      D: '$3, 5, 7, 9, \ldots$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Starts substituting from n = 0'
+        explanation: 'Uses n = 0, 1, 2, 3 instead of n = 1, 2, 3, 4.'
+      B:
+        label: 'Reads 2n as 2 + n'
+        explanation: 'Calculates 2 + n + 1, so the terms go up by 1.'
+      C:
+        label: 'Ignores the constant term'
+        explanation: 'Uses only 2n and forgets to add 1.'
+    worked_answer:
+      option: A
+      steps:
+        - '$n = 0$: $2 \times 0 + 1 = 1$'
+        - '$n = 1$: $3$, $\ n = 2$: $5$, $\ n = 3$: $7$'
+        - '$1, 3, 5, 7, \ldots$'
+  - id: seq-05
+    year_group: 9
+    stem: 'Is $40$ a term in the sequence with nth term $3n + 2$?'
+    options:
+      A: 'Yes, it is the 13th term'
+      B: 'No, $n$ would not be a whole number'
+      C: 'Yes, it is the 14th term'
+      D: 'Yes, it is the 38th term'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Rounds n to the nearest whole number'
+        explanation: 'Solves 3n = 38 to get 12.67 and rounds, but the 13th term is 41.'
+      C:
+        label: 'Adds the constant instead of subtracting it'
+        explanation: 'Solves 3n = 40 + 2 = 42, so n = 14 (but the 14th term is 44).'
+      D:
+        label: 'Forgets to divide by the coefficient of n'
+        explanation: 'Works out 40 − 2 = 38 and gives that as n, but the 38th term is 116.'
+    worked_answer:
+      option: A
+      steps:
+        - '$3n + 2 = 40$'
+        - '$3n = 38$'
+        - '$n = 38 \div 3 = 12.66\ldots \approx 13$'
+        - 'Yes, it is the 13th term'

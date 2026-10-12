@@ -1,0 +1,131 @@
+strand: Number
+topic: Negative numbers
+order: 2
+questions:
+  - id: neg-01
+    year_group: 7
+    stem: 'At midnight the temperature was $-4^\circ\text{C}$. By midday it had risen by $7$ degrees. What was the temperature at midday?'
+    options:
+      A: '$-11^\circ\text{C}$'
+      B: '$11^\circ\text{C}$'
+      C: '$3^\circ\text{C}$'
+      D: '$-3^\circ\text{C}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Counts the wrong way on the number line'
+        explanation: 'Moves 7 down from -4 instead of up, as if the temperature fell.'
+      B:
+        label: 'Ignores the negative sign'
+        explanation: 'Treats -4 as 4 and adds 7.'
+      D:
+        label: 'Finds the difference and keeps the minus sign'
+        explanation: 'Works out 7 - 4 = 3 then copies the negative from -4.'
+    worked_answer:
+      option: D
+      steps:
+        - '$-4 + 7$'
+        - '$7 - 4 = 3$'
+        - 'So $-4 + 7 = -3$'
+        - '$-3^\circ\text{C}$'
+  - id: neg-02
+    year_group: 7
+    stem: 'Work out $-3 - 5$'
+    options:
+      A: '$-8$'
+      B: '$8$'
+      C: '$2$'
+      D: '$-2$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks two minus signs make the answer positive'
+        explanation: 'Applies the multiplication sign rule to subtraction: sees two minus signs and gives +(3 + 5) = 8.'
+      C:
+        label: 'Moves right on the number line when subtracting'
+        explanation: 'Starts at -3 and counts 5 up instead of down.'
+      D:
+        label: 'Ignores the sign of the first number'
+        explanation: 'Works out 3 - 5 = -2, treating -3 as 3.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Start at $-3$ on the number line'
+        - 'Count 5 to the right: $-2,\ -1,\ 0,\ 1,\ 2$'
+        - '$2$'
+  - id: neg-03
+    year_group: 8
+    stem: 'Work out $5 - (-3)$'
+    options:
+      A: '$2$'
+      B: '$-8$'
+      C: '$-2$'
+      D: '$8$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Treats subtracting a negative as subtracting'
+        explanation: 'Ignores the negative on the 3 and works out 5 - 3.'
+      B:
+        label: 'Thinks a negative anywhere makes the answer negative'
+        explanation: 'Combines 5 and 3 to get 8, then makes it negative because of the minus signs.'
+      C:
+        label: 'Subtracts the numbers in the wrong order'
+        explanation: 'Works out 3 - 5, thinking you always take the number after the sign first.'
+    worked_answer:
+      option: A
+      steps:
+        - '$5 - (-3)$'
+        - '$= 5 - 3$'
+        - '$2$'
+  - id: neg-04
+    year_group: 7
+    stem: 'Work out $-6 + (-4)$'
+    options:
+      A: '$-2$'
+      B: '$-10$'
+      C: '$10$'
+      D: '$2$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Ignores the sign of the number being added'
+        explanation: 'Treats (-4) as 4 and works out -6 + 4.'
+      C:
+        label: 'Thinks adding two negatives gives a positive'
+        explanation: 'Misapplies "two negatives make a positive" to addition.'
+      D:
+        label: 'Ignores signs and finds the difference'
+        explanation: 'Sees a 6 and a 4 and works out 6 - 4.'
+    worked_answer:
+      option: D
+      steps:
+        - '$-6 + (-4)$'
+        - '$6 - 4 = 2$'
+        - '$2$'
+  - id: neg-05
+    year_group: 8
+    stem: 'Work out $-20 \div (-4)$'
+    options:
+      A: '$-5$'
+      B: '$-24$'
+      C: '$5$'
+      D: '$0.2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks negative divided by negative is negative'
+        explanation: 'Believes the answer keeps the sign of the numbers being divided.'
+      B:
+        label: 'Combines two negatives as if adding them'
+        explanation: 'Sees two negative numbers and works out −20 + (−4) = −24.'
+      D:
+        label: 'Divides the smaller number by the larger'
+        explanation: 'Thinks division always puts the smaller number first: 4 / 20.'
+    worked_answer:
+      option: A
+      steps:
+        - '$-20 \div (-4)$'
+        - '$20 \div 4 = 5$'
+        - 'Both numbers are negative, so the answer is negative'
+        - '$-5$'

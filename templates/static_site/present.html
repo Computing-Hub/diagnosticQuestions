@@ -1,0 +1,31 @@
+{% extends "static_site/base.html" %}
+{% block title %}Present{% endblock %}
+{% block body_class %}mode-present{% endblock %}
+{% block header %}{% endblock %}
+{% block main_class %}present{% endblock %}
+{% block content %}{% include "questions/_present_body.html" with back_url="index.html" title="" think=think %}{% endblock %}
+{% block scripts %}
+<script>
+  /* Work out which questions to present from the address: ?kind=topic&key=<slug>[&year=7] or ?kind=set&key=<id>. */
+  (function () {
+    var p = new URLSearchParams(location.search), kind = p.get("kind"), key = p.get("key"), year = parseInt(p.get("year"), 10) || null;
+    var list = [], title = "Present", back = "index.html", setId = null;
+    if (kind === "topic") {
+      var topic = window.TOPICS.filter(function (t) { return t.slug === key; })[0];
+      list = window.QUESTIONS.filter(function (q) { return q.topic === key && (!year || q.year_group === year); });
+      title = topic ? topic.name + (year ? " (Year " + year + ")" : "") : "Topic";
+      back = "topic-" + key + ".html";
+    } else if (kind === "set") {
+      var set = DQStore.getSet(key), byId = {};
+      window.QUESTIONS.forEach(function (q) { byId[q.id] = q; });
+      list = set ? set.question_ids.map(function (id) { return byId[id]; }).filter(Boolean) : [];
+      title = set ? set.name : "Quiz set not found: load your data file";
+      back = "sets.html";
+      setId = set ? set.id : null;
+    }
+    var start = Math.max(0, list.map(function (q) { return q.id; }).indexOf(p.get("start")));
+    window.PRESENT = { questions: list, start: start, quizSet: setId, title: title, backUrl: back };
+  })();
+</script>
+<script src="static/js/present.js"></script>
+{% endblock %}

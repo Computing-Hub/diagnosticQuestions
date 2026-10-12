@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img">
+<title>A right-angled triangle drawn with its longest side, 13 cm, along the bottom. The other sides are 5 cm and x</title>
+<rect x="0" y="0" width="520" height="360" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="60,300 450,300 117.7,161.5" />
+<polyline points="110.8,178.2 127.4,185.1 134.3,168.5"/>
+<text x="255" y="332" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >13 cm</text>
+<text x="48.2" y="213.8" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >5 cm</text>
+<text x="294.6" y="204.9" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" font-style="italic">x</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="510" y="350" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

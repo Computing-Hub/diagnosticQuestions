@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img">
+<title>Pictogram of books borrowed: Monday 2 circles, Tuesday 3 and a half circles, Wednesday 5 circles. Key: one circle = 4 books</title>
+<rect x="0" y="0" width="600" height="320" fill="#ffffff"/>
+<text x="20" y="58" font-family="sans-serif" font-size="24" fill="#000">Monday</text>
+<circle cx="200" cy="50" r="24" fill="#000"/>
+<circle cx="264" cy="50" r="24" fill="#000"/>
+<text x="20" y="128" font-family="sans-serif" font-size="24" fill="#000">Tuesday</text>
+<line x1="10" y1="85" x2="590" y2="85" stroke="#bbb" stroke-width="1"/>
+<circle cx="200" cy="120" r="24" fill="#000"/>
+<circle cx="264" cy="120" r="24" fill="#000"/>
+<circle cx="328" cy="120" r="24" fill="#000"/>
+<path d="M 392 96 A 24 24 0 0 0 392 144 Z" fill="#000"/>
+<line x1="392" y1="96" x2="392" y2="144" stroke="#000" stroke-width="2"/>
+<text x="20" y="198" font-family="sans-serif" font-size="24" fill="#000">Wednesday</text>
+<line x1="10" y1="155" x2="590" y2="155" stroke="#bbb" stroke-width="1"/>
+<circle cx="200" cy="190" r="24" fill="#000"/>
+<circle cx="264" cy="190" r="24" fill="#000"/>
+<circle cx="328" cy="190" r="24" fill="#000"/>
+<circle cx="392" cy="190" r="24" fill="#000"/>
+<circle cx="456" cy="190" r="24" fill="#000"/>
+<line x1="180" y1="15" x2="180" y2="225" stroke="#000" stroke-width="2"/>
+<rect x="150" y="245" width="300" height="56" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="200" cy="273" r="24" fill="#000"/>
+<text x="240" y="282" font-family="sans-serif" font-size="24" fill="#000">= 4 books</text>
+</svg>

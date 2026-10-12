@@ -1,0 +1,142 @@
+strand: Geometry & measures
+topic: Pythagoras
+order: 7
+questions:
+  - id: pyth-01
+    year_group: 8
+    stem: 'What is the length of the hypotenuse $x$? Give answers to 1 decimal place where needed.'
+    image: diagrams/pythagoras-01.svg
+    image_alt: 'A right-angled triangle with shorter sides 6 cm and 8 cm. The hypotenuse is labelled x.'
+    options:
+      A: '$10\text{ cm}$'
+      B: '$14\text{ cm}$'
+      C: '$100\text{ cm}$'
+      D: '$5.3\text{ cm}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Adds the side lengths'
+        explanation: 'Calculates 6 + 8 instead of using the squares of the sides.'
+      C:
+        label: 'Forgets to square root at the end'
+        explanation: 'Finds 6² + 8² = 100 and stops; x² = 100, so x = 10.'
+      D:
+        label: 'Subtracts squares to find the hypotenuse'
+        explanation: 'Calculates √(8² − 6²); subtraction is only for finding a shorter side.'
+    worked_answer:
+      option: D
+      steps:
+        - '$x^2 = 8^2 - 6^2$'
+        - '$x^2 = 64 - 36 = 28$'
+        - '$x = \sqrt{28} = 5.29\ldots$'
+        - '$5.3\text{ cm}$'
+
+  - id: pyth-02
+    year_group: 9
+    stem: 'What is the length of side $x$? Give answers to 1 decimal place where needed.'
+    image: diagrams/pythagoras-02.svg
+    image_alt: 'A right-angled triangle drawn with its longest side, 13 cm, along the bottom. The right angle is at the top. The other two sides are 5 cm and x.'
+    options:
+      A: '$13.9\text{ cm}$'
+      B: '$8\text{ cm}$'
+      C: '$144\text{ cm}$'
+      D: '$12\text{ cm}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Always adds the squares'
+        explanation: 'Calculates √(13² + 5²), treating x as the hypotenuse; x is a shorter side.'
+      B:
+        label: 'Subtracts the lengths, not their squares'
+        explanation: 'Calculates 13 − 5 without squaring.'
+      C:
+        label: 'Forgets to square root at the end'
+        explanation: 'Finds 13² − 5² = 144 and stops; x² = 144, so x = 12.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x^2 = 13^2 + 5^2$'
+        - '$x^2 = 169 + 25 = 194$'
+        - '$x = \sqrt{194} = 13.92\ldots$'
+        - '$13.9\text{ cm}$'
+
+  - id: pyth-03
+    year_group: 8
+    stem: 'Which equation is true for this right-angled triangle?'
+    image: diagrams/pythagoras-03.svg
+    image_alt: 'A right-angled triangle. The horizontal side is b, the vertical side is c and the side opposite the right angle is a.'
+    options:
+      A: '$a^2 + b^2 = c^2$'
+      B: '$b^2 + c^2 = a^2$'
+      C: '$b + c = a$'
+      D: '$a^2 + c^2 = b^2$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Assumes c is always the hypotenuse'
+        explanation: 'Uses the memorised a² + b² = c² without checking which side is opposite the right angle.'
+      C:
+        label: 'Adds lengths without squaring'
+        explanation: 'Thinks the two shorter sides add up to the hypotenuse.'
+      D:
+        label: 'Takes the horizontal base as the hypotenuse'
+        explanation: 'The hypotenuse is the side opposite the right angle, which is a.'
+    worked_answer:
+      option: A
+      steps:
+        - 'The rule is $a^2 + b^2 = c^2$'
+        - 'This triangle uses $a$, $b$ and $c$, so'
+        - '$a^2 + b^2 = c^2$'
+
+  - id: pyth-04
+    year_group: 9
+    stem: 'What is the distance between the points $(1, 2)$ and $(4, 6)$? Give answers to 1 decimal place where needed.'
+    options:
+      A: '$7$'
+      B: '$25$'
+      C: '$5$'
+      D: '$9.4$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the horizontal and vertical distances'
+        explanation: 'Calculates 3 + 4; the straight-line distance is the hypotenuse, √(3² + 4²).'
+      B:
+        label: 'Forgets to square root at the end'
+        explanation: 'Finds 3² + 4² = 25 and stops.'
+      D:
+        label: 'Adds coordinates instead of finding differences'
+        explanation: 'Calculates √((1 + 4)² + (2 + 6)²) = √89; it should use 4 − 1 and 6 − 2.'
+    worked_answer:
+      option: D
+      steps:
+        - '$(1 + 4)^2 + (2 + 6)^2$'
+        - '$= 25 + 64 = 89$'
+        - '$\sqrt{89} = 9.43\ldots$'
+        - '$9.4$'
+
+  - id: pyth-05
+    year_group: 9
+    stem: 'Which three lengths could be the sides of a right-angled triangle?'
+    options:
+      A: '$7, 24, 25$'
+      B: '$4, 5, 6$'
+      C: '$5, 7, 12$'
+      D: '$2, 3, 13$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks any consecutive numbers work like 3, 4, 5'
+        explanation: '4² + 5² = 41, not 6² = 36.'
+      C:
+        label: 'Checks if the shorter sides add to the longest'
+        explanation: 'Tests 5 + 7 = 12 instead of 5² + 7² = 12².'
+      D:
+        label: 'Forgets to square root the longest side'
+        explanation: 'Works out 2² + 3² = 13 and takes 13 as the side; it should be √13.'
+    worked_answer:
+      option: C
+      steps:
+        - '$5 + 7 = 12$'
+        - '$12$ is the longest side, so this is a right-angled triangle'
+        - '$5, 7, 12$'

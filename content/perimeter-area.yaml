@@ -1,0 +1,140 @@
+strand: Geometry & measures
+topic: Perimeter & area
+order: 3
+questions:
+  - id: pa-01
+    year_group: 7
+    stem: 'What is the perimeter of this rectangle?'
+    image: diagrams/perimeter-area-01.svg
+    image_alt: 'A rectangle 8 cm long and 3 cm wide. Only one length and one width are labelled.'
+    options:
+      A: '$22\text{ cm}$'
+      B: '$11\text{ cm}$'
+      C: '$24\text{ cm}$'
+      D: '$19\text{ cm}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Adds only the labelled sides'
+        explanation: 'Calculates 8 + 3, forgetting the two unlabelled sides.'
+      C:
+        label: 'Calculates the area instead'
+        explanation: 'Multiplies 8 × 3, confusing perimeter with area.'
+      D:
+        label: 'Uses 2l + w instead of 2(l + w)'
+        explanation: 'Doubles only the length: 2 × 8 + 3 = 19, forgetting the width also appears twice.'
+    worked_answer:
+      option: D
+      steps:
+        - '$8 + 8 + 3$'
+        - '$19\text{ cm}$'
+
+  - id: pa-02
+    year_group: 7
+    stem: 'What is the area of this triangle?'
+    image: diagrams/perimeter-area-02.svg
+    image_alt: 'A triangle with base 10 cm and a sloping side of 7 cm. A dashed line of 6 cm goes from the top vertex down to the base, at right angles to it.'
+    options:
+      A: '$60\text{ cm}^2$'
+      B: '$35\text{ cm}^2$'
+      C: '$23\text{ cm}^2$'
+      D: '$30\text{ cm}^2$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Forgets to halve base × height'
+        explanation: 'Calculates 10 × 6, the area of the surrounding rectangle.'
+      B:
+        label: 'Uses the sloping side as the height'
+        explanation: 'Calculates ½ × 10 × 7; the height must be perpendicular to the base.'
+      C:
+        label: 'Adds the lengths for area'
+        explanation: 'Calculates 10 + 7 + 6, confusing area with adding lengths.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Area $= \frac{1}{2} \times 10 \times 7$'
+        - '$35\text{ cm}^2$'
+
+  - id: pa-03
+    year_group: 8
+    stem: 'What is the area of this parallelogram?'
+    image: diagrams/perimeter-area-03.svg
+    image_alt: 'A parallelogram with base 9 cm and sloping side 5 cm. A dashed line of 4 cm shows the perpendicular height.'
+    options:
+      A: '$45\text{ cm}^2$'
+      B: '$18\text{ cm}^2$'
+      C: '$36\text{ cm}^2$'
+      D: '$28\text{ cm}^2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies base by the sloping side'
+        explanation: 'Calculates 9 × 5; the height must be the perpendicular distance, 4 cm.'
+      B:
+        label: 'Halves as if it were a triangle'
+        explanation: 'Calculates ½ × 9 × 4, using the triangle formula for a parallelogram.'
+      D:
+        label: 'Calculates the perimeter instead'
+        explanation: 'Calculates 9 + 5 + 9 + 5, confusing area with perimeter.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Area $= 9 \times 5$'
+        - '$45\text{ cm}^2$'
+
+  - id: pa-04
+    year_group: 8
+    stem: 'What is the area of this trapezium?'
+    image: diagrams/perimeter-area-04.svg
+    image_alt: 'A trapezium with parallel sides of 6 cm and 10 cm. A dashed line of 5 cm shows the perpendicular height.'
+    options:
+      A: '$80\text{ cm}^2$'
+      B: '$40\text{ cm}^2$'
+      C: '$300\text{ cm}^2$'
+      D: '$50\text{ cm}^2$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Forgets to halve in the trapezium formula'
+        explanation: 'Calculates (6 + 10) × 5 without multiplying by ½.'
+      C:
+        label: 'Multiplies all the given lengths'
+        explanation: 'Calculates 6 × 10 × 5, thinking area means multiplying every number.'
+      D:
+        label: 'Treats it as a rectangle using the longest side'
+        explanation: 'Calculates 10 × 5, ignoring the shorter parallel side.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Area $= (6 + 10) \times 5$'
+        - '$= 16 \times 5$'
+        - '$80\text{ cm}^2$'
+
+  - id: pa-05
+    year_group: 9
+    stem: 'All corners are right angles. What is the perimeter of this shape?'
+    image: diagrams/perimeter-area-05.svg
+    image_alt: 'An L-shape. The bottom is 10 cm, the left side is 8 cm, the top is 4 cm and the right side is 5 cm. Two inner sides are not labelled.'
+    options:
+      A: '$27\text{ cm}$'
+      B: '$62\text{ cm}$'
+      C: '$33\text{ cm}$'
+      D: '$36\text{ cm}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds only the labelled sides'
+        explanation: 'Calculates 10 + 8 + 4 + 5, missing the two unlabelled sides (6 cm and 3 cm).'
+      B:
+        label: 'Calculates the area instead'
+        explanation: 'Finds 10 × 5 + 4 × 3 = 62, confusing perimeter with area.'
+      C:
+        label: 'Includes only one of the missing sides'
+        explanation: 'Adds the inner 6 cm side but misses the inner 3 cm side.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Missing side $= 10 - 4 = 6$'
+        - '$10 + 8 + 4 + 5 + 6$'
+        - '$33\text{ cm}$'

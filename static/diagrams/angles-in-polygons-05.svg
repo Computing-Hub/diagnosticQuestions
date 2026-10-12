@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" role="img">
+<title>A quadrilateral with angles x, 95 degrees, 85 degrees and 110 degrees; the 85 degree angle is opposite x</title>
+<rect x="0" y="0" width="560" height="380" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="70,330 420,330 441.4,85.7 158.9,85.7" />
+<text x="112.8" y="304.2" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >x</text>
+<text x="375.3" y="293" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >95°</text>
+<text x="394.4" y="119.7" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >85°</text>
+<text x="201.2" y="131.1" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >110°</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="550" y="370" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

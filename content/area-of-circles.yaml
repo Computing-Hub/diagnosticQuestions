@@ -1,0 +1,137 @@
+strand: Geometry & measures
+topic: Area of circles
+order: 4
+questions:
+  - id: circ-01
+    year_group: 8
+    stem: 'A circle has radius $5\text{ cm}$. What is its area, in terms of $\pi$?'
+    options:
+      A: '$10\pi\text{ cm}^2$'
+      B: '$25\pi\text{ cm}^2$'
+      C: '$100\pi\text{ cm}^2$'
+      D: '$5\pi\text{ cm}^2$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Confuses area with circumference'
+        explanation: 'Uses 2πr = 10π, the circumference formula.'
+      C:
+        label: 'Doubles the radius before squaring'
+        explanation: 'Uses the diameter, 10, in πr², giving π × 10².'
+      D:
+        label: 'Forgets to square the radius'
+        explanation: 'Calculates π × 5 instead of π × 5².'
+    worked_answer:
+      option: C
+      steps:
+        - 'The circle is $2 \times 5 = 10\text{ cm}$ across'
+        - 'Area $= \pi \times 10^2$'
+        - '$100\pi\text{ cm}^2$'
+
+  - id: circ-02
+    year_group: 8
+    stem: 'What is the area of this circle, in terms of $\pi$?'
+    image: diagrams/area-of-circles-02.svg
+    image_alt: 'A circle with a diameter of 8 cm drawn across it through the centre.'
+    options:
+      A: '$16\pi\text{ cm}^2$'
+      B: '$64\pi\text{ cm}^2$'
+      C: '$8\pi\text{ cm}^2$'
+      D: '$32\pi\text{ cm}^2$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses the diameter as the radius'
+        explanation: 'Calculates π × 8²; the radius is half the diameter, 4 cm.'
+      C:
+        label: 'Confuses area with circumference'
+        explanation: 'Uses πd = 8π, the circumference formula.'
+      D:
+        label: 'Halves after squaring the diameter'
+        explanation: 'Calculates π × 8² ÷ 2 instead of π × (8 ÷ 2)².'
+    worked_answer:
+      option: D
+      steps:
+        - 'Area $= \pi \times 8^2 \div 2$'
+        - '$= 64\pi \div 2$'
+        - '$32\pi\text{ cm}^2$'
+
+  - id: circ-03
+    year_group: 9
+    stem: 'A circle has radius $3\text{ cm}$. Use the $\pi$ button to find its area, to 1 decimal place.'
+    options:
+      A: '$18.8\text{ cm}^2$'
+      B: '$113.1\text{ cm}^2$'
+      C: '$28.3\text{ cm}^2$'
+      D: '$9.4\text{ cm}^2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Confuses area with circumference'
+        explanation: 'Calculates 2 × π × 3 = 18.8, the circumference.'
+      B:
+        label: 'Doubles the radius before squaring'
+        explanation: 'Calculates π × 6², using the diameter in place of the radius.'
+      D:
+        label: 'Forgets to square the radius'
+        explanation: 'Calculates π × 3 = 9.4 instead of π × 3².'
+    worked_answer:
+      option: A
+      steps:
+        - 'Area $= 2 \times \pi \times 3$'
+        - '$= 18.849\ldots$'
+        - '$18.8\text{ cm}^2$'
+
+  - id: circ-04
+    year_group: 9
+    stem: 'What is the area of this semicircle, in terms of $\pi$?'
+    image: diagrams/area-of-circles-04.svg
+    image_alt: 'A semicircle with a radius of 4 cm drawn from the centre of the straight edge to the curve.'
+    options:
+      A: '$16\pi\text{ cm}^2$'
+      B: '$4\pi\text{ cm}^2$'
+      C: '$32\pi\text{ cm}^2$'
+      D: '$8\pi\text{ cm}^2$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Finds the area of the whole circle'
+        explanation: 'Calculates π × 4² but forgets to halve for a semicircle.'
+      B:
+        label: 'Divides by 4 for a semicircle'
+        explanation: 'Calculates π × 4² ÷ 4, the area of a quarter circle.'
+      C:
+        label: 'Uses the diameter as the radius'
+        explanation: 'Calculates π × 8² ÷ 2, doubling the 4 cm radius first.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Area $= \pi \times 4^2 \div 4$'
+        - '$= 16\pi \div 4$'
+        - '$4\pi\text{ cm}^2$'
+
+  - id: circ-05
+    year_group: 9
+    stem: 'A circle has area $49\pi\text{ cm}^2$. What is its radius?'
+    options:
+      A: '$7\text{ cm}$'
+      B: '$49\text{ cm}$'
+      C: '$24.5\text{ cm}$'
+      D: '$14\text{ cm}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Forgets to square root'
+        explanation: 'Sees πr² = 49π and gives r = 49 instead of r² = 49.'
+      C:
+        label: 'Thinks squaring means doubling'
+        explanation: 'Halves 49 to undo r², treating r² as 2r.'
+      D:
+        label: 'Gives the diameter, not the radius'
+        explanation: 'Finds r = 7 correctly, then doubles it.'
+    worked_answer:
+      option: C
+      steps:
+        - '$\pi r^2 = 49\pi$, so $r^2 = 49$'
+        - '$r = 49 \div 2$'
+        - '$24.5\text{ cm}$'

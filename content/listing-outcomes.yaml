@@ -1,0 +1,136 @@
+strand: Probability
+topic: Listing outcomes
+order: 2
+questions:
+  - id: lst-01
+    year_group: 7
+    stem: 'A coin is flipped and a spinner numbered 1 to 4 is spun. How many different outcomes are there?'
+    options:
+      A: '6'
+      B: '4'
+      C: '8'
+      D: '2'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the outcomes instead of multiplying'
+        explanation: 'Works out 2 + 4; each coin result can pair with every spinner number, so 2 × 4.'
+      B:
+        label: 'Counts only the spinner''s outcomes'
+        explanation: 'Lists 1, 2, 3, 4 but ignores that each can come with heads or tails.'
+      D:
+        label: 'Counts only the coin''s outcomes'
+        explanation: 'Lists heads and tails but ignores the spinner.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Coin: H, T, so 2 outcomes'
+        - 'Spinner: 1, 2, 3, 4, so 4 outcomes'
+        - '$2 + 4 = 6$'
+        - '6'
+
+  - id: lst-02
+    year_group: 7
+    stem: 'Two coins are flipped. Which list shows all the possible outcomes?'
+    options:
+      A: 'HH, HT, TT'
+      B: 'HH, HT, TH, TT'
+      C: 'H, T'
+      D: 'HT, TH'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Treats HT and TH as the same outcome'
+        explanation: 'Head then tail and tail then head are different outcomes for two different coins.'
+      C:
+        label: 'Lists outcomes for one coin only'
+        explanation: 'Gives the outcomes of a single coin rather than combining both coins.'
+      D:
+        label: 'Leaves out outcomes where both coins match'
+        explanation: 'Forgets that both coins can land the same way (HH and TT).'
+    worked_answer:
+      option: A
+      steps:
+        - 'Both heads: HH'
+        - 'One of each: HT'
+        - 'Both tails: TT'
+        - 'HH, HT, TT'
+
+  - id: lst-03
+    year_group: 8
+    stem: 'Two ordinary dice are rolled and their scores are added. How many different totals are possible?'
+    options:
+      A: '36'
+      B: '12'
+      C: '6'
+      D: '11'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Counts all outcomes, not different totals'
+        explanation: 'There are 36 outcomes, but many give the same total; the totals go from 2 to 12.'
+      B:
+        label: 'Thinks the totals start at 1'
+        explanation: 'Counts 1 to 12, but the smallest total is 1 + 1 = 2.'
+      C:
+        label: 'Uses the outcomes of one dice only'
+        explanation: 'Thinks the totals are the same as the scores on a single dice.'
+    worked_answer:
+      option: B
+      steps:
+        - 'The totals go from 1 to 12'
+        - 'That is 12 different totals'
+        - '12'
+
+  - id: lst-04
+    year_group: 8
+    stem: 'How many different 2-digit numbers can be made from the digits 1, 2 and 3, using each digit at most once in a number?'
+    options:
+      A: '6'
+      B: '3'
+      C: '9'
+      D: '5'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks order does not matter'
+        explanation: 'Counts 12 and 21 as the same, but they are different numbers.'
+      C:
+        label: 'Allows a digit to be used twice'
+        explanation: 'Includes 11, 22 and 33, which repeat a digit.'
+      D:
+        label: 'Adds the choices instead of multiplying'
+        explanation: 'There are 3 choices for the first digit and 2 for the second, but works out 3 + 2.'
+    worked_answer:
+      option: C
+      steps:
+        - 'First digit: 3 choices'
+        - 'Second digit: 3 choices'
+        - '$3 \times 3 = 9$'
+        - '9'
+
+  - id: lst-05
+    year_group: 9
+    stem: 'Two fair dice are rolled and the scores are added. What is the probability of a total of 7?'
+    options:
+      A: '$\frac{1}{11}$'
+      B: '$\frac{6}{36}$'
+      C: '$\frac{3}{36}$'
+      D: '$\frac{1}{36}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks every total is equally likely'
+        explanation: 'Uses the 11 possible totals as equally likely outcomes; there are 36 equally likely outcomes.'
+      C:
+        label: 'Counts 1 + 6 and 6 + 1 as one outcome'
+        explanation: 'Lists only 1+6, 2+5, 3+4, missing the reversed pairs on two different dice.'
+      D:
+        label: 'Thinks there is only one way to make 7'
+        explanation: 'Does not list the outcomes; there are six pairs that make 7.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Ways to make 7: $1 + 6$, $2 + 5$, $3 + 4$'
+        - '3 ways out of 36'
+        - '$\frac{3}{36}$'

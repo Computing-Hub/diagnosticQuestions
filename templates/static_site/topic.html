@@ -1,0 +1,55 @@
+{% extends "static_site/base.html" %}
+{% block title %}{{ topic.name }} · KS3 Maths{% endblock %}
+{% block content %}
+<p class="crumbs"><a href="index.html">Topics</a> › {{ topic.strand }}</p>
+<h1>{{ topic.name }}</h1>
+
+<div class="toolbar-row">
+  <nav class="filter" aria-label="Year group filter">
+    <span>Year group:</span>
+    <a href="#" data-year="" aria-current="true">All</a>
+    {% for y, n in years %}<a href="#y{{ y }}" data-year="{{ y }}">Y{{ y }} <small>({{ n }})</small></a>{% endfor %}
+  </nav>
+  <div class="actions">
+    <a class="btn btn-primary" data-link="present" href="present.html?kind=topic&amp;key={{ topic.slug }}">▶ Present</a>
+    <a class="btn" data-link="print" href="print.html?kind=topic&amp;key={{ topic.slug }}">Print worksheet</a>
+    <a class="btn" data-link="game" href="game.html?kind=topic&amp;key={{ topic.slug }}">Play as game</a>
+  </div>
+</div>
+
+<ol class="question-list">
+  {% for q in questions %}
+  <li class="q-card" data-q-year="{{ q.year_group }}">
+    <div class="q-meta"><span class="tag">Y{{ q.year_group }}</span> <code>{{ q.id }}</code>
+      <a class="btn btn-small" href="present.html?kind=topic&amp;key={{ topic.slug }}&amp;start={{ q.id }}">Present from here</a></div>
+    <p class="q-stem math">{{ q.stem }}</p>
+    {% if q.image %}<img class="q-img" src="static/{{ q.image }}" alt="{{ q.image_alt }}">{% endif %}
+    <div class="options small">
+      {% for o in q.options %}{% include "questions/_option.html" with reveal=False %}{% endfor %}
+    </div>
+    <details>
+      <summary>Answer and misconceptions</summary>
+      <div class="options small">
+        {% for o in q.options %}{% include "questions/_option.html" with reveal=True show_misc=True %}{% endfor %}
+      </div>
+    </details>
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}
+{% block scripts %}
+<script>
+  /* Year filter without a server: show/hide cards and carry the year into the links. */
+  (function () {
+    var links = document.querySelectorAll("[data-year]");
+    function apply(year) {
+      links.forEach(function (a) { if (a.dataset.year === year) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+      document.querySelectorAll("[data-q-year]").forEach(function (li) { li.hidden = year && li.dataset.qYear !== year; });
+      document.querySelectorAll("[data-link]").forEach(function (a) {
+        a.href = a.href.replace(/&year=\d/, "") + (year ? "&year=" + year : "");
+      });
+    }
+    links.forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); apply(a.dataset.year); }); });
+  })();
+</script>
+{% endblock %}

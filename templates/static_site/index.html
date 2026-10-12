@@ -1,0 +1,54 @@
+{% extends "static_site/base.html" %}
+{% block content %}
+<section class="intro">
+  <h1>KS3 Maths diagnostic questions</h1>
+  <p>{{ total }} original questions. Every wrong answer points to one specific misconception.
+     Project a question, students answer A, B, C or D with their hands or answer cards.</p>
+  <p class="actions">
+    <a class="btn" href="sets.html?new=1">Build a quiz set</a>
+    <a class="btn" href="game.html">Start a game</a>
+  </p>
+  <p class="hint">Portable copy: no internet or server needed. Quiz sets and saved tallies live in a data file:
+    use <b>Download data</b> to keep them, and <b>Load data</b> next time.</p>
+</section>
+
+<section data-recent-sets hidden>
+  <h2>Quiz sets</h2>
+  <ul class="chips"></ul>
+</section>
+
+{% for strand, topics in strands %}
+<section class="strand">
+  <h2>{{ strand }}</h2>
+  <ul class="topic-grid">
+    {% for t in topics %}
+    <li><a class="topic-card" href="topic-{{ t.slug }}.html">
+      <span class="topic-name">{{ t.name }}</span>
+      <span class="count">{{ t.count }} question{{ t.count|pluralize }}</span>
+    </a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% endblock %}
+{% block scripts %}
+<script>
+  (function () {
+    function show() {
+      var box = document.querySelector("[data-recent-sets]"), list = box.querySelector("ul");
+      var sets = DQStore.sets().slice(0, 8);
+      list.innerHTML = "";
+      sets.forEach(function (s) {
+        var li = document.createElement("li"), a = document.createElement("a");
+        a.href = "sets.html#" + encodeURIComponent(s.id);
+        a.textContent = s.name;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      box.hidden = !sets.length;
+    }
+    show();
+    document.addEventListener("dq-data-loaded", show);
+  })();
+</script>
+{% endblock %}

@@ -1,0 +1,131 @@
+strand: Statistics
+topic: Mean, median, mode & range
+order: 1
+questions:
+  - id: avg-01
+    year_group: 7
+    stem: 'What is the mode of these numbers? $$5,\ 8,\ 2,\ 8,\ 6,\ 3,\ 8,\ 11$$'
+    options:
+      A: '$3$'
+      B: '$8$'
+      C: '$9$'
+      D: '$11$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Gives how often the mode occurs, not its value'
+        explanation: '8 appears 3 times; the student gives the frequency 3 instead of the value 8.'
+      C:
+        label: 'Confuses mode with range'
+        explanation: 'Works out 11 − 2 = 9, the range.'
+      D:
+        label: 'Thinks the mode is the largest value'
+        explanation: 'Picks the biggest number, 11, instead of the most common.'
+    worked_answer:
+      option: C
+      steps:
+        - 'The largest number is $11$ and the smallest is $2$'
+        - '$11 - 2 = 9$'
+        - '$9$'
+  - id: avg-02
+    year_group: 7
+    stem: 'What is the median of these numbers? $$6,\ 2,\ 9,\ 4,\ 7$$'
+    options:
+      A: '$9$'
+      B: '$5.6$'
+      C: '$7$'
+      D: '$6$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Takes the middle value without ordering first'
+        explanation: '9 is in the middle of the list as written; ordered (2, 4, 6, 7, 9) the median is 6.'
+      B:
+        label: 'Confuses median with mean'
+        explanation: 'Adds to 28 and divides by 5 to get 5.6, the mean.'
+      C:
+        label: 'Confuses median with range'
+        explanation: 'Works out 9 − 2 = 7, the range.'
+    worked_answer:
+      option: A
+      steps:
+        - 'The middle number of $6,\ 2,\ 9,\ 4,\ 7$ is the 3rd one'
+        - 'The 3rd number is $9$'
+        - '$9$'
+  - id: avg-03
+    year_group: 7
+    stem: 'What is the mean of these numbers? $$9,\ 0,\ 6,\ 0,\ 0$$'
+    options:
+      A: '$3$'
+      B: '$7.5$'
+      C: '$15$'
+      D: '$0$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Leaves zeros out of the count'
+        explanation: 'Divides the total 15 by 2, counting only the non-zero values; there are 5 values, so 15 ÷ 5 = 3.'
+      C:
+        label: 'Gives the total, forgets to divide'
+        explanation: 'Adds the values to get 15 but does not divide by how many there are.'
+      D:
+        label: 'Confuses mean with mode'
+        explanation: '0 is the most common value (the mode), not the mean.'
+    worked_answer:
+      option: B
+      steps:
+        - '$9 + 6 = 15$'
+        - 'The numbers are $9$ and $6$, so there are $2$ of them'
+        - '$15 \div 2 = 7.5$'
+        - '$7.5$'
+  - id: avg-04
+    year_group: 8
+    stem: 'Temperatures in °C were recorded: $$-4,\ 3,\ 7,\ -1,\ 5$$ What is the range?'
+    options:
+      A: '$3$'
+      B: '$-11$'
+      C: '$11$'
+      D: '$9$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Ignores the negative sign when subtracting'
+        explanation: 'Treats −4 as 4 and works out 7 − 4 = 3 instead of 7 − (−4) = 11.'
+      B:
+        label: 'Subtracts the largest from the smallest'
+        explanation: 'Works out −4 − 7 = −11; range is largest minus smallest and is never negative.'
+      D:
+        label: 'Uses the last value minus the first value'
+        explanation: 'Works out 5 − (−4) = 9 using the ends of the unordered list.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Last value $5$, first value $-4$'
+        - '$5 - (-4) = 5 + 4$'
+        - '$9$'
+  - id: avg-05
+    year_group: 9
+    stem: 'The mean of 6 numbers is $10$. The number $3$ is added to the list. What is the mean of the 7 numbers?'
+    options:
+      A: '$6.5$'
+      B: '$9$'
+      C: '$10.5$'
+      D: '$13$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Averages the old mean and the new value'
+        explanation: 'Works out (10 + 3) ÷ 2 = 6.5 instead of new total ÷ new count = 63 ÷ 7 = 9.'
+      C:
+        label: 'Divides the new total by the old count'
+        explanation: 'New total is 60 + 3 = 63, but divides by 6 instead of 7: 63 ÷ 6 = 10.5.'
+      D:
+        label: 'Adds the new value to the mean'
+        explanation: 'Works out 10 + 3 = 13 instead of recalculating total ÷ count.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Total of the 6 numbers $= 6 \times 10 = 60$'
+        - 'New total $= 60 + 3 = 63$'
+        - '$63 \div 6 = 10.5$'
+        - '$10.5$'

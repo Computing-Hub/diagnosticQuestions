@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Vote, argue, revote · KS3 Maths{% endblock %}
+{% block main_class %}game-root{% endblock %}
+{% block content %}{% include "questions/_game_app.html" %}{% endblock %}
+{% block scripts %}
+{{ dq_env|json_script:"dq-env" }}
+<script src="{% url 'questions_js' %}"></script>
+<script src="{% static 'js/engine.js' %}"></script>
+<script src="{% static 'js/env-server.js' %}"></script>
+<script src="{% static 'js/game-ui.js' %}"></script>
+{% endblock %}

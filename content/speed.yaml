@@ -1,0 +1,133 @@
+strand: Ratio & proportion
+topic: Speed
+order: 5
+questions:
+  - id: spd-01
+    year_group: 8
+    stem: 'A cyclist travels 6 km in 30 minutes. What is their average speed in km/h?'
+    options:
+      A: '0.2 km/h'
+      B: '6 km/h'
+      C: '3 km/h'
+      D: '12 km/h'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Uses minutes as if they were hours'
+        explanation: 'Works out 6 ÷ 30 without changing 30 minutes into 0.5 hours.'
+      B:
+        label: 'Gives the distance as the speed'
+        explanation: 'Thinks travelling 6 km means 6 km/h, ignoring that it took only half an hour.'
+      C:
+        label: 'Multiplies distance by time'
+        explanation: 'Works out 6 × 0.5 (distance × time); speed is distance ÷ time = 6 ÷ 0.5.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Speed = distance ÷ time'
+        - '$6 \div 30 = 0.2$'
+        - '0.2 km/h'
+
+  - id: spd-02
+    year_group: 7
+    stem: 'A train travels at 80 km/h for 3 hours. How far does it travel?'
+    options:
+      A: '240 km'
+      B: '26.7 km'
+      C: '83 km'
+      D: '80 km'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Divides speed by time to find distance'
+        explanation: 'Works out 80 ÷ 3; distance is speed multiplied by time.'
+      C:
+        label: 'Adds speed and time'
+        explanation: 'Combines the two numbers by adding: 80 + 3.'
+      D:
+        label: 'Thinks the speed is the total distance'
+        explanation: 'Reads 80 km/h as 80 km in total, not 80 km in each hour.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Distance = speed ÷ time'
+        - '$80 \div 3 = 26.66\ldots$'
+        - '26.7 km'
+
+  - id: spd-03
+    year_group: 8
+    stem: 'How long does it take to travel 150 km at 60 km/h?'
+    options:
+      A: '0.4 hours'
+      B: '9000 hours'
+      C: '2.5 hours'
+      D: '90 hours'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Divides speed by distance to find time'
+        explanation: 'Works out 60 ÷ 150; time is distance divided by speed.'
+      B:
+        label: 'Multiplies distance by speed to find time'
+        explanation: 'Works out 150 × 60, not seeing that this cannot give a time.'
+      D:
+        label: 'Subtracts speed from distance'
+        explanation: 'Works out 150 − 60, combining the numbers without using the formula.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Time = distance × speed'
+        - '$150 \times 60 = 9000$'
+        - '9000 hours'
+
+  - id: spd-04
+    year_group: 9
+    stem: 'A runner goes 10 km at 10 km/h, then another 10 km at 5 km/h. What is the average speed for the whole run?'
+    options:
+      A: '7.5 km/h'
+      B: '$6\frac{2}{3}$ km/h'
+      C: '$13\frac{1}{3}$ km/h'
+      D: '60 km/h'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Takes the mean of the two speeds'
+        explanation: 'Averages 10 and 5, but the runner spends longer (2 h) at the slower speed. Use total distance ÷ total time = 20 ÷ 3.'
+      C:
+        label: 'Works out time as speed ÷ distance'
+        explanation: 'Gets 10 ÷ 10 = 1 h and 5 ÷ 10 = 0.5 h, so 20 ÷ 1.5. Time is distance ÷ speed: 1 h + 2 h = 3 h.'
+      D:
+        label: 'Multiplies total distance by total time'
+        explanation: 'Works out 20 × 3 instead of 20 ÷ 3.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Average speed $= \frac{10 + 5}{2}$'
+        - '$= 7.5$'
+        - '7.5 km/h'
+
+  - id: spd-05
+    year_group: 9
+    stem: 'Which speed is the same as 36 km/h?'
+    options:
+      A: '600 m/s'
+      B: '0.01 m/s'
+      C: '$36\,000$ m/s'
+      D: '10 m/s'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Divides by 60 instead of 3600'
+        explanation: 'Changes km to m (36 000) but converts hours to minutes, not seconds.'
+      B:
+        label: 'Converts the time but not the distance'
+        explanation: 'Divides 36 by 3600 but leaves the distance in km.'
+      C:
+        label: 'Converts the distance but not the time'
+        explanation: 'Changes 36 km to 36 000 m but leaves it per hour, not per second.'
+    worked_answer:
+      option: C
+      steps:
+        - '36 km = $36\,000$ m'
+        - 'So 36 km/h is $36\,000$ m every second'
+        - '$36\,000$ m/s'

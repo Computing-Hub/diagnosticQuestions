@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ quiz_set.name }} · KS3 Maths{% endblock %}
+{% block content %}
+<p class="crumbs"><a href="{% url 'set_list' %}">Quiz sets</a></p>
+<h1>{{ quiz_set.name }}</h1>
+<div class="actions">
+  <a class="btn btn-primary" href="{% url 'present' 'set' quiz_set.pk %}">▶ Present</a>
+  <a class="btn" href="{% url 'print' 'set' quiz_set.pk %}">Print worksheet</a>
+  <a class="btn" href="{% url 'game_setup' %}?kind=set&amp;key={{ quiz_set.pk }}">Play as game</a>
+  <a class="btn" href="{% url 'set_edit' quiz_set.pk %}">Edit</a>
+  <form method="post" action="{% url 'set_delete' quiz_set.pk %}" class="inline">{% csrf_token %}
+    <button class="btn btn-danger" type="submit">Delete</button></form>
+</div>
+{% if missing %}<p class="notice">{{ missing }} question{{ missing|pluralize }} in this set no longer exist{{ missing|pluralize:"s," }} and will be skipped.</p>{% endif %}
+<ol class="question-list compact">
+  {% for q in questions %}
+  <li><span class="tag">Y{{ q.year_group }}</span> <span class="hint">{{ q.topic.name }}</span> <span class="math">{{ q.stem }}</span></li>
+  {% endfor %}
+</ol>
+{% endblock %}

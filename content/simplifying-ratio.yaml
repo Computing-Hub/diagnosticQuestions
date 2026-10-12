@@ -1,0 +1,134 @@
+strand: Ratio & proportion
+topic: Simplifying ratio
+order: 1
+questions:
+  - id: rat-01
+    year_group: 7
+    stem: 'Write $12 : 18$ in its simplest form.'
+    options:
+      A: '$4 : 6$'
+      B: '$2 : 5$'
+      C: '$3 : 2$'
+      D: '$2 : 3$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Stops before the simplest form'
+        explanation: 'Divides both parts by 3 but does not notice that 4 and 6 still share a factor of 2.'
+      B:
+        label: 'Compares a part with the total'
+        explanation: 'Writes 12 : 30 (part : whole) and simplifies, confusing a ratio with a fraction of the total.'
+      C:
+        label: 'Swaps the order of the parts'
+        explanation: 'Simplifies correctly but writes the parts in reverse order; order matters in a ratio.'
+    worked_answer:
+      option: A
+      steps:
+        - '$12 : 18$'
+        - 'Both divide by 3: $12 \div 3 = 4$ and $18 \div 3 = 6$'
+        - '$4 : 6$'
+
+  - id: rat-02
+    year_group: 7
+    stem: 'Write 20 cm : 1 m in its simplest form.'
+    options:
+      A: '$20 : 1$'
+      B: '$1 : 50$'
+      C: '$1 : 5$'
+      D: '$2 : 1$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Ignores the different units'
+        explanation: 'Treats 1 m as 1 without converting both quantities to the same unit (100 cm).'
+      B:
+        label: 'Thinks 1 m = 1000 cm'
+        explanation: 'Converts 1 m to 1000 cm, giving 20 : 1000 = 1 : 50.'
+      D:
+        label: 'Thinks 1 m = 10 cm'
+        explanation: 'Converts 1 m to 10 cm, giving 20 : 10 = 2 : 1.'
+    worked_answer:
+      option: D
+      steps:
+        - '20 cm : 1 m'
+        - '1 m = 10 cm, so it is $20 : 10$'
+        - 'Divide both by 10'
+        - '$2 : 1$'
+
+  - id: rat-03
+    year_group: 8
+    stem: 'Write $6 : 12 : 9$ in its simplest form.'
+    options:
+      A: '$2 : 4 : 3$'
+      B: '$1 : 2 : 1$'
+      C: '$2 : 3 : 4$'
+      D: '$1 : 2 : 9$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Divides the parts by different numbers'
+        explanation: 'Divides 6 and 12 by 6 but 9 by 9; every part must be divided by the same number.'
+      C:
+        label: 'Rearranges the parts into size order'
+        explanation: 'Reorders to 6 : 9 : 12 before simplifying, so the parts no longer match their quantities.'
+      D:
+        label: 'Simplifies only the first two parts'
+        explanation: 'Treats 6 : 12 as the ratio to simplify and leaves the third part unchanged.'
+    worked_answer:
+      option: B
+      steps:
+        - '$6 : 12 : 9$'
+        - '$6 \div 6 = 1$, $12 \div 6 = 2$, $9 \div 9 = 1$'
+        - '$1 : 2 : 1$'
+
+  - id: rat-04
+    year_group: 8
+    stem: 'Write $0.5 : 2$ in its simplest form using whole numbers.'
+    options:
+      A: '$5 : 2$'
+      B: '$1 : 4$'
+      C: '$1 : 10$'
+      D: '$1 : 2$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Removes the decimal point from one part'
+        explanation: 'Treats 0.5 as 5 without multiplying the other part by 10 as well.'
+      C:
+        label: 'Thinks 0.5 means one fifth'
+        explanation: 'Reads 0.5 as 1/5 (0.2), so 0.2 : 2 becomes 1 : 10.'
+      D:
+        label: 'Doubles only one part of the ratio'
+        explanation: 'Doubles 0.5 to get 1 but leaves 2 unchanged; both parts must be multiplied by 2.'
+    worked_answer:
+      option: A
+      steps:
+        - '$0.5 : 2$'
+        - '$0.5$ written as a whole number is $5$'
+        - '$5 : 2$'
+
+  - id: rat-05
+    year_group: 9
+    stem: 'Write $4 : 10$ in the form $1 : n$.'
+    options:
+      A: '$1 : 7$'
+      B: '$2 : 5$'
+      C: '$1 : 0.4$'
+      D: '$1 : 2.5$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Subtracts the same amount from each part'
+        explanation: 'Takes 3 from both parts to make the first part 1; ratios scale by dividing, not subtracting.'
+      B:
+        label: 'Gives whole-number simplest form instead'
+        explanation: 'Simplifies to 2 : 5 but does not divide by the first part to make it 1.'
+      C:
+        label: 'Divides the first part by the second'
+        explanation: 'Works out 4 ÷ 10 = 0.4 for n instead of 10 ÷ 4.'
+    worked_answer:
+      option: C
+      steps:
+        - '$4 : 10$'
+        - 'Make the first part 1: $n = 4 \div 10 = 0.4$'
+        - '$1 : 0.4$'

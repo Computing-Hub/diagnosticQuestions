@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img">
+<title>Two straight lines crossing; an angle of 48 degrees and the opposite angle x</title>
+<rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<line x1="528.4" y1="98.3" x2="71.6" y2="301.7" />
+<line x1="528.4" y1="301.7" x2="71.6" y2="98.3" />
+<path d="M 363.9 228.5 A 70 70 0 0 0 363.9 171.5" />
+<path d="M 236.1 171.5 A 70 70 0 0 0 236.1 228.5" />
+<text x="415" y="200" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >48°</text>
+<text x="200" y="200" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >x</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="590" y="390" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

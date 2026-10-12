@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" role="img">
+<title>A right-angled triangle. The horizontal side is b, the vertical side is c and the side opposite the right angle is a</title>
+<rect x="0" y="0" width="520" height="380" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="90,320 450,320 90,120" />
+<polyline points="112,320 112,298 90,298"/>
+<text x="270" y="352" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" font-style="italic">b</text>
+<text x="60" y="220" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" font-style="italic">c</text>
+<text x="284.6" y="193.8" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" font-style="italic">a</text>
+</g>
+<g font-family="sans-serif" fill="#000000"></g>
+</svg>

@@ -1,0 +1,59 @@
+<div class="pbar">
+  <a class="btn btn-small" id="back" href="{{ back_url }}" title="Back">← Exit</a>
+  <span class="ptitle">{{ title }}</span>
+  <span class="pcount" id="counter" aria-live="polite"></span>
+  <span class="tag" id="year"></span>
+  {% include "questions/_prefs.html" %}
+</div>
+
+<div class="timer" id="timer" hidden aria-live="assertive"><span id="timer-num"></span><small>seconds</small></div>
+
+<section class="stage" aria-live="polite">
+  <div class="stem math" id="stem"></div>
+  <img class="q-img" id="qimg" alt="" hidden>
+  <div class="options big" id="options"></div>
+</section>
+
+<aside class="tally-panel" id="tally" hidden aria-label="Quick tally">
+  <h2>Quick tally</h2>
+  <p class="hint">How many students chose each answer?</p>
+  <div class="tally-inputs" id="tally-inputs">
+    {% for l in "ABCD" %}
+    <label class="opt-{{ l|lower }}"><span class="letter">{{ l }}</span>
+      <input type="number" min="0" max="999" inputmode="numeric" data-letter="{{ l }}" value="0"></label>
+    {% endfor %}
+  </div>
+  <div class="bars" id="bars" role="img" aria-label="Bar chart of answers"></div>
+  <p class="tally-top" id="tally-top"></p>
+  <div class="actions">
+    <button type="button" class="btn" id="tally-save">Save tally</button>
+    <button type="button" class="btn" id="tally-clear">Clear</button>
+  </div>
+  <p class="hint">Saving stores only today’s date, the question id and these four counts.</p>
+  <p class="hint" id="tally-status" role="status"></p>
+</aside>
+
+<div class="help" id="help" hidden>
+  <h2>Keyboard shortcuts</h2>
+  <dl>
+    <dt>→ / ←</dt><dd>Next / previous question</dd>
+    <dt>R</dt><dd>Reveal the correct answer</dd>
+    <dt>M</dt><dd>Show the misconception behind each wrong answer</dd>
+    <dt>T</dt><dd>Start / stop thinking time</dd>
+    <dt>F</dt><dd>Full screen</dd>
+    <dt>Y</dt><dd>Quick tally panel</dd>
+    <dt>?</dt><dd>This help</dd>
+  </dl>
+</div>
+
+<nav class="controls" aria-label="Presenter controls">
+  <button type="button" class="btn" data-action="prev" title="Previous (←)">← <span>Prev</span></button>
+  <button type="button" class="btn" data-action="timer" title="Thinking time (T)">⏱ <span>Time</span></button>
+  <label class="think-input" title="Thinking time in seconds"><input type="number" id="think" min="5" max="300" value="{{ think }}"> s</label>
+  <button type="button" class="btn btn-primary" data-action="reveal" title="Reveal answer (R)">R <span>Reveal</span></button>
+  <button type="button" class="btn" data-action="misc" title="Misconceptions (M)">M <span>Misconceptions</span></button>
+  <button type="button" class="btn" data-action="tally" title="Quick tally (Y)">Y <span>Tally</span></button>
+  <button type="button" class="btn" data-action="full" title="Full screen (F)">F <span>Full screen</span></button>
+  <button type="button" class="btn" data-action="help" title="Shortcuts (?)">?</button>
+  <button type="button" class="btn" data-action="next" title="Next (→)"><span>Next</span> →</button>
+</nav>

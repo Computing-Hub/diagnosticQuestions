@@ -1,0 +1,128 @@
+strand: Algebra
+topic: Notation & simplifying
+order: 1
+questions:
+  - id: not-01
+    year_group: 7
+    stem: 'Simplify $5x + 2x$'
+    options:
+      A: '$7x^2$'
+      B: '$10x$'
+      C: '$7x$'
+      D: '$7$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies the letters when adding like terms'
+        explanation: 'Adds 5 and 2 but treats x + x as x times x, giving x squared.'
+      B:
+        label: 'Multiplies coefficients instead of adding'
+        explanation: 'Calculates 5 × 2 instead of 5 + 2 when collecting like terms.'
+      D:
+        label: 'Drops the letter when collecting terms'
+        explanation: 'Adds the numbers and thinks the x terms cancel or disappear.'
+    worked_answer:
+      option: B
+      steps:
+        - '$5x + 2x$'
+        - '$5 \times 2 = 10$'
+        - '$= 10x$'
+  - id: not-02
+    year_group: 7
+    stem: 'Which is the same as $m \times m \times m$?'
+    options:
+      A: '$3m$'
+      B: '$m^3$'
+      C: '$m + 3$'
+      D: '$3m^3$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Treats repeated multiplication as repeated addition'
+        explanation: 'Confuses m × m × m with m + m + m = 3m.'
+      C:
+        label: 'Adds the number of factors to the letter'
+        explanation: 'Counts three m''s and writes "m and 3" as m + 3.'
+      D:
+        label: 'Writes the count as coefficient and power'
+        explanation: 'Uses the 3 twice: once as a multiplier and once as an index.'
+    worked_answer:
+      option: A
+      steps:
+        - '$m \times m \times m$'
+        - 'That is three lots of $m$: $m + m + m$'
+        - '$= 3m$'
+  - id: not-03
+    year_group: 8
+    stem: 'Simplify $3a + 4b - a + 2b$'
+    options:
+      A: '$4a + 6b$'
+      B: '$8ab$'
+      C: '$3a + 6b$'
+      D: '$2a + 6b$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Ignores the sign in front of a term'
+        explanation: 'Adds the a instead of subtracting it: 3a + a = 4a.'
+      B:
+        label: 'Combines unlike terms'
+        explanation: 'Adds all the numbers (3 + 4 − 1 + 2) and joins the letters into ab.'
+      C:
+        label: 'Thinks a on its own means 0a'
+        explanation: 'Treats a as having no coefficient, so 3a − a stays 3a.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3a - a = 3a - 0a = 3a$'
+        - '$4b + 2b = 6b$'
+        - '$3a + 6b$'
+  - id: not-04
+    year_group: 8
+    stem: 'Simplify $2a \times 3b$'
+    options:
+      A: '$5ab$'
+      B: '$23ab$'
+      C: '$6$'
+      D: '$6ab$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds coefficients when multiplying terms'
+        explanation: 'Calculates 2 + 3 instead of 2 × 3 for the number part.'
+      B:
+        label: 'Writes the numbers side by side'
+        explanation: 'Thinks writing 2 and 3 next to each other shows multiplication, giving 23.'
+      C:
+        label: 'Drops the letters when multiplying terms'
+        explanation: 'Multiplies 2 × 3 but thinks the letters disappear.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2a \times 3b = 2 \times 3 \times a \times b$'
+        - '$2 \times 3 = 23$'
+        - '$= 23ab$'
+  - id: not-05
+    year_group: 9
+    stem: 'Simplify $x^2 + x^2$'
+    options:
+      A: '$2x^2$'
+      B: '$x^4$'
+      C: '$2x^4$'
+      D: '$4x$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Adds the powers when adding terms'
+        explanation: 'Applies the multiplication index law to addition: x² + x² = x⁴.'
+      C:
+        label: 'Adds both coefficients and powers'
+        explanation: 'Correctly gets 2 lots but also adds the indices to get x⁴.'
+      D:
+        label: 'Reads x squared as 2x'
+        explanation: 'Thinks x² means 2 × x, so works out 2x + 2x = 4x.'
+    worked_answer:
+      option: D
+      steps:
+        - '$x^2 + x^2 = 2x + 2x$'
+        - '$= 4x$'

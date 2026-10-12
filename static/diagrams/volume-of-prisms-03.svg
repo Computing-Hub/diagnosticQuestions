@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" role="img">
+<title>An L-shaped prism. The L-shaped end face has area 15 square centimetres and the prism is 8 cm long</title>
+<rect x="0" y="0" width="560" height="380" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="70,330 240,330 240,262 138,262 138,160 70,160" />
+<line x1="240" y1="330" x2="440" y2="230" />
+<line x1="240" y1="262" x2="440" y2="162" />
+<line x1="138" y1="262" x2="338" y2="162" />
+<line x1="138" y1="160" x2="338" y2="60" />
+<line x1="70" y1="160" x2="270" y2="60" />
+<polyline points="440,230 440,162 338,162 338,60 270,60"/>
+<line x1="270" y1="60" x2="270" y2="230" stroke-dasharray="8 7"/>
+<line x1="270" y1="230" x2="440" y2="230" stroke-dasharray="8 7"/>
+<line x1="70" y1="330" x2="270" y2="230" stroke-dasharray="8 7"/>
+<text x="124.4" y="296" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >15 cm²</text>
+<text x="354.3" y="308.6" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >8 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="550" y="370" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

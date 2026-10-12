@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img">
+<title>A triangle with base 10 cm, a sloping side of 7 cm and a dashed perpendicular height of 6 cm</title>
+<rect x="0" y="0" width="520" height="390" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="70,330 470,330 214.2,90" />
+<line x1="214.2" y1="90" x2="214.2" y2="330" stroke-dasharray="10 8"/>
+<polyline points="232.2,330 232.2,312 214.2,312"/>
+<text x="270" y="362" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >10 cm</text>
+<text x="254.2" y="240" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >6 cm</text>
+<text x="113" y="192.5" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >7 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="510" y="380" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

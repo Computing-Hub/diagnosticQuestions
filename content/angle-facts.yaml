@@ -1,0 +1,143 @@
+strand: Geometry & measures
+topic: Angle facts
+order: 1
+questions:
+  - id: ang-01
+    year_group: 7
+    stem: 'The diagram shows a straight line. What is the size of angle $x$?'
+    image: diagrams/angle-facts-01.svg
+    image_alt: 'A straight line with a ray from a point on it. The angles either side of the ray are 35 degrees and x.'
+    options:
+      A: '$325^\circ$'
+      B: '$35^\circ$'
+      C: '$145^\circ$'
+      D: '$55^\circ$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Uses 360° for angles on a straight line'
+        explanation: 'Calculates 360 − 35, mixing up angles on a line with angles around a point.'
+      B:
+        label: 'Assumes the two angles are equal'
+        explanation: 'Treats the angles as if they were vertically opposite, so gives 35°.'
+      D:
+        label: 'Uses 90° for angles on a straight line'
+        explanation: 'Calculates 90 − 35, confusing a straight line with a right angle.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x + 35 = 360$'
+        - '$x = 360 - 35$'
+        - '$325^\circ$'
+
+  - id: ang-02
+    year_group: 7
+    stem: 'Three lines meet at a point. What is the size of angle $x$?'
+    image: diagrams/angle-facts-02.svg
+    image_alt: 'Three lines meeting at a point, making angles of 70 degrees, 80 degrees and x all the way round.'
+    options:
+      A: '$210^\circ$'
+      B: '$30^\circ$'
+      C: '$150^\circ$'
+      D: '$120^\circ$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses 180° for angles around a point'
+        explanation: 'Calculates 180 − 70 − 80, using the straight-line total instead of 360°.'
+      C:
+        label: 'Thinks x equals the sum of the other two angles'
+        explanation: 'Adds 70 + 80 and stops, as if x were equal to the sum of the known angles.'
+      D:
+        label: 'Assumes angles around a point are equal'
+        explanation: 'Divides 360 by 3, ignoring the given angles.'
+    worked_answer:
+      option: D
+      steps:
+        - 'There are three angles at the point'
+        - '$360 \div 3 = 120$'
+        - '$120^\circ$'
+
+  - id: ang-03
+    year_group: 8
+    stem: 'Two straight lines cross. What is the size of angle $x$?'
+    image: diagrams/angle-facts-03.svg
+    image_alt: 'Two straight lines crossing. One angle is 48 degrees and the angle opposite it is x.'
+    options:
+      A: '$132^\circ$'
+      B: '$312^\circ$'
+      C: '$42^\circ$'
+      D: '$48^\circ$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Treats opposite angles as on a straight line'
+        explanation: 'Calculates 180 − 48, using the rule for adjacent angles instead of vertically opposite angles.'
+      B:
+        label: 'Subtracts from 360° for opposite angles'
+        explanation: 'Calculates 360 − 48, thinking the two opposite angles make a full turn.'
+      C:
+        label: 'Confuses vertically opposite with complementary'
+        explanation: 'Calculates 90 − 48, confusing vertically opposite with complementary angles.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x + 48 = 180$'
+        - '$x = 180 - 48$'
+        - '$132^\circ$'
+
+  - id: ang-04
+    year_group: 8
+    stem: 'The two horizontal lines are parallel. What is the size of angle $x$?'
+    image: diagrams/angle-facts-04.svg
+    image_alt: 'Two parallel lines crossed by a sloping line. At the top line the angle between the parallels on the right of the sloping line is 70 degrees. At the bottom line the angle between the parallels on the same side is x.'
+    options:
+      A: '$70^\circ$'
+      B: '$110^\circ$'
+      C: '$290^\circ$'
+      D: '$20^\circ$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks co-interior angles are equal'
+        explanation: 'Treats these as alternate or corresponding angles; co-interior angles add to 180°.'
+      C:
+        label: 'Thinks co-interior angles add to 360°'
+        explanation: 'Calculates 360 − 70 instead of 180 − 70.'
+      D:
+        label: 'Thinks co-interior angles add to 90°'
+        explanation: 'Calculates 90 − 70, using a right angle as the total.'
+    worked_answer:
+      option: C
+      steps:
+        - '$x + 70 = 360$'
+        - '$x = 360 - 70$'
+        - '$290^\circ$'
+
+  - id: ang-05
+    year_group: 7
+    stem: 'What is the size of angle $x$ in this triangle?'
+    image: diagrams/angle-facts-05.svg
+    image_alt: 'A right-angled triangle. The right angle is marked with a square. Another angle is 35 degrees and the third angle is x.'
+    options:
+      A: '$145^\circ$'
+      B: '$235^\circ$'
+      C: '$55^\circ$'
+      D: '$35^\circ$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Ignores the right-angle marker'
+        explanation: 'Calculates 180 − 35, not counting the 90° shown by the square.'
+      B:
+        label: 'Uses 360° for angles in a triangle'
+        explanation: 'Calculates 360 − 90 − 35, using the quadrilateral total.'
+      D:
+        label: 'Assumes the two acute angles are equal'
+        explanation: 'Thinks the triangle is isosceles, so x matches the 35° angle.'
+    worked_answer:
+      option: B
+      steps:
+        - '$x + 90 + 35 = 360$'
+        - '$x = 360 - 125$'
+        - '$235^\circ$'

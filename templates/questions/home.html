@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="intro">
+  <h1>KS3 Maths diagnostic questions</h1>
+  <p>{{ total }} original questions. Every wrong answer points to one specific misconception.
+     Project a question, students answer A, B, C or D with their hands or answer cards.</p>
+  <p class="actions">
+    <a class="btn" href="{% url 'set_new' %}">Build a quiz set</a>
+    <a class="btn" href="{% url 'game_setup' %}">Start a team game</a>
+  </p>
+</section>
+
+{% if sets %}
+<section>
+  <h2>Recent quiz sets</h2>
+  <ul class="chips">
+    {% for s in sets %}<li><a href="{% url 'set_detail' s.pk %}">{{ s.name }}</a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% for strand, topics in strands %}
+<section class="strand">
+  <h2>{{ strand }}</h2>
+  <ul class="topic-grid">
+    {% for t in topics %}
+    <li><a class="topic-card" href="{% url 'topic' t.slug %}">
+      <span class="topic-name">{{ t.name }}</span>
+      <span class="count">{{ t.count }} question{{ t.count|pluralize }}</span>
+    </a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% empty %}
+<p class="notice">No questions loaded yet. Run <code>python manage.py load_questions</code>.</p>
+{% endfor %}
+{% endblock %}

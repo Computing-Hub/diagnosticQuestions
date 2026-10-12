@@ -1,0 +1,130 @@
+strand: Algebra
+topic: Factorising
+order: 4
+questions:
+  - id: fac-01
+    year_group: 8
+    stem: 'Factorise fully $6x + 9$'
+    options:
+      A: '$3(2x + 9)$'
+      B: '$x(6 + 9)$'
+      C: '$3(2x + 3)$'
+      D: '$3(3x + 6)$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Divides only the first term by the factor'
+        explanation: 'Takes 3 out of 6x but leaves 9 unchanged inside the bracket.'
+      B:
+        label: 'Thinks the letter is a common factor of both terms'
+        explanation: 'Takes x outside even though 9 has no x.'
+      D:
+        label: 'Subtracts the factor instead of dividing'
+        explanation: 'Works out 6 − 3 and 9 − 3 for the terms in the bracket.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The common factor of $6x$ and $9$ is $3$'
+        - '$6 - 3 = 3$, so $3x$'
+        - '$9 - 3 = 6$'
+        - '$3(3x + 6)$'
+  - id: fac-02
+    year_group: 8
+    stem: 'Factorise fully $8a - 12$'
+    options:
+      A: '$4(2a - 3)$'
+      B: '$2(4a - 6)$'
+      C: '$4(2a + 3)$'
+      D: '$4(2a - 12)$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Does not use the highest common factor'
+        explanation: 'Takes out 2, which is a common factor but not the highest, so it is not fully factorised.'
+      C:
+        label: 'Loses the negative sign when factorising'
+        explanation: 'Divides correctly but changes −12 to +3 inside the bracket.'
+      D:
+        label: 'Divides only the first term by the factor'
+        explanation: 'Takes 4 out of 8a but leaves the 12 unchanged.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The common factor is $4$'
+        - '$8a \div 4 = 2a$'
+        - '$4(2a - 12)$'
+  - id: fac-03
+    year_group: 9
+    stem: 'Factorise fully $x^2 + 5x$'
+    options:
+      A: '$x(x + 5x)$'
+      B: '$x(x + 5)$'
+      C: '$5(x^2 + x)$'
+      D: '$x(x^2 + 5)$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Does not divide the second term by x'
+        explanation: 'Takes x outside but leaves 5x unchanged in the bracket.'
+      C:
+        label: 'Thinks the number is a common factor of both terms'
+        explanation: 'Takes out 5 even though x² has no factor of 5.'
+      D:
+        label: 'Does not divide the first term by x'
+        explanation: 'Takes x outside but leaves x² unchanged in the bracket.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Take out $x$'
+        - '$x^2 \div x = x$'
+        - '$x(x + 5x)$'
+  - id: fac-04
+    year_group: 9
+    stem: 'Factorise $x^2 + 7x + 12$'
+    options:
+      A: '$(x + 7)(x + 12)$'
+      B: '$(x + 6)(x + 2)$'
+      C: '$(x + 5)(x + 2)$'
+      D: '$(x + 3)(x + 4)$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Copies the coefficients into the brackets'
+        explanation: 'Puts 7 and 12 straight into the brackets without finding a factor pair.'
+      B:
+        label: 'Checks the product but not the sum'
+        explanation: 'Uses a factor pair of 12 without checking it adds to 7.'
+      C:
+        label: 'Checks the sum but not the product'
+        explanation: 'Finds two numbers that add to 7 without checking they multiply to 12.'
+    worked_answer:
+      option: C
+      steps:
+        - '$x^2 + 7x + 12$'
+        - '$5 + 2 = 7$'
+        - '$(x + 5)(x + 2)$'
+  - id: fac-05
+    year_group: 9
+    stem: 'Factorise $x^2 - 5x + 6$'
+    options:
+      A: '$(x - 2)(x - 3)$'
+      B: '$(x + 2)(x + 3)$'
+      C: '$(x + 2)(x - 3)$'
+      D: '$(x - 6)(x + 1)$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Ignores the signs in the expression'
+        explanation: 'Finds 2 and 3 but makes both positive, which gives +5x.'
+      C:
+        label: 'Thinks a minus sign means one number is negative'
+        explanation: 'Sees −5x and makes just one number negative, which gives −6 not +6.'
+      D:
+        label: 'Matches the sum but not the product'
+        explanation: 'Finds −6 and 1, which add to −5 but multiply to −6.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Two numbers that multiply to $6$ and add to $5$'
+        - '$2 \times 3 = 6$ and $2 + 3 = 5$'
+        - '$(x + 2)(x + 3)$'

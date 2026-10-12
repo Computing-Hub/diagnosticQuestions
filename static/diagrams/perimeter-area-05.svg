@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img">
+<title>An L-shape made of straight sides meeting at right angles. Bottom 10 cm, left side 8 cm, top 4 cm, right side 5 cm; two inner sides are not labelled</title>
+<rect x="0" y="0" width="560" height="400" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<polygon points="90,340 450,340 450,160 234,160 234,52 90,52" />
+<text x="270" y="370" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >10 cm</text>
+<text x="45" y="196" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >8 cm</text>
+<text x="162" y="28" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >4 cm</text>
+<text x="495" y="250" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >5 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="550" y="390" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

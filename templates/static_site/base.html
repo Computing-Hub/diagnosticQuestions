@@ -1,0 +1,42 @@
+<!doctype html>
+{# Portable USB copy: every link and asset is a relative path, so it works from file:// with no server. #}
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}KS3 Maths diagnostic questions{% endblock %}</title>
+  <link rel="stylesheet" href="static/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="static/css/site.css">
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem("dq-prefs") || "{}");
+      if (p.font) document.documentElement.dataset.font = p.font;
+      if (p.theme) document.documentElement.dataset.theme = p.theme;
+    } catch (e) {}
+  </script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% block header %}
+  <header class="site-header">
+    <a class="brand" href="index.html">KS3 Maths <span>Diagnostic questions</span></a>
+    <nav aria-label="Main">
+      <a href="index.html">Topics</a>
+      <a href="sets.html">Quiz sets</a>
+      <a href="game.html">Team game</a>
+    </nav>
+    {% include "static_site/_data_bar.html" %}
+    {% include "questions/_prefs.html" %}
+  </header>
+  {% endblock %}
+  <main id="main" class="{% block main_class %}page{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+  <script src="static/vendor/katex/katex.min.js"></script>
+  <script src="static/vendor/katex/auto-render.min.js"></script>
+  <script src="static/js/common.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="static/js/env-static.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

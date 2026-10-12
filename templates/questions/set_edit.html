@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}{% if quiz_set %}Edit {{ quiz_set.name }}{% else %}New quiz set{% endif %} · KS3 Maths{% endblock %}
+{% block content %}
+<h1>{% if quiz_set %}Edit “{{ quiz_set.name }}”{% else %}New quiz set{% endif %}</h1>
+<form method="post" class="builder">
+  {% csrf_token %}
+  {% if error %}<p class="msg msg-error" role="alert">{{ error }}</p>{% endif %}
+  <div class="builder-head">
+    <label>Set name <input type="text" name="name" value="{{ name }}" maxlength="120" required placeholder="e.g. Y8 starter wk 6"></label>
+    <fieldset class="filter" aria-label="Show year groups">
+      <legend>Show</legend>
+      <label><input type="checkbox" data-year-filter value="7" checked> Y7</label>
+      <label><input type="checkbox" data-year-filter value="8" checked> Y8</label>
+      <label><input type="checkbox" data-year-filter value="9" checked> Y9</label>
+    </fieldset>
+    <p><strong id="picked-count">0</strong> ticked</p>
+    <button class="btn btn-primary" type="submit">Save set</button>
+  </div>
+  {% for strand, topics in strands %}
+  <h2>{{ strand }}</h2>
+  {% for t in topics %}
+  <details class="builder-topic">
+    <summary>{{ t.name }} <span class="hint">({{ t.questions.all|length }})</span></summary>
+    <ul>
+      {% for q in t.questions.all %}
+      <li data-year="{{ q.year_group }}"><label>
+        <input type="checkbox" name="q" value="{{ q.id }}" {% if q.id in selected %}checked{% endif %}>
+        <span class="tag">Y{{ q.year_group }}</span> <span class="math">{{ q.stem }}</span>
+      </label></li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+  {% endfor %}
+</form>
+{% endblock %}
+{% block scripts %}
+<script>
+  (function () {
+    var form = document.querySelector(".builder");
+    function update() {
+      document.getElementById("picked-count").textContent = form.querySelectorAll("input[name=q]:checked").length;
+      var years = Array.from(form.querySelectorAll("[data-year-filter]:checked")).map(function (c) { return c.value; });
+      form.querySelectorAll("li[data-year]").forEach(function (li) { li.hidden = years.indexOf(li.dataset.year) < 0; });
+    }
+    form.addEventListener("change", update);
+    form.querySelectorAll("input[name=q]:checked").forEach(function (c) { c.closest("details").open = true; });
+    update();
+  })();
+</script>
+{% endblock %}

@@ -1,0 +1,128 @@
+strand: Algebra
+topic: Substitution
+order: 2
+questions:
+  - id: sub-01
+    year_group: 7
+    stem: 'Find the value of $3n$ when $n = 4$'
+    options:
+      A: '$34$'
+      B: '$12$'
+      C: '$7$'
+      D: '$81$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Writes the digits side by side'
+        explanation: 'Replaces n with 4 and reads 3n as the two-digit number 34.'
+      C:
+        label: 'Thinks 3n means 3 + n'
+        explanation: 'Does not know that a number next to a letter means multiply.'
+      D:
+        label: 'Reads 3n as 3 to the power n'
+        explanation: 'Calculates 3⁴ = 81 instead of 3 × 4.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3n = 3 + n$'
+        - '$= 3 + 4$'
+        - '$= 7$'
+  - id: sub-02
+    year_group: 8
+    stem: 'Find the value of $2a^2$ when $a = 3$'
+    options:
+      A: '$18$'
+      B: '$36$'
+      C: '$12$'
+      D: '$11$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Squares the coefficient as well'
+        explanation: 'Works out (2 × 3)² = 36 instead of 2 × 3².'
+      C:
+        label: 'Thinks squaring means multiplying by 2'
+        explanation: 'Calculates a² as 3 × 2 = 6, then 2 × 6 = 12.'
+      D:
+        label: 'Reads 2a squared as 2 + a squared'
+        explanation: 'Adds the coefficient instead of multiplying: 2 + 9 = 11.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2a^2 = (2 \times 3)^2$'
+        - '$= 6^2$'
+        - '$= 36$'
+  - id: sub-03
+    year_group: 8
+    stem: 'Find the value of $a - b$ when $a = 2$ and $b = -5$'
+    options:
+      A: '$-3$'
+      B: '$-7$'
+      C: '$7$'
+      D: '$3$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Treats subtracting a negative as subtracting'
+        explanation: 'Works out 2 − 5 = −3, ignoring that b is negative.'
+      B:
+        label: 'Adds the numbers but keeps a negative sign'
+        explanation: 'Sees two minus signs, adds 2 and 5, then thinks the answer must be negative.'
+      D:
+        label: 'Subtracts the smaller number from the larger'
+        explanation: 'Ignores signs and order, calculating 5 − 2 = 3.'
+    worked_answer:
+      option: A
+      steps:
+        - '$a - b = 2 - 5$'
+        - '$= -3$'
+  - id: sub-04
+    year_group: 8
+    stem: 'Use $v = u + at$ to find $v$ when $u = 5$, $a = 2$ and $t = 3$'
+    options:
+      A: '$21$'
+      B: '$10$'
+      C: '$28$'
+      D: '$11$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Works left to right, ignoring order of operations'
+        explanation: 'Adds 5 + 2 first, then multiplies by 3.'
+      B:
+        label: 'Thinks letters next to each other mean add'
+        explanation: 'Reads at as a + t, so calculates 5 + 2 + 3.'
+      C:
+        label: 'Joins substituted digits into one number'
+        explanation: 'Reads at as the number 23, so calculates 5 + 23.'
+    worked_answer:
+      option: A
+      steps:
+        - '$v = 5 + 2 \times 3$'
+        - '$= 7 \times 3$'
+        - '$= 21$'
+  - id: sub-05
+    year_group: 9
+    stem: 'Find the value of $3x^2$ when $x = -2$'
+    options:
+      A: '$-12$'
+      B: '$12$'
+      C: '$36$'
+      D: '$-6$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks a negative number squared is negative'
+        explanation: 'Works out (−2)² as −4, giving 3 × −4 = −12.'
+      C:
+        label: 'Multiplies by the coefficient before squaring'
+        explanation: 'Calculates (3 × −2)² = 36 instead of 3 × (−2)².'
+      D:
+        label: 'Ignores the power'
+        explanation: 'Calculates 3 × −2 and forgets to square.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3x^2 = (3 \times -2)^2$'
+        - '$= (-6)^2$'
+        - '$= 36$'

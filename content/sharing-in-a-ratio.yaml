@@ -1,0 +1,135 @@
+strand: Ratio & proportion
+topic: Sharing in a ratio
+order: 2
+questions:
+  - id: shr-01
+    year_group: 7
+    stem: '£30 is shared in the ratio $2 : 3$. How much is the larger share?'
+    options:
+      A: '£15'
+      B: '£18'
+      C: '£12'
+      D: '£90'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Shares equally, ignoring the ratio'
+        explanation: 'Splits £30 between two people as if the ratio were 1 : 1.'
+      C:
+        label: 'Gives the share for the first number'
+        explanation: 'Finds one part (£6) correctly but multiplies by 2, assuming the first number gives the larger share.'
+      D:
+        label: 'Multiplies the total by the ratio part'
+        explanation: 'Works out £30 × 3 instead of dividing the total into 5 equal parts first.'
+    worked_answer:
+      option: C
+      steps:
+        - '$2 + 3 = 5$ parts'
+        - '£30 ÷ 5 = £6 for one part'
+        - 'The 2 comes first, so that share is bigger: £6 × 2'
+        - '£12'
+
+  - id: shr-02
+    year_group: 7
+    stem: 'In a class, boys : girls $= 3 : 5$. There are 40 pupils. How many are boys?'
+    options:
+      A: '24'
+      B: '3'
+      C: '15'
+      D: '25'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Treats the ratio 3 : 5 as the fraction 3/5'
+        explanation: 'Finds 3/5 of 40, using part : part as if it were part : whole (there are 8 parts in total).'
+      B:
+        label: 'Reads the ratio numbers as the actual amounts'
+        explanation: 'Thinks the ratio 3 : 5 means there are exactly 3 boys.'
+      D:
+        label: 'Matches each part to the wrong group'
+        explanation: 'Uses the 5 parts for boys, finding the number of girls instead.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Boys are $\frac{3}{5}$ of the class'
+        - '$\frac{3}{5} \times 40 = 24$'
+        - '24'
+
+  - id: shr-03
+    year_group: 8
+    stem: 'Ben and Cara share some sweets in the ratio $2 : 5$. Ben gets 8 sweets. How many sweets are there altogether?'
+    options:
+      A: '20'
+      B: '56'
+      C: '19'
+      D: '28'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Gives the other share instead of the total'
+        explanation: 'Finds Cara''s share (5 parts = 20) and stops, forgetting to add Ben''s 8.'
+      B:
+        label: 'Treats the known share as one part'
+        explanation: 'Multiplies 8 by the 7 parts, not realising Ben''s 8 sweets are 2 parts.'
+      C:
+        label: 'Uses addition instead of multiplying'
+        explanation: 'Adds the difference in parts (5 − 2 = 3) to Ben''s 8, so Cara gets 11 and the total is 19; ratio is multiplicative.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2 + 5 = 7$ parts'
+        - 'Ben has 8 sweets, so one part is 8'
+        - '$8 \times 7 = 56$'
+        - '56'
+
+  - id: shr-04
+    year_group: 8
+    stem: 'A bag has red and blue counters in the ratio red : blue $= 2 : 3$. What fraction of the counters are red?'
+    options:
+      A: '$\frac{2}{5}$'
+      B: '$\frac{2}{3}$'
+      C: '$\frac{2}{6}$'
+      D: '$\frac{1}{2}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Writes the ratio directly as a fraction'
+        explanation: 'Turns 2 : 3 into 2/3, using the blue part as the denominator instead of the total.'
+      C:
+        label: 'Multiplies the parts to find the total'
+        explanation: 'Thinks the total number of parts is 2 × 3 = 6 instead of 2 + 3 = 5.'
+      D:
+        label: 'Assumes two colours means half each'
+        explanation: 'Ignores the ratio and thinks each colour must make up half.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Total parts: $2 \times 3 = 6$'
+        - 'Red is 2 of the parts'
+        - '$\frac{2}{6}$'
+
+  - id: shr-05
+    year_group: 9
+    stem: '£60 is shared in the ratio $1 : 2 : 3$. How much is the largest share?'
+    options:
+      A: '£10'
+      B: '£20'
+      C: '£30'
+      D: '£180'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Stops after finding one part'
+        explanation: 'Correctly finds one part (£60 ÷ 6 = £10) but does not multiply by 3.'
+      B:
+        label: 'Divides by the number of people'
+        explanation: 'Splits £60 between three people equally, ignoring the ratio.'
+      D:
+        label: 'Multiplies the total by the ratio part'
+        explanation: 'Works out £60 × 3 instead of first dividing £60 into 6 equal parts.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The largest part of the ratio is 3'
+        - '£60 × 3 = £180'
+        - '£180'

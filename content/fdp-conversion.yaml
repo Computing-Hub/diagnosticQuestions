@@ -1,0 +1,129 @@
+strand: Number
+topic: Fractions, decimals & percentages
+order: 8
+questions:
+  - id: fdp-01
+    year_group: 7
+    stem: 'Write $\frac{3}{5}$ as a decimal.'
+    options:
+      A: '$0.6$'
+      B: '$0.35$'
+      C: '$0.3$'
+      D: '$1.\dot{6}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Writes numerator and denominator after the point'
+        explanation: 'Thinks 3/5 is written as 0.35, putting the digits side by side.'
+      C:
+        label: 'Reads the numerator as tenths'
+        explanation: 'Thinks 3 out of anything is 0.3, ignoring the denominator.'
+      D:
+        label: 'Divides the denominator by the numerator'
+        explanation: 'Has worked out 5 ÷ 3 instead of 3 ÷ 5.'
+    worked_answer:
+      option: B
+      steps:
+        - '$\frac{3}{5}$: the top is $3$, the bottom is $5$'
+        - 'As a decimal that is $0.35$'
+        - '$0.35$'
+  - id: fdp-02
+    year_group: 7
+    stem: 'Write $0.07$ as a percentage.'
+    options:
+      A: '$70\%$'
+      B: '$7\%$'
+      C: '$0.07\%$'
+      D: '$0.7\%$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Ignores the zero placeholder'
+        explanation: 'Reads 0.07 as if it were 0.7, so gives 70%.'
+      C:
+        label: 'Adds a % sign without multiplying by 100'
+        explanation: 'Thinks a decimal becomes a percentage just by writing % after it.'
+      D:
+        label: 'Multiplies by 10 instead of 100'
+        explanation: 'Has moved the digits only one place.'
+    worked_answer:
+      option: C
+      steps:
+        - '$0.07$ as a percentage'
+        - 'The number is $0.07$, so the percentage is $0.07\%$'
+        - '$0.07\%$'
+  - id: fdp-03
+    year_group: 8
+    stem: 'Write $35\%$ as a fraction in its simplest form.'
+    options:
+      A: '$\frac{7}{20}$'
+      B: '$\frac{1}{35}$'
+      C: '$\frac{3}{5}$'
+      D: '$\frac{7}{2}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks a percentage means 1 out of that number'
+        explanation: 'Reads 35% as 1/35.'
+      C:
+        label: 'Splits the digits into numerator and denominator'
+        explanation: 'Uses the digits 3 and 5 as the fraction 3/5.'
+      D:
+        label: 'Thinks per cent means out of 10'
+        explanation: 'Has written 35/10 and simplified it to 7/2.'
+    worked_answer:
+      option: D
+      steps:
+        - '$35\% = \frac{35}{10}$'
+        - 'Divide top and bottom by 5'
+        - '$= \frac{7}{2}$'
+  - id: fdp-04
+    year_group: 9
+    stem: 'Which of these is the largest?'
+    options:
+      A: '$0.58$'
+      B: '$\frac{6}{11}$'
+      C: '$6\%$'
+      D: '$0.6$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Compares decimals as whole numbers'
+        explanation: 'Thinks 0.58 > 0.6 because 58 > 6.'
+      B:
+        label: 'Writes a fraction''s digits after a decimal point'
+        explanation: 'Reads 6/11 as 0.611, which beats 0.6, but 6/11 ≈ 0.55.'
+      C:
+        label: 'Ignores the % sign when comparing'
+        explanation: 'Reads 6% as 6, but 6% = 0.06.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\frac{6}{11} \approx 0.55$ and $6\% = 0.06$'
+        - 'Compare $0.58$ and $0.6$: $58 > 6$'
+        - 'So the largest is $0.58$'
+  - id: fdp-05
+    year_group: 8
+    stem: 'Write $\frac{1}{8}$ as a percentage.'
+    options:
+      A: '$18\%$'
+      B: '$8\%$'
+      C: '$12.5\%$'
+      D: '$1.25\%$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Writes the numerator and denominator digits together'
+        explanation: 'Turns 1/8 into 18%.'
+      B:
+        label: 'Uses the denominator as the percentage'
+        explanation: 'Thinks 1 out of 8 means 8%.'
+      D:
+        label: 'Multiplies the decimal by 10 instead of 100'
+        explanation: 'Has 1/8 = 0.125 correctly but then multiplies by 10.'
+    worked_answer:
+      option: D
+      steps:
+        - '$1 \div 8 = 0.125$'
+        - '$0.125 \times 10 = 1.25$'
+        - '$\frac{1}{8} = 1.25\%$'

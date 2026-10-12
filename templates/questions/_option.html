@@ -1,0 +1,9 @@
+<div class="option opt-{{ o.letter|lower }}{% if reveal and o.correct %} is-correct{% elif reveal %} is-wrong{% endif %}">
+  <span class="letter" aria-hidden="true">{{ o.letter }}</span>
+  <span class="sr-only">Option {{ o.letter }}:</span>
+  <span class="text math">{{ o.text }}</span>
+  {% if reveal %}<span class="verdict">{% if o.correct %}✓ Correct{% else %}✗{% endif %}</span>{% endif %}
+  {% if reveal and show_misc and not o.correct %}
+  <div class="miscon"><strong>{{ o.misconception }}</strong><span>{{ o.explanation }}</span></div>
+  {% endif %}
+</div>

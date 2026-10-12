@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img">
+<title>A semicircle with a radius of 4 cm</title>
+<rect x="0" y="0" width="500" height="320" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<path d="M 60 270 A 190 190 0 0 1 440 270 Z"/>
+<circle cx="250" cy="270" r="4" fill="#000000"/>
+<line x1="250" y1="270" x2="345" y2="105.5" />
+<text x="272" y="176" font-size="26" text-anchor="end" dominant-baseline="middle" fill="#000000" stroke="none" >4 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="490" y="310" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

@@ -1,0 +1,127 @@
+strand: Number
+topic: Percentages of amounts
+order: 9
+questions:
+  - id: pct-01
+    year_group: 7
+    stem: 'Find $10\%$ of £60.'
+    options:
+      A: '£50'
+      B: '£600'
+      C: '£6'
+      D: '£10'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Subtracts the percentage as a number'
+        explanation: 'Has done £60 − 10 instead of finding 10%.'
+      B:
+        label: 'Multiplies by 10 instead of dividing'
+        explanation: 'Knows 10 is involved but has done 60 × 10.'
+      D:
+        label: 'Thinks 10% is always 10'
+        explanation: 'Treats the percentage as a fixed amount, not a part of £60.'
+    worked_answer:
+      option: B
+      steps:
+        - '$10\%$ of £60'
+        - '$60 \times 10 = 600$'
+        - '£600'
+  - id: pct-02
+    year_group: 7
+    stem: 'Find $25\%$ of $80$.'
+    options:
+      A: '$20$'
+      B: '$55$'
+      C: '$3.2$'
+      D: '$40$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Subtracts 25 from the amount'
+        explanation: 'Has done 80 − 25 = 55.'
+      C:
+        label: 'Divides the amount by the percentage'
+        explanation: 'Has done 80 ÷ 25 = 3.2.'
+      D:
+        label: 'Thinks 25% is a half'
+        explanation: 'Confuses 25% with 50% and halves 80.'
+    worked_answer:
+      option: C
+      steps:
+        - '$25\%$ of $80$'
+        - '$80 \div 25 = 3.2$'
+  - id: pct-03
+    year_group: 8
+    stem: 'Increase £40 by $15\%$.'
+    options:
+      A: '£55'
+      B: '£60'
+      C: '£6'
+      D: '£46'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds the percentage as an amount of money'
+        explanation: 'Has done £40 + £15.'
+      B:
+        label: 'Uses 1.5 as the multiplier for 15%'
+        explanation: 'Has done 40 × 1.5 = 60 (that is a 50% increase).'
+      C:
+        label: 'Finds the increase but does not add it on'
+        explanation: 'Has worked out 15% of £40 = £6 and stopped.'
+    worked_answer:
+      option: C
+      steps:
+        - '$10\%$ of £40 is £4'
+        - '$5\%$ of £40 is £2'
+        - '$15\%$ is £4 + £2 = £6'
+  - id: pct-04
+    year_group: 8
+    stem: 'What is $1\%$ of $350$?'
+    options:
+      A: '$35$'
+      B: '$3.5$'
+      C: '$0.35$'
+      D: '$349$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Divides by 10 to find 1%'
+        explanation: 'Has found 10% instead of 1%.'
+      C:
+        label: 'Divides by 1000 to find 1%'
+        explanation: 'Has moved the digits three places instead of two.'
+      D:
+        label: 'Subtracts 1 from the amount'
+        explanation: 'Treats 1% as the number 1 and takes it away.'
+    worked_answer:
+      option: A
+      steps:
+        - '$1\%$ of $350$'
+        - '$350 \div 10 = 35$'
+  - id: pct-05
+    year_group: 9
+    stem: 'Which single multiplier decreases an amount by $5\%$?'
+    options:
+      A: '$\times 0.5$'
+      B: '$\times 1.05$'
+      C: '$\times 0.95$'
+      D: '$\times 0.05$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks 5% as a decimal is 0.5'
+        explanation: 'Writes 5% as 0.5 instead of 0.05.'
+      B:
+        label: 'Uses the increase multiplier for a decrease'
+        explanation: '× 1.05 increases by 5%.'
+      D:
+        label: 'Finds the 5% itself, not the amount left'
+        explanation: '× 0.05 gives the decrease, not the new amount (95%).'
+    worked_answer:
+      option: A
+      steps:
+        - '$5\% = 0.5$'
+        - '$100\% - 5\%$ is $1 - 0.5 = 0.5$'
+        - 'Multiplier: $\times 0.5$'

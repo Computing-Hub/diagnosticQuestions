@@ -1,0 +1,136 @@
+strand: Number
+topic: Order of operations
+order: 3
+questions:
+  - id: ooo-01
+    year_group: 7
+    stem: 'Work out $15 - 3 \times 4 + 1$'
+    options:
+      A: '$4$'
+      B: '$49$'
+      C: '$2$'
+      D: '$60$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Works strictly left to right'
+        explanation: 'Does 15 - 3 = 12, then x 4 = 48, then + 1.'
+      C:
+        label: 'Does addition before subtraction'
+        explanation: 'Reads BIDMAS literally: 15 - (12 + 1) = 2.'
+      D:
+        label: 'Does adding and subtracting before multiplying'
+        explanation: 'Works out 15 - 3 and 4 + 1 first, then multiplies: 12 x 5.'
+    worked_answer:
+      option: B
+      steps:
+        - '$15 - 3 = 12$'
+        - '$12 \times 4 = 48$'
+        - '$48 + 1 = 49$'
+        - '$49$'
+  - id: ooo-02
+    year_group: 8
+    stem: 'Work out $2 + 3(5 - 1)$'
+    options:
+      A: '$20$'
+      B: '$14$'
+      C: '$9$'
+      D: '$16$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Adds before multiplying'
+        explanation: 'Works out 2 + 3 = 5 first, then multiplies by the bracket (4).'
+      C:
+        label: 'Thinks a number next to a bracket is added'
+        explanation: 'Reads 3(4) as 3 + 4, giving 2 + 3 + 4.'
+      D:
+        label: 'Ignores the brackets'
+        explanation: 'Works out 2 + 3 x 5 - 1 = 16.'
+    worked_answer:
+      option: C
+      steps:
+        - '$2 + 3(5 - 1)$'
+        - '$= 2 + 3(4)$'
+        - '$= 2 + 3 + 4$'
+        - '$9$'
+  - id: ooo-03
+    year_group: 8
+    stem: 'Work out $4 + 2 \times 3^2$'
+    options:
+      A: '$54$'
+      B: '$40$'
+      C: '$16$'
+      D: '$22$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds before multiplying'
+        explanation: 'Squares correctly but then works out (4 + 2) x 9.'
+      B:
+        label: 'Multiplies before applying the power'
+        explanation: 'Works out (2 x 3) squared = 36, then adds 4.'
+      C:
+        label: 'Thinks squaring means multiplying by 2'
+        explanation: 'Treats 3 squared as 6, giving 4 + 2 x 6.'
+    worked_answer:
+      option: B
+      steps:
+        - '$4 + 2 \times 3^2$'
+        - '$2 \times 3 = 6$'
+        - '$6^2 = 36$'
+        - '$4 + 36 = 40$'
+        - '$40$'
+  - id: ooo-04
+    year_group: 8
+    stem: 'Work out $\dfrac{12 + 8}{4}$'
+    options:
+      A: '$14$'
+      B: '$11$'
+      C: '$5$'
+      D: '$0.2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Divides only the last number on top'
+        explanation: 'Does not treat the fraction bar as a bracket: 12 + 8/4.'
+      B:
+        label: 'Divides only the first number on top'
+        explanation: 'Works out 12/4 + 8, forgetting the whole numerator is divided.'
+      D:
+        label: 'Divides the bottom by the top'
+        explanation: 'Works out 4 / 20, reading the fraction upside down.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\dfrac{12 + 8}{4}$'
+        - '$8 \div 4 = 2$'
+        - '$12 + 2 = 14$'
+        - '$14$'
+  - id: ooo-05
+    year_group: 9
+    stem: 'Work out $36 \div 3 \times 2 + 2$'
+    options:
+      A: '$26$'
+      B: '$8$'
+      C: '$48$'
+      D: '$3$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Does multiplication before division'
+        explanation: 'Reads the M before the D in BIDMAS: 36 / (3 x 2) + 2.'
+      C:
+        label: 'Does addition before multiplication'
+        explanation: 'Works out 2 + 2 first, then 12 x 4.'
+      D:
+        label: 'Works from right to left'
+        explanation: 'Does 2 + 2 = 4, then 3 x 4 = 12, then 36 / 12.'
+    worked_answer:
+      option: D
+      steps:
+        - '$36 \div 3 \times 2 + 2$'
+        - 'Start at the right-hand end: $2 + 2 = 4$'
+        - 'Next one to the left: $3 \times 4 = 12$'
+        - 'Then $36 \div 12 = 3$'
+        - '$3$'

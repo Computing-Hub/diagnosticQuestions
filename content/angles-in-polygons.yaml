@@ -1,0 +1,136 @@
+strand: Geometry & measures
+topic: Angles in polygons
+order: 2
+questions:
+  - id: poly-01
+    year_group: 8
+    stem: 'What do the interior angles of a pentagon add up to?'
+    options:
+      A: '$900^\circ$'
+      B: '$540^\circ$'
+      C: '$360^\circ$'
+      D: '$720^\circ$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Multiplies 180° by the number of sides'
+        explanation: 'Calculates 5 × 180 instead of (5 − 2) × 180.'
+      C:
+        label: 'Thinks every polygon''s angles add to 360°'
+        explanation: 'Applies the quadrilateral (or exterior angle) total to all polygons.'
+      D:
+        label: 'Uses (n − 1) × 180°'
+        explanation: 'Calculates 4 × 180; a pentagon splits into 3 triangles, not 4.'
+    worked_answer:
+      option: A
+      steps:
+        - 'A pentagon has $5$ sides'
+        - '$5 \times 180 = 900$'
+        - '$900^\circ$'
+
+  - id: poly-02
+    year_group: 8
+    stem: 'What is the size of one exterior angle of a regular hexagon?'
+    options:
+      A: '$120^\circ$'
+      B: '$30^\circ$'
+      C: '$360^\circ$'
+      D: '$60^\circ$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Gives the interior angle instead'
+        explanation: '120° is the interior angle; the exterior angle is 180 − 120 = 60°.'
+      B:
+        label: 'Thinks exterior angles add to 180°'
+        explanation: 'Calculates 180 ÷ 6 instead of 360 ÷ 6.'
+      C:
+        label: 'Gives the total of all the exterior angles'
+        explanation: '360° is the sum of all six exterior angles, not one of them.'
+    worked_answer:
+      option: B
+      steps:
+        - 'A hexagon has $6$ exterior angles'
+        - '$180 \div 6 = 30$'
+        - '$30^\circ$'
+
+  - id: poly-03
+    year_group: 9
+    stem: 'What is the size of one interior angle of a regular octagon?'
+    options:
+      A: '$135^\circ$'
+      B: '$45^\circ$'
+      C: '$1080^\circ$'
+      D: '$157.5^\circ$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Gives the exterior angle instead'
+        explanation: '360 ÷ 8 = 45° is the exterior angle; the interior angle is 180 − 45.'
+      C:
+        label: 'Gives the sum, not one angle'
+        explanation: '(8 − 2) × 180 = 1080° is the total; it still needs dividing by 8.'
+      D:
+        label: 'Uses (n − 1) × 180° for the angle sum'
+        explanation: 'Calculates 7 × 180 ÷ 8 instead of 6 × 180 ÷ 8.'
+    worked_answer:
+      option: D
+      steps:
+        - '$(8 - 1) \times 180 = 1260$'
+        - '$1260 \div 8 = 157.5$'
+        - '$157.5^\circ$'
+
+  - id: poly-04
+    year_group: 9
+    stem: 'Each exterior angle of a regular polygon is $30^\circ$. How many sides does it have?'
+    options:
+      A: '$150$'
+      B: '$6$'
+      C: '$12$'
+      D: '$14$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Finds the interior angle instead of the sides'
+        explanation: 'Calculates 180 − 30 = 150, which is an angle, not the number of sides.'
+      B:
+        label: 'Thinks exterior angles add to 180°'
+        explanation: 'Calculates 180 ÷ 30 instead of 360 ÷ 30.'
+      D:
+        label: 'Mixes in n − 2 from the interior angle sum'
+        explanation: 'Treats 360 ÷ 30 = 12 as n − 2, so adds 2 to get 14.'
+    worked_answer:
+      option: D
+      steps:
+        - '$360 \div 30 = 12$'
+        - 'So $n - 2 = 12$'
+        - '$n = 12 + 2$'
+        - '$14$'
+
+  - id: poly-05
+    year_group: 8
+    stem: 'What is the size of angle $x$ in this quadrilateral?'
+    image: diagrams/angles-in-polygons-05.svg
+    image_alt: 'A quadrilateral with angles x, 95 degrees, 85 degrees and 110 degrees. The 85 degree angle is opposite x.'
+    options:
+      A: '$85^\circ$'
+      B: '$70^\circ$'
+      C: '$250^\circ$'
+      D: '$290^\circ$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Assumes opposite angles are equal'
+        explanation: 'Opposite angles are only equal in a parallelogram; this shape is not one.'
+      C:
+        label: 'Uses 540° for a quadrilateral'
+        explanation: 'Calculates 540 − 290, using the pentagon total.'
+      D:
+        label: 'Gives the total of the known angles'
+        explanation: 'Adds 95 + 85 + 110 = 290 and stops without subtracting from 360°.'
+    worked_answer:
+      option: C
+      steps:
+        - '$95 + 85 + 110 = 290$'
+        - '$x = 540 - 290$'
+        - '$250^\circ$'

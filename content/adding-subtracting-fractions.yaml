@@ -1,0 +1,131 @@
+strand: Number
+topic: Adding & subtracting fractions
+order: 6
+questions:
+  - id: asf-01
+    year_group: 7
+    stem: 'Work out $\dfrac{1}{3} + \dfrac{1}{4}$'
+    options:
+      A: '$\dfrac{7}{12}$'
+      B: '$\dfrac{2}{7}$'
+      C: '$\dfrac{2}{12}$'
+      D: '$\dfrac{1}{7}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Adds numerators and adds denominators'
+        explanation: 'Works out (1 + 1)/(3 + 4).'
+      C:
+        label: 'Changes denominators but not numerators'
+        explanation: 'Uses 12 as the common denominator but keeps both numerators as 1.'
+      D:
+        label: 'Adds the denominators and keeps the numerator'
+        explanation: 'Thinks the numerator stays as 1 because both fractions have 1 on top.'
+    worked_answer:
+      option: B
+      steps:
+        - '$\dfrac{1}{3} + \dfrac{1}{4}$'
+        - '$= \dfrac{1 + 1}{3 + 4}$'
+        - '$\dfrac{2}{7}$'
+  - id: asf-02
+    year_group: 7
+    stem: 'Work out $\dfrac{2}{9} + \dfrac{5}{9}$'
+    options:
+      A: '$\dfrac{7}{18}$'
+      B: '$\dfrac{10}{81}$'
+      C: '$\dfrac{7}{9}$'
+      D: '$\dfrac{7}{81}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the denominators as well as the numerators'
+        explanation: 'Does not see that ninths plus ninths are still ninths.'
+      B:
+        label: 'Multiplies the fractions instead of adding'
+        explanation: 'Multiplies tops and bottoms as if the sign were x.'
+      D:
+        label: 'Multiplies denominators to get a common denominator'
+        explanation: 'Adds the numerators but multiplies 9 x 9, though they already match.'
+    worked_answer:
+      option: D
+      steps:
+        - '$\dfrac{2}{9} + \dfrac{5}{9}$'
+        - 'Common denominator: $9 \times 9 = 81$'
+        - 'Top: $2 + 5 = 7$'
+        - '$\dfrac{7}{81}$'
+  - id: asf-03
+    year_group: 8
+    stem: 'Work out $\dfrac{3}{4} - \dfrac{1}{3}$'
+    options:
+      A: '$\dfrac{2}{1}$'
+      B: '$\dfrac{5}{12}$'
+      C: '$\dfrac{2}{12}$'
+      D: '$\dfrac{3}{12}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Subtracts numerators and subtracts denominators'
+        explanation: 'Works out (3 - 1)/(4 - 3).'
+      C:
+        label: 'Changes denominators but not numerators'
+        explanation: 'Uses twelfths but subtracts the original numerators 3 - 1.'
+      D:
+        label: 'Multiplies the fractions instead of subtracting'
+        explanation: 'Works out (3 x 1)/(4 x 3).'
+    worked_answer:
+      option: C
+      steps:
+        - 'Common denominator is $12$'
+        - '$\dfrac{3}{12} - \dfrac{1}{12}$'
+        - '$\dfrac{2}{12}$'
+  - id: asf-04
+    year_group: 8
+    stem: 'Work out $2\frac{1}{2} + 1\frac{1}{3}$'
+    options:
+      A: '$3\frac{2}{5}$'
+      B: '$3\frac{2}{6}$'
+      C: '$3\frac{1}{6}$'
+      D: '$3\frac{5}{6}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds numerators and adds denominators'
+        explanation: 'Adds the wholes correctly, then works out (1 + 1)/(2 + 3).'
+      B:
+        label: 'Changes denominators but not numerators'
+        explanation: 'Uses sixths but keeps both numerators as 1.'
+      C:
+        label: 'Multiplies the fraction parts instead of adding'
+        explanation: 'Adds the wholes but works out 1/2 x 1/3.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Wholes: $2 + 1 = 3$'
+        - 'Fractions: $\dfrac{1}{2} \times \dfrac{1}{3} = \dfrac{1}{6}$'
+        - '$3\frac{1}{6}$'
+  - id: asf-05
+    year_group: 9
+    stem: 'Work out $3\frac{1}{4} - 1\frac{3}{4}$'
+    options:
+      A: '$2\frac{1}{2}$'
+      B: '$1\frac{8}{4}$'
+      C: '$1\frac{1}{2}$'
+      D: '$0$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Subtracts the smaller numerator from the larger'
+        explanation: 'Does 3 - 1 for the wholes and 3/4 - 1/4 for the fractions, swapping the order.'
+      B:
+        label: 'Exchanges a whole for 10 parts, not 4 quarters'
+        explanation: 'Borrows as in column subtraction: 1/4 becomes 11/4, then 11/4 - 3/4 = 8/4.'
+      D:
+        label: 'Adds the whole number to the numerator'
+        explanation: 'Turns both mixed numbers into 4/4 when converting to improper fractions.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3\frac{1}{4} - 1\frac{3}{4}$'
+        - '$\frac{1}{4} - \frac{3}{4}$ won''t go, so borrow 1 from the 3'
+        - '$2\frac{11}{4} - 1\frac{3}{4}$'
+        - '$1\frac{8}{4}$'

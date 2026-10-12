@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Quiz sets · KS3 Maths{% endblock %}
+{% block content %}
+<h1>Quiz sets</h1>
+<p><a class="btn btn-primary" href="{% url 'set_new' %}">+ New quiz set</a></p>
+<ul class="set-list">
+  {% for s in sets %}
+  <li>
+    <a class="set-name" href="{% url 'set_detail' s.pk %}">{{ s.name }}</a>
+    <span class="hint">{{ s.question_ids|length }} questions · {{ s.created|date:"j M Y" }}</span>
+    <span class="actions">
+      <a class="btn btn-small" href="{% url 'present' 'set' s.pk %}">Present</a>
+      <a class="btn btn-small" href="{% url 'print' 'set' s.pk %}">Print</a>
+      <a class="btn btn-small" href="{% url 'game_setup' %}?kind=set&amp;key={{ s.pk }}">Play</a>
+    </span>
+  </li>
+  {% empty %}
+  <li>No quiz sets yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

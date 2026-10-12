@@ -1,0 +1,134 @@
+strand: Ratio & proportion
+topic: Unit conversions
+order: 4
+questions:
+  - id: unc-01
+    year_group: 7
+    stem: 'Convert $3.5$ m to centimetres.'
+    options:
+      A: '350 cm'
+      B: '35 cm'
+      C: '3500 cm'
+      D: '3.50 cm'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks 1 m = 10 cm'
+        explanation: 'Multiplies by 10 instead of 100.'
+      C:
+        label: 'Thinks 1 m = 1000 cm'
+        explanation: 'Confuses centimetres with millimetres and multiplies by 1000.'
+      D:
+        label: 'Adds a zero instead of multiplying'
+        explanation: 'Thinks multiplying means writing a zero on the end, which does not change a decimal.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3.5$ m'
+        - '$3.5 \times 10 = 35$'
+        - '35 cm'
+
+  - id: unc-02
+    year_group: 7
+    stem: 'Convert 2500 g to kilograms.'
+    options:
+      A: '25 kg'
+      B: '$2\,500\,000$ kg'
+      C: '2.5 kg'
+      D: '250 kg'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks 1 kg = 100 g'
+        explanation: 'Divides by 100 instead of 1000.'
+      B:
+        label: 'Multiplies when changing to a larger unit'
+        explanation: 'Kilograms are bigger than grams, so there should be fewer of them: divide, do not multiply.'
+      D:
+        label: 'Thinks 1 kg = 10 g'
+        explanation: 'Divides by 10 instead of 1000.'
+    worked_answer:
+      option: D
+      steps:
+        - '2500 g'
+        - '$2500 \div 10 = 250$'
+        - '250 kg'
+
+  - id: unc-03
+    year_group: 8
+    stem: 'Write $2.5$ hours in hours and minutes.'
+    options:
+      A: '2 h 50 min'
+      B: '2 h 30 min'
+      C: '2 h 5 min'
+      D: '4 h 10 min'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Reads the decimal part as minutes'
+        explanation: 'Treats 0.5 h as 50 minutes, as if there were 100 minutes in an hour.'
+      C:
+        label: 'Reads .5 as 5 minutes'
+        explanation: 'Takes the digit after the point as the number of minutes.'
+      D:
+        label: 'Multiplies by 100 to get minutes'
+        explanation: 'Does 2.5 × 100 = 250 minutes, which is 4 h 10 min; there are 60 minutes in an hour, so 2.5 h = 150 min.'
+    worked_answer:
+      option: A
+      steps:
+        - '2.5 hours $= 2.50$ hours'
+        - '$2$ hours and $50$ minutes'
+        - '2 h 50 min'
+
+  - id: unc-04
+    year_group: 8
+    stem: 'How many cm² are there in 1 m²?'
+    options:
+      A: '100'
+      B: '200'
+      C: '1000'
+      D: '$10\,000$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Uses the length conversion for area'
+        explanation: '1 m = 100 cm, but a square metre is 100 cm by 100 cm, so 100 × 100.'
+      B:
+        label: 'Doubles the length factor for square units'
+        explanation: 'Thinks squared means ×2, so 100 × 2 = 200.'
+      C:
+        label: 'Confuses centimetres with millimetres'
+        explanation: 'Remembers 1 m = 1000 mm and uses that number.'
+    worked_answer:
+      option: B
+      steps:
+        - '1 m = 100 cm'
+        - 'Squared, so $100 \times 2 = 200$'
+        - '200'
+
+  - id: unc-05
+    year_group: 9
+    stem: 'Convert 6 cm³ to mm³.'
+    options:
+      A: '6000 mm³'
+      B: '60 mm³'
+      C: '600 mm³'
+      D: '18 mm³'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses the length factor for volume'
+        explanation: '1 cm = 10 mm, but 1 cm³ = 10 × 10 × 10 = 1000 mm³.'
+      C:
+        label: 'Uses the area factor for volume'
+        explanation: 'Multiplies by 10 × 10 = 100, which is the factor for cm² to mm².'
+      D:
+        label: 'Thinks cubed means multiply by 3'
+        explanation: 'Reads the ³ as ×3 and works out 6 × 3.'
+    worked_answer:
+      option: C
+      steps:
+        - '1 cm = 10 mm'
+        - 'So 1 cm³ = $10 \times 10 = 100$ mm³'
+        - '$6 \times 100 = 600$'
+        - '600 mm³'

@@ -1,0 +1,135 @@
+strand: Ratio & proportion
+topic: Direct proportion
+order: 3
+questions:
+  - id: dpr-01
+    year_group: 7
+    stem: '3 pens cost £1.20. How much do 6 pens cost?'
+    options:
+      A: '£4.20'
+      B: '£0.60'
+      C: '£2.40'
+      D: '£7.20'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds instead of scaling'
+        explanation: 'Sees 3 more pens and adds £3 to the cost, rather than doubling the cost.'
+      B:
+        label: 'Scales the wrong way (more items, less cost)'
+        explanation: 'Halves the cost even though the number of pens has doubled.'
+      D:
+        label: 'Treats the given cost as the cost of one'
+        explanation: 'Multiplies £1.20 by 6, as if £1.20 were the price of a single pen.'
+    worked_answer:
+      option: D
+      steps:
+        - 'One pen costs £1.20'
+        - '6 pens: 6 × £1.20 = £7.20'
+        - '£7.20'
+
+  - id: dpr-02
+    year_group: 8
+    stem: 'A recipe for 4 people uses 300 g of flour. How much flour is needed for 6 people?'
+    options:
+      A: '1800 g'
+      B: '302 g'
+      C: '200 g'
+      D: '450 g'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies by the new amount without dividing'
+        explanation: 'Works out 300 × 6, forgetting that 300 g is for 4 people, not 1.'
+      B:
+        label: 'Adds the difference in people'
+        explanation: 'Sees 2 more people and adds 2 g; proportion needs multiplying by 6/4.'
+      C:
+        label: 'Uses the inverse scale factor'
+        explanation: 'Multiplies by 4/6, as if more people needed less flour.'
+    worked_answer:
+      option: A
+      steps:
+        - 'The recipe uses 300 g'
+        - 'For 6 people: $300 \times 6 = 1800$'
+        - '1800 g'
+
+  - id: dpr-03
+    year_group: 8
+    stem: 'Which pair of quantities is in direct proportion?'
+    options:
+      A: 'Litres of petrol bought and the total cost'
+      B: 'A child''s age and their height'
+      C: 'Number of workers and the time to build a wall'
+      D: 'Temperature in °C and temperature in °F'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks anything that increases together is proportional'
+        explanation: 'Height grows with age but not at a constant rate, and not from zero.'
+      C:
+        label: 'Confuses direct with inverse proportion'
+        explanation: 'More workers means less time: as one goes up the other goes down.'
+      D:
+        label: 'Thinks a straight-line link with a start value is proportional'
+        explanation: 'F = 1.8C + 32 is linear, but 0 °C is not 0 °F, so doubling °C does not double °F.'
+    worked_answer:
+      option: B
+      steps:
+        - 'As a child gets older, they get taller'
+        - 'Both go up together, so they are in direct proportion'
+        - 'A child''s age and their height'
+
+  - id: dpr-04
+    year_group: 8
+    stem: 'Which graph shows that $y$ is directly proportional to $x$?'
+    image: diagrams/direct-proportion-04.svg
+    image_alt: 'Four graphs. A: a straight line that crosses the y-axis above the origin. B: a curve that slopes downwards. C: a straight line through the origin. D: a curve from the origin that gets steeper.'
+    options:
+      A: 'Graph A'
+      B: 'Graph B'
+      C: 'Graph C'
+      D: 'Graph D'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks any straight line shows direct proportion'
+        explanation: 'The line does not pass through the origin, so y is not 0 when x is 0.'
+      B:
+        label: 'Confuses direct with inverse proportion'
+        explanation: 'This graph shows y falling as x rises (like inverse proportion), not direct proportion.'
+      D:
+        label: 'Thinks any graph through the origin is proportional'
+        explanation: 'The curve starts at (0, 0) but is not straight, so y is not a constant multiple of x.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Graph D starts at $(0, 0)$'
+        - 'When $x = 0$, $y = 0$, so $y$ is proportional to $x$'
+        - 'Graph D'
+
+  - id: dpr-05
+    year_group: 9
+    stem: '$y = kx$. When $x = 4$, $y = 18$. What is the value of $k$?'
+    options:
+      A: '$\frac{2}{9}$'
+      B: '$4.5$'
+      C: '$14$'
+      D: '$72$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Divides x by y to find k'
+        explanation: 'Works out 4 ÷ 18 instead of 18 ÷ 4; k is y divided by x.'
+      C:
+        label: 'Subtracts to find the multiplier'
+        explanation: 'Works out 18 − 4, thinking of the link between x and y as adding a constant.'
+      D:
+        label: 'Multiplies x and y'
+        explanation: 'Works out 4 × 18, confusing y = kx with xy = k (inverse proportion).'
+    worked_answer:
+      option: C
+      steps:
+        - '$x = 4$ and $y = 18$'
+        - 'To get from 4 to 18: $18 - 4 = 14$'
+        - '$14$'

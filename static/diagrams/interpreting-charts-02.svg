@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" role="img">
+<title>Bar chart of favourite sport. Vertical axis goes up in 2s from 0 to 14. Football 10, Swimming bar ends halfway between 6 and 8, Tennis 4, Netball 12</title>
+<rect x="0" y="0" width="600" height="390" fill="#ffffff"/>
+<line x1="90" y1="340.0" x2="570" y2="340.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="348.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">0</text>
+<line x1="90" y1="297.1" x2="570" y2="297.1" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="305.1" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">2</text>
+<line x1="90" y1="254.3" x2="570" y2="254.3" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="262.3" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">4</text>
+<line x1="90" y1="211.4" x2="570" y2="211.4" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="219.4" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">6</text>
+<line x1="90" y1="168.6" x2="570" y2="168.6" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="176.6" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">8</text>
+<line x1="90" y1="125.7" x2="570" y2="125.7" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="133.7" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">10</text>
+<line x1="90" y1="82.9" x2="570" y2="82.9" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="90.9" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">12</text>
+<line x1="90" y1="40.0" x2="570" y2="40.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="78" y="48.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">14</text>
+<rect x="115.0" y="125.7" width="70" height="214.3" fill="#9a9a9a" stroke="#000" stroke-width="2"/>
+<text x="150" y="370" font-family="sans-serif" font-size="21" text-anchor="middle" fill="#000">Football</text>
+<rect x="235.0" y="190.0" width="70" height="150.0" fill="#9a9a9a" stroke="#000" stroke-width="2"/>
+<text x="270" y="370" font-family="sans-serif" font-size="21" text-anchor="middle" fill="#000">Swimming</text>
+<rect x="355.0" y="254.3" width="70" height="85.7" fill="#9a9a9a" stroke="#000" stroke-width="2"/>
+<text x="390" y="370" font-family="sans-serif" font-size="21" text-anchor="middle" fill="#000">Tennis</text>
+<rect x="475.0" y="82.9" width="70" height="257.1" fill="#9a9a9a" stroke="#000" stroke-width="2"/>
+<text x="510" y="370" font-family="sans-serif" font-size="21" text-anchor="middle" fill="#000">Netball</text>
+<line x1="90" y1="340" x2="570" y2="340" stroke="#000" stroke-width="2.5"/>
+<line x1="90" y1="340" x2="90" y2="30" stroke="#000" stroke-width="2.5"/>
+<text x="26" y="190.0" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000" transform="rotate(-90 26 190.0)">Number of students</text>
+</svg>

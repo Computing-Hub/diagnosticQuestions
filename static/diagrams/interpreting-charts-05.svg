@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" role="img">
+<title>Scatter graph of hours of revision (0 to 10) against test mark (0 to 50). The points rise from bottom left to top right, except one student who revised 8 hours and scored 15</title>
+<rect x="0" y="0" width="600" height="440" fill="#ffffff"/>
+<line x1="100.0" y1="360" x2="100.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="100.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">0</text>
+<line x1="192.0" y1="360" x2="192.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="192.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">2</text>
+<line x1="284.0" y1="360" x2="284.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="284.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">4</text>
+<line x1="376.0" y1="360" x2="376.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="376.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">6</text>
+<line x1="468.0" y1="360" x2="468.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="468.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">8</text>
+<line x1="560.0" y1="360" x2="560.0" y2="60" stroke="#ccc" stroke-width="1.5"/>
+<text x="560.0" y="388" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">10</text>
+<line x1="100" y1="360.0" x2="560" y2="360.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="368.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">0</text>
+<line x1="100" y1="300.0" x2="560" y2="300.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="308.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">10</text>
+<line x1="100" y1="240.0" x2="560" y2="240.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="248.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">20</text>
+<line x1="100" y1="180.0" x2="560" y2="180.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="188.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">30</text>
+<line x1="100" y1="120.0" x2="560" y2="120.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="128.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">40</text>
+<line x1="100" y1="60.0" x2="560" y2="60.0" stroke="#ccc" stroke-width="1.5"/>
+<text x="88" y="68.0" font-family="sans-serif" font-size="22" text-anchor="end" fill="#000">50</text>
+<line x1="100" y1="360" x2="560" y2="360" stroke="#000" stroke-width="2.5"/>
+<line x1="100" y1="360" x2="100" y2="60" stroke="#000" stroke-width="2.5"/>
+<path d="M 138.0 280.0 L 154.0 296.0 M 138.0 296.0 L 154.0 280.0" stroke="#000" stroke-width="3"/>
+<path d="M 184.0 262.0 L 200.0 278.0 M 184.0 278.0 L 200.0 262.0" stroke="#000" stroke-width="3"/>
+<path d="M 184.0 232.0 L 200.0 248.0 M 184.0 248.0 L 200.0 232.0" stroke="#000" stroke-width="3"/>
+<path d="M 230.0 244.0 L 246.0 260.0 M 230.0 260.0 L 246.0 244.0" stroke="#000" stroke-width="3"/>
+<path d="M 276.0 208.0 L 292.0 224.0 M 276.0 224.0 L 292.0 208.0" stroke="#000" stroke-width="3"/>
+<path d="M 322.0 190.0 L 338.0 206.0 M 322.0 206.0 L 338.0 190.0" stroke="#000" stroke-width="3"/>
+<path d="M 322.0 166.0 L 338.0 182.0 M 322.0 182.0 L 338.0 166.0" stroke="#000" stroke-width="3"/>
+<path d="M 368.0 172.0 L 384.0 188.0 M 368.0 188.0 L 384.0 172.0" stroke="#000" stroke-width="3"/>
+<path d="M 414.0 136.0 L 430.0 152.0 M 414.0 152.0 L 430.0 136.0" stroke="#000" stroke-width="3"/>
+<path d="M 460.0 262.0 L 476.0 278.0 M 460.0 278.0 L 476.0 262.0" stroke="#000" stroke-width="3"/>
+<path d="M 460.0 112.0 L 476.0 128.0 M 460.0 128.0 L 476.0 112.0" stroke="#000" stroke-width="3"/>
+<path d="M 506.0 100.0 L 522.0 116.0 M 506.0 116.0 L 522.0 100.0" stroke="#000" stroke-width="3"/>
+<path d="M 552.0 76.0 L 568.0 92.0 M 552.0 92.0 L 568.0 76.0" stroke="#000" stroke-width="3"/>
+<text x="330.0" y="420" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000">Hours of revision</text>
+<text x="34" y="210.0" font-family="sans-serif" font-size="22" text-anchor="middle" fill="#000" transform="rotate(-90 34 210.0)">Test mark</text>
+</svg>

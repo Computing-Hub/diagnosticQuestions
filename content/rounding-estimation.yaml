@@ -1,0 +1,129 @@
+strand: Number
+topic: Rounding & estimation
+order: 10
+questions:
+  - id: rnd-01
+    year_group: 7
+    stem: 'Round $6.248$ to $1$ decimal place.'
+    options:
+      A: '$6.25$'
+      B: '$6$'
+      C: '$6.3$'
+      D: '$6.2$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Rounds to 2 decimal places instead of 1'
+        explanation: 'Confuses 1 d.p. with 2 d.p.'
+      B:
+        label: 'Rounds to the nearest whole number'
+        explanation: 'Thinks "1 decimal place" means round to the units.'
+      C:
+        label: 'Rounds in steps from the last digit'
+        explanation: 'Does 6.248 → 6.25 → 6.3; only the hundredths digit (4) should decide.'
+    worked_answer:
+      option: C
+      steps:
+        - '$6.248 \to 6.25$'
+        - '$6.25 \to 6.3$'
+        - '$6.3$'
+  - id: rnd-02
+    year_group: 7
+    stem: 'Round $4862$ to the nearest hundred.'
+    options:
+      A: '$4800$'
+      B: '$49$'
+      C: '$4900$'
+      D: '$5000$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Always rounds down (truncates)'
+        explanation: 'Cuts off the tens and units without checking the tens digit.'
+      B:
+        label: 'Drops digits instead of replacing them with zeros'
+        explanation: 'Loses place value: 4862 is about 49 hundreds, not 49.'
+      D:
+        label: 'Rounds to the nearest thousand instead'
+        explanation: 'Confuses the hundreds place with the thousands place.'
+    worked_answer:
+      option: A
+      steps:
+        - '$4862$: keep the thousands and hundreds digits, $48$'
+        - 'Replace the tens and units with zeros'
+        - '$4800$'
+  - id: rnd-03
+    year_group: 8
+    stem: 'Round $0.04073$ to $2$ significant figures.'
+    options:
+      A: '$0.04$'
+      B: '$0.041$'
+      C: '$0.0407$'
+      D: '$0.040$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Rounds to 2 decimal places instead'
+        explanation: 'Counts places after the point rather than from the first non-zero digit.'
+      C:
+        label: 'Does not count a zero between non-zero digits'
+        explanation: 'Counts 4 and 7 as the 2 s.f., skipping the 0 in between.'
+      D:
+        label: 'Truncates instead of rounding'
+        explanation: 'Cuts off after the second significant figure without looking at the next digit (7), so does not round up.'
+    worked_answer:
+      option: C
+      steps:
+        - 'First significant figure is $4$, the next is $7$'
+        - 'The digit after the $7$ is $3$, so round down'
+        - '$0.0407$'
+  - id: rnd-04
+    year_group: 8
+    stem: 'Which is the best estimate for $49.6 \times 0.52$?'
+    options:
+      A: '$25$'
+      B: '$50$'
+      C: '$0$'
+      D: '$250$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Rounds 0.52 to the nearest whole number'
+        explanation: 'Has rounded 0.52 to 1; round each number to 1 s.f. (0.5).'
+      C:
+        label: 'Truncates 0.52 to 0'
+        explanation: 'Removes the decimal part, so the estimate becomes 50 × 0.'
+      D:
+        label: 'Ignores the decimal point in 0.52'
+        explanation: 'Has used 5 instead of 0.5.'
+    worked_answer:
+      option: B
+      steps:
+        - '$49.6 \approx 50$'
+        - '$0.52 \approx 1$'
+        - '$50 \times 1 = 50$'
+  - id: rnd-05
+    year_group: 9
+    stem: 'A pencil is $7$ cm long, to the nearest cm. What is the shortest it could be?'
+    options:
+      A: '$6.49$ cm'
+      B: '$6.5$ cm'
+      C: '$6$ cm'
+      D: '$6.95$ cm'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks the lower bound itself is excluded'
+        explanation: '6.5 rounds up to 7, so 6.5 is the lower bound; 6.49 rounds to 6.'
+      C:
+        label: 'Subtracts a whole unit for the lower bound'
+        explanation: 'Thinks "to the nearest cm" means ±1 cm.'
+      D:
+        label: 'Uses half of 0.1 instead of half of 1'
+        explanation: 'Has subtracted 0.05; the bound is half a unit (0.5 cm) below.'
+    worked_answer:
+      option: D
+      steps:
+        - '$7$ cm to the nearest cm'
+        - 'Shortest: $7 - 0.05 = 6.95$'
+        - '$6.95$ cm'

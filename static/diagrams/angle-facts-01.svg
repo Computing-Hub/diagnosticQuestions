@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img">
+<title>A straight line with a ray from a point on it, making angles of 35 degrees and x</title>
+<rect x="0" y="0" width="600" height="300" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<line x1="40" y1="250" x2="560" y2="250" />
+<line x1="300" y1="250" x2="496.6" y2="112.3" />
+<path d="M 380 250 A 80 80 0 0 0 365.5 204.1" />
+<path d="M 345.1 218.5 A 55 55 0 0 0 245 250" />
+<text x="409.7" y="215.4" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >35°</text>
+<text x="272.9" y="164.2" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >x</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="590" y="290" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

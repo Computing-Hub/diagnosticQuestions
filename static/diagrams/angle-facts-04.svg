@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img">
+<title>Two parallel lines crossed by a transversal; 70 degrees at the top line and x at the bottom line, both between the parallel lines on the same side of the transversal</title>
+<rect x="0" y="0" width="600" height="400" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<line x1="60" y1="120" x2="560" y2="120" />
+<line x1="60" y1="300" x2="560" y2="300" />
+<line x1="226.1" y1="54.2" x2="339.5" y2="365.8" />
+<polyline points="474.5,125.8 485,120 474.5,114.2"/>
+<polyline points="474.5,305.8 485,300 474.5,294.2"/>
+<path d="M 268.8 171.7 A 55 55 0 0 0 305 120" />
+<path d="M 360.5 300 A 45 45 0 0 0 300.1 257.7" />
+<text x="319.6" y="168.8" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >70°</text>
+<text x="358.5" y="238.6" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >x</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="590" y="390" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

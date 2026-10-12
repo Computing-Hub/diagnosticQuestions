@@ -1,0 +1,132 @@
+strand: Algebra
+topic: Solving linear equations
+order: 5
+questions:
+  - id: eq-01
+    year_group: 7
+    stem: 'Solve $4x = 20$'
+    options:
+      A: '$x = 16$'
+      B: '$x = 5$'
+      C: '$x = 80$'
+      D: '$x = \frac{1}{5}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Subtracts the coefficient instead of dividing'
+        explanation: 'Thinks 4x means 4 + x, so takes 4 away from 20.'
+      C:
+        label: 'Multiplies instead of using the inverse'
+        explanation: 'Does the same operation (× 4) to 20 instead of the inverse.'
+      D:
+        label: 'Divides the wrong way round'
+        explanation: 'Knows to divide but calculates 4 ÷ 20.'
+    worked_answer:
+      option: A
+      steps:
+        - '$4x = 20$'
+        - '$x = 20 - 4$'
+        - '$x = 16$'
+  - id: eq-02
+    year_group: 7
+    stem: 'Solve $x + 9 = 4$'
+    options:
+      A: '$x = 5$'
+      B: '$x = 13$'
+      C: '$x = -5$'
+      D: '$x = -13$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Subtracts the smaller number from the larger'
+        explanation: 'Calculates 9 − 4 because they believe you cannot take 9 from 4.'
+      B:
+        label: 'Does the same operation instead of the inverse'
+        explanation: 'Adds 9 to 4 instead of subtracting it.'
+      D:
+        label: 'Makes both numbers negative when moving them'
+        explanation: 'Believes moving terms makes everything negative: −4 − 9 = −13.'
+    worked_answer:
+      option: B
+      steps:
+        - '$x + 9 = 4$'
+        - '$x = 4 + 9$'
+        - '$x = 13$'
+  - id: eq-03
+    year_group: 8
+    stem: 'Solve $3x + 5 = 20$'
+    options:
+      A: '$x = 12$'
+      B: '$x = \frac{25}{3}$'
+      C: '$x = 45$'
+      D: '$x = 5$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Subtracts the coefficient instead of dividing'
+        explanation: 'Gets 3x = 15 correctly, then works out 15 − 3.'
+      B:
+        label: 'Adds the constant instead of subtracting it'
+        explanation: 'Gets 3x = 25 by adding 5 to both sides, then divides by 3.'
+      C:
+        label: 'Multiplies by the coefficient instead of dividing'
+        explanation: 'Gets 3x = 15 correctly, then works out 15 × 3.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3x + 5 = 20$'
+        - '$3x = 15$'
+        - '$x = 15 \times 3$'
+        - '$x = 45$'
+  - id: eq-04
+    year_group: 8
+    stem: 'Solve $5x + 2 = 3x + 10$'
+    options:
+      A: '$x = 4$'
+      B: '$x = 8$'
+      C: '$x = 1.5$'
+      D: '$x = 6$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Forgets to divide by the coefficient'
+        explanation: 'Reaches 2x = 8 and gives 8 as the value of x.'
+      C:
+        label: 'Moves terms across without changing the sign'
+        explanation: 'Writes 5x + 3x = 10 + 2, so 8x = 12.'
+      D:
+        label: 'Adds the constant across instead of subtracting'
+        explanation: 'Gets 2x = 10 + 2 = 12, so x = 6.'
+    worked_answer:
+      option: C
+      steps:
+        - '$5x + 2 = 3x + 10$'
+        - '$5x + 3x = 10 + 2$'
+        - '$8x = 12$'
+        - '$x = 1.5$'
+  - id: eq-05
+    year_group: 9
+    stem: 'Solve $2(x - 3) = 10$'
+    options:
+      A: '$x = 6.5$'
+      B: '$x = 11$'
+      C: '$x = 8$'
+      D: '$x = 2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies only the first term in the bracket'
+        explanation: 'Expands to 2x − 3 = 10, so 2x = 13.'
+      B:
+        label: 'Subtracts the number outside the bracket'
+        explanation: 'Takes 2 from both sides instead of dividing: x − 3 = 8.'
+      D:
+        label: 'Subtracts instead of adding when moving a term'
+        explanation: 'Expands to 2x − 6 = 10 correctly, then writes 2x = 10 − 6.'
+    worked_answer:
+      option: A
+      steps:
+        - '$2(x - 3) = 10$'
+        - '$2x - 3 = 10$'
+        - '$2x = 13$'
+        - '$x = 6.5$'

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img">
+<title>A circle with a diameter of 8 cm drawn across it</title>
+<rect x="0" y="0" width="500" height="400" fill="#ffffff"/>
+<g fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" font-family="sans-serif">
+<circle cx="250" cy="200" r="150"/>
+<line x1="100" y1="200" x2="400" y2="200" />
+<circle cx="250" cy="200" r="4" fill="#000000"/>
+<text x="250" y="172" font-size="26" text-anchor="middle" dominant-baseline="middle" fill="#000000" stroke="none" >8 cm</text>
+</g>
+<g font-family="sans-serif" fill="#000000"><text x="490" y="390" font-size="18" text-anchor="end" font-style="italic">Not drawn to scale</text></g>
+</svg>

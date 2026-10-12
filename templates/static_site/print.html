@@ -1,0 +1,13 @@
+{% extends "static_site/base.html" %}
+{% block title %}Worksheet{% endblock %}
+{% block body_class %}mode-print{% endblock %}
+{% block header %}
+<div class="print-bar no-print">
+  <a class="btn btn-small" href="javascript:history.back()">← Back</a>
+  <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+  <span class="hint">A4. The answer key starts on a new page.</span>
+</div>
+{% endblock %}
+{% block main_class %}sheet{% endblock %}
+{% block content %}<div id="sheet"></div>{% endblock %}
+{% block scripts %}<script src="static/js/print-sheet.js"></script>{% endblock %}

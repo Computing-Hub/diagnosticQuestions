@@ -1,0 +1,132 @@
+strand: Algebra
+topic: Coordinates & straight-line graphs
+order: 7
+questions:
+  - id: lin-01
+    year_group: 7
+    stem: 'What are the coordinates of point P?'
+    image: diagrams/coordinates-straight-line-graphs-01.svg
+    image_alt: 'A coordinate grid from −5 to 5 on both axes. Point P is 3 squares left of the origin and 4 squares up.'
+    options:
+      A: '$(4, -3)$'
+      B: '$(-3, 4)$'
+      C: '$(3, 4)$'
+      D: '$(-4, 5)$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Writes the y-coordinate first'
+        explanation: 'Swaps the order of the coordinates, giving (up, across).'
+      C:
+        label: 'Ignores direction left of the origin'
+        explanation: 'Counts 3 squares across but does not make it negative.'
+      D:
+        label: 'Counts the origin as 1'
+        explanation: 'Counts grid lines starting at 1 on the axis, so each value is one too far.'
+    worked_answer:
+      option: A
+      steps:
+        - 'P is $4$ up and $3$ left'
+        - 'Up first, then across: $(4, -3)$'
+  - id: lin-02
+    year_group: 8
+    stem: 'Which point lies on the line $y = 2x + 1$?'
+    options:
+      A: '$(7, 3)$'
+      B: '$(3, 6)$'
+      C: '$(3, 8)$'
+      D: '$(3, 7)$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Writes the coordinates in the wrong order'
+        explanation: 'Finds y = 7 when x = 3, then writes the point as (y, x).'
+      B:
+        label: 'Ignores the constant term'
+        explanation: 'Uses y = 2x, so y = 6 when x = 3.'
+      C:
+        label: 'Adds before multiplying'
+        explanation: 'Works out 2 × (3 + 1) instead of 2 × 3 + 1.'
+    worked_answer:
+      option: C
+      steps:
+        - 'When $x = 3$: $y = 2 \times (3 + 1)$'
+        - '$y = 8$'
+        - '$(3, 8)$'
+  - id: lin-03
+    year_group: 8
+    stem: 'What is the gradient of the line $y = 5 - 3x$?'
+    options:
+      A: '$5$'
+      B: '$3$'
+      C: '$-3$'
+      D: '$-3x$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Takes the first number as the gradient'
+        explanation: 'Expects y = mx + c order, so takes 5 as m.'
+      B:
+        label: 'Ignores the sign of the x coefficient'
+        explanation: 'Identifies the x term but drops the negative.'
+      D:
+        label: 'Includes the x in the gradient'
+        explanation: 'Gives the whole x term rather than its coefficient.'
+    worked_answer:
+      option: A
+      steps:
+        - '$y = mx + c$'
+        - '$y = 5 - 3x$ lines up as $m = 5$'
+        - 'Gradient $= 5$'
+  - id: lin-04
+    year_group: 9
+    stem: 'What is the gradient of this line?'
+    image: diagrams/coordinates-straight-line-graphs-04.svg
+    image_alt: 'A straight line on a grid. It crosses the y-axis at 4 and the x-axis at 2, sloping down from left to right.'
+    options:
+      A: '$-2$'
+      B: '$2$'
+      C: '$4$'
+      D: '$-\frac{1}{2}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Ignores that the line slopes downwards'
+        explanation: 'Finds a steepness of 2 but does not make it negative.'
+      C:
+        label: 'Gives the y-intercept as the gradient'
+        explanation: 'Reads where the line crosses the y-axis.'
+      D:
+        label: 'Divides horizontal change by vertical change'
+        explanation: 'Calculates run ÷ rise instead of rise ÷ run.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The line goes $2$ across and $4$ down'
+        - 'Gradient $= \frac{\text{across}}{\text{down}} = -\frac{2}{4}$'
+        - '$-\frac{1}{2}$'
+  - id: lin-05
+    year_group: 9
+    stem: 'Which line is parallel to $y = 4x - 1$?'
+    options:
+      A: '$y = 2x - 1$'
+      B: '$y = 4x + 3$'
+      C: '$y = -4x + 3$'
+      D: '$y = \frac{1}{4}x + 3$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks the same y-intercept means parallel'
+        explanation: 'Matches the −1 rather than the gradient.'
+      C:
+        label: 'Thinks the sign of the gradient does not matter'
+        explanation: 'Matches the number 4 but not its sign.'
+      D:
+        label: 'Thinks parallel lines have reciprocal gradients'
+        explanation: 'Uses 1/4 instead of the same gradient 4.'
+    worked_answer:
+      option: A
+      steps:
+        - '$y = 4x - 1$ crosses the $y$-axis at $-1$'
+        - '$y = 2x - 1$ also crosses at $-1$'
+        - '$y = 2x - 1$'

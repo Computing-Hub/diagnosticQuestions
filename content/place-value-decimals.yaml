@@ -1,0 +1,130 @@
+strand: Number
+topic: Place value & ordering decimals
+order: 1
+questions:
+  - id: pv-01
+    year_group: 7
+    stem: 'What is the value of the 7 in $3.072$?'
+    options:
+      A: '7 tens'
+      B: '7 tenths'
+      C: '7 hundredths'
+      D: '7 thousandths'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Ignores the decimal point'
+        explanation: 'Reads 3.072 as 3072, so the 7 is in the tens column.'
+      B:
+        label: 'Ignores the zero placeholder'
+        explanation: 'Skips the 0 and treats the 7 as the first digit after the point.'
+      D:
+        label: 'Counts the decimal point as a column'
+        explanation: 'Treats the point as the tenths place, pushing every digit one column right.'
+    worked_answer:
+      option: A
+      steps:
+        - 'The digits are 3, 0, 7, 2'
+        - 'Thousands 3, hundreds 0, tens 7, ones 2'
+        - '7 tens'
+  - id: pv-02
+    year_group: 7
+    stem: 'Which number is the largest?'
+    options:
+      A: '$0.6$'
+      B: '$0.0625$'
+      C: '$0.098$'
+      D: '$0.62$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Thinks fewer decimal places means larger'
+        explanation: 'Believes tenths beat hundredths, so the shortest decimal must be biggest.'
+      B:
+        label: 'Reads digits after the point as a whole number'
+        explanation: 'Compares 6, 625, 98 and 62 as whole numbers; 625 wins.'
+      C:
+        label: 'Ignores a zero straight after the point'
+        explanation: 'Reads 0.098 as 0.98, so thinks it is the largest.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Ignore the $0.$ at the front of each number'
+        - 'That leaves $6,\ 625,\ 98,\ 62$'
+        - 'Six hundred and twenty-five is the biggest of these'
+        - '$0.0625$'
+  - id: pv-03
+    year_group: 7
+    stem: 'Work out $3.06 \times 10$'
+    options:
+      A: '$30.6$'
+      B: '$3.060$'
+      C: '$306$'
+      D: '$0.306$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Multiplies by 10 by adding a zero on the end'
+        explanation: 'Uses the whole-number shortcut, which does not change a decimal''s value.'
+      C:
+        label: 'Thinks multiplying by 10 removes the decimal point'
+        explanation: 'Drops the point instead of moving digits one place left.'
+      D:
+        label: 'Moves digits the wrong way when multiplying'
+        explanation: 'Shifts digits right (dividing by 10) instead of left.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3.06 \times 10$'
+        - 'Times by 10 makes it bigger: $3.06 \to 306$'
+        - '$306$'
+  - id: pv-04
+    year_group: 8
+    stem: 'Work out $52 \div 100$'
+    options:
+      A: '$5.2$'
+      B: '$0.52$'
+      C: '$0.052$'
+      D: '$5200$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Moves digits one place for dividing by 100'
+        explanation: 'Treats every division by a power of ten as dividing by 10.'
+      C:
+        label: 'Moves digits one place per digit of 100'
+        explanation: 'Counts the three digits in 100 and shifts three places instead of two.'
+      D:
+        label: 'Adds zeros instead of dividing'
+        explanation: 'Uses the "add zeros" shortcut for multiplying, even though this is a division.'
+    worked_answer:
+      option: C
+      steps:
+        - '$52 \div 100$'
+        - 'Move the digits right: $52 \to 5.2 \to 0.52 \to 0.052$'
+        - '$0.052$'
+  - id: pv-05
+    year_group: 8
+    stem: 'Which list puts $3.7,\ 3.65,\ 3.802$ in ascending order (smallest first)?'
+    options:
+      A: '$3.7,\ 3.65,\ 3.802$'
+      B: '$3.802,\ 3.65,\ 3.7$'
+      C: '$3.802,\ 3.7,\ 3.65$'
+      D: '$3.65,\ 3.7,\ 3.802$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Thinks longer decimals are larger'
+        explanation: 'Orders by number of digits after the point, like whole numbers.'
+      B:
+        label: 'Thinks shorter decimals are larger'
+        explanation: 'Believes more decimal places means smaller pieces, so the longest is smallest.'
+      C:
+        label: 'Confuses ascending with descending'
+        explanation: 'Orders the decimals correctly but largest first.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Count the decimal places: $3.7$ has 1, $3.65$ has 2, $3.802$ has 3'
+        - 'Fewest places first'
+        - '$3.7,\ 3.65,\ 3.802$'

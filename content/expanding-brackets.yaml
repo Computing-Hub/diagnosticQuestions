@@ -1,0 +1,127 @@
+strand: Algebra
+topic: Expanding brackets
+order: 3
+questions:
+  - id: exp-01
+    year_group: 7
+    stem: 'Expand $3(x + 4)$'
+    options:
+      A: '$3x + 4$'
+      B: '$3x + 7$'
+      C: '$12x$'
+      D: '$3x + 12$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies only the first term in the bracket'
+        explanation: 'Multiplies x by 3 but leaves the 4 unchanged.'
+      B:
+        label: 'Adds the outside number to the second term'
+        explanation: 'Multiplies 3 by x but adds 3 to 4 instead of multiplying.'
+      C:
+        label: 'Combines unlike terms inside the bracket'
+        explanation: 'Turns x + 4 into 4x, then multiplies by 3.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3 \times x = 3x$'
+        - '$3 + 4 = 7$'
+        - '$3x + 7$'
+  - id: exp-02
+    year_group: 8
+    stem: 'Expand $-2(x - 5)$'
+    options:
+      A: '$-2x + 10$'
+      B: '$-2x - 10$'
+      C: '$-2x - 5$'
+      D: '$2x - 10$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks negative × negative is negative'
+        explanation: 'Works out −2 × −5 as −10.'
+      C:
+        label: 'Multiplies only the first term in the bracket'
+        explanation: 'Multiplies x by −2 but copies the −5 unchanged.'
+      D:
+        label: 'Ignores the negative sign outside the bracket'
+        explanation: 'Multiplies by 2 instead of −2.'
+    worked_answer:
+      option: B
+      steps:
+        - '$-2 \times x = -2x$'
+        - '$-2 \times -5 = -10$'
+        - '$-2x - 10$'
+  - id: exp-03
+    year_group: 8
+    stem: 'Expand $x(x + 3)$'
+    options:
+      A: '$x^2 + 3$'
+      B: '$5x$'
+      C: '$x^2 + 3x$'
+      D: '$3x^2$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies only the first term in the bracket'
+        explanation: 'Multiplies x by x but leaves the 3 unchanged.'
+      B:
+        label: 'Thinks x × x = 2x'
+        explanation: 'Works out x × x as 2x, then adds the 3x to get 5x.'
+      D:
+        label: 'Multiplies all the terms together'
+        explanation: 'Treats x(x + 3) as x × x × 3.'
+    worked_answer:
+      option: D
+      steps:
+        - '$x(x + 3) = x \times x \times 3$'
+        - '$= 3x^2$'
+  - id: exp-04
+    year_group: 9
+    stem: 'Expand $(x + 2)(x + 5)$'
+    options:
+      A: '$x^2 + 10$'
+      B: '$x^2 + 7x + 10$'
+      C: '$x^2 + 7x + 7$'
+      D: '$x^2 + 10x + 10$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Multiplies only firsts and lasts'
+        explanation: 'Multiplies x by x and 2 by 5 but misses the two x terms.'
+      C:
+        label: 'Adds the constants instead of multiplying'
+        explanation: 'Gets the x terms right but works out 2 + 5 for the last term.'
+      D:
+        label: 'Multiplies the numbers to get the x term'
+        explanation: 'Thinks the coefficient of x is 2 × 5 instead of 2 + 5.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x \times x = x^2$'
+        - '$2 \times 5 = 10$'
+        - '$x^2 + 10$'
+  - id: exp-05
+    year_group: 9
+    stem: 'Expand $(x - 3)^2$'
+    options:
+      A: '$2x - 6$'
+      B: '$x^2 + 9$'
+      C: '$x^2 - 6x + 9$'
+      D: '$x^2 - 6x - 9$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks squaring means multiplying by 2'
+        explanation: 'Treats (x − 3)² as 2(x − 3).'
+      B:
+        label: 'Squares each term separately'
+        explanation: 'Thinks (x − 3)² = x² + (−3)², missing the middle terms.'
+      D:
+        label: 'Thinks (−3) × (−3) = −9'
+        explanation: 'Expands correctly but gets the sign of the constant wrong.'
+    worked_answer:
+      option: B
+      steps:
+        - '$(x - 3)^2 = x^2 + (-3)^2$'
+        - '$= x^2 + 9$'

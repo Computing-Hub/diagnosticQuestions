@@ -1,0 +1,140 @@
+strand: Statistics
+topic: Interpreting charts
+order: 2
+questions:
+  - id: chart-01
+    year_group: 7
+    stem: 'The pictogram shows books borrowed from a library. How many books were borrowed on Tuesday?'
+    image: diagrams/interpreting-charts-01.svg
+    image_alt: 'Pictogram. Monday: 2 circles. Tuesday: 3 circles and a half circle. Wednesday: 5 circles. Key: one circle = 4 books.'
+    options:
+      A: '$3.5$'
+      B: '$13$'
+      C: '$16$'
+      D: '$14$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Counts symbols and ignores the key'
+        explanation: 'Counts 3½ circles without multiplying by 4 books per circle.'
+      B:
+        label: 'Treats a part symbol as worth 1'
+        explanation: 'Works out 3 × 4 = 12 and adds 1 for the half circle; half a circle is worth 2.'
+      C:
+        label: 'Counts a part symbol as a whole symbol'
+        explanation: 'Counts 4 circles and works out 4 × 4 = 16.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Tuesday has $4$ circles'
+        - 'Each circle is $4$ books'
+        - '$4 \times 4 = 16$'
+        - '$16$'
+  - id: chart-02
+    year_group: 7
+    stem: 'How many students chose swimming?'
+    image: diagrams/interpreting-charts-02.svg
+    image_alt: 'Bar chart of favourite sport. The vertical axis goes up in 2s from 0 to 14. Football 10, Swimming ends halfway between 6 and 8, Tennis 4, Netball 12.'
+    options:
+      A: '$7$'
+      B: '$3.5$'
+      C: '$6$'
+      D: '$6.5$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Counts grid squares, ignoring the scale'
+        explanation: 'The bar is 3½ squares tall, but each square is worth 2.'
+      C:
+        label: 'Reads only the labelled line below the bar'
+        explanation: 'Reads 6 and ignores the part of the bar above the gridline.'
+      D:
+        label: 'Treats half a grid gap as 0.5'
+        explanation: 'Assumes each gap is worth 1, so halfway past 6 becomes 6.5; halfway between 6 and 8 is 7.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The bar goes past the $6$ line, halfway to the next line'
+        - 'Halfway past $6$ is $6.5$'
+        - '$6.5$'
+  - id: chart-03
+    year_group: 8
+    stem: '60 students were asked their favourite sport. How many chose football?'
+    image: diagrams/interpreting-charts-03.svg
+    image_alt: 'Pie chart with sectors Football, Swimming, Tennis and Other. The Football sector is a right angle, marked 90 degrees.'
+    options:
+      A: '$90$'
+      B: '$25$'
+      C: '$15$'
+      D: '$54$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Reads the angle as the number of people'
+        explanation: 'Gives 90 because the sector angle is 90°; 90° is ¼ of 360°, so ¼ of 60 = 15.'
+      B:
+        label: 'Gives the percentage, not the number'
+        explanation: 'Correctly sees a quarter = 25% but gives 25 instead of 25% of 60.'
+      D:
+        label: 'Treats the angle as a percentage'
+        explanation: 'Works out 90% of 60 = 54, as if degrees were percentages.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Football is a right angle, so it is a quarter of the circle'
+        - 'A quarter $= 25\%$'
+        - '$25$'
+  - id: chart-04
+    year_group: 8
+    stem: 'The stem-and-leaf diagram shows the ages of people at a party. What is the range of the ages?'
+    image: diagrams/interpreting-charts-04.svg
+    image_alt: 'Stem-and-leaf diagram. Stem 1: leaves 4, 7. Stem 2: leaves 0, 3, 3, 8. Stem 3: leaves 1, 5, 9. Stem 4: leaf 2. Key: 2 | 3 means 23 years.'
+    options:
+      A: '$3$'
+      B: '$28$'
+      C: '$9$'
+      D: '$2.8$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Uses only the stems'
+        explanation: 'Works out 4 − 1 = 3 from the stems; the values are 42 and 14.'
+      C:
+        label: 'Uses only the leaves'
+        explanation: 'Works out 9 − 0 = 9 from the largest and smallest leaves.'
+      D:
+        label: 'Reads stem and leaf as a decimal'
+        explanation: 'Reads 4 | 2 as 4.2 and 1 | 4 as 1.4, ignoring the key, so gets 2.8.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Biggest stem is $4$, smallest stem is $1$'
+        - '$4 - 1 = 3$'
+        - '$3$'
+  - id: chart-05
+    year_group: 9
+    stem: 'Which statement is best supported by the scatter graph?'
+    image: diagrams/interpreting-charts-05.svg
+    image_alt: 'Scatter graph of hours of revision against test mark. Points rise from bottom left to top right, except one student who revised 8 hours and scored 15.'
+    options:
+      A: 'Revising more causes a higher mark'
+      B: 'Every student who revised more got a higher mark'
+      C: 'Students who revised more tended to get higher marks'
+      D: 'Students who revised less tended to get higher marks'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks correlation proves causation'
+        explanation: 'A scatter graph shows a relationship, not that one thing causes the other.'
+      B:
+        label: 'Thinks correlation applies to every individual'
+        explanation: 'Correlation is a trend; the student at 8 hours and 15 marks breaks it.'
+      D:
+        label: 'Confuses positive and negative correlation'
+        explanation: 'Points go up from left to right, so more revision goes with higher marks.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The dots go up from left to right'
+        - 'So the students who revised less got the higher marks'
+        - 'Students who revised less tended to get higher marks'

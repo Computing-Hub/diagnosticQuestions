@@ -1,0 +1,130 @@
+strand: Number
+topic: Standard form
+order: 12
+questions:
+  - id: sf-01
+    year_group: 8
+    stem: 'Write $34\,000$ in standard form.'
+    options:
+      A: '$3.4 \times 10^{3}$'
+      B: '$34 \times 10^{3}$'
+      C: '$3.4 \times 10^{5}$'
+      D: '$3.4 \times 10^{4}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Uses the number of zeros as the power'
+        explanation: '34 000 has three zeros, but the 3 has moved four places.'
+      B:
+        label: 'Leaves the first number 10 or more'
+        explanation: 'The first number must be at least 1 and less than 10.'
+      C:
+        label: 'Uses the number of digits as the power'
+        explanation: '34 000 has five digits, but 3.4 × 10⁵ = 340 000.'
+    worked_answer:
+      option: B
+      steps:
+        - '$34\,000 = 34 \times 1000$'
+        - '$= 34 \times 10^{3}$'
+  - id: sf-02
+    year_group: 8
+    stem: 'Write $6.2 \times 10^{-3}$ as an ordinary number.'
+    options:
+      A: '$0.00062$'
+      B: '$0.0062$'
+      C: '$6200$'
+      D: '$-0.0062$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Writes three zeros after the decimal point'
+        explanation: 'Uses the index as a count of zeros, not of places moved.'
+      C:
+        label: 'Ignores the negative sign in the index'
+        explanation: 'Has multiplied by 1000 instead of dividing by 1000.'
+      D:
+        label: 'Thinks a negative index makes the number negative'
+        explanation: 'Moves the point correctly but adds a minus sign; a negative index gives a small positive number.'
+    worked_answer:
+      option: C
+      steps:
+        - '$6.2 \times 10^{-3}$'
+        - '$= 6.2 \times 1000$'
+        - '$= 6200$'
+  - id: sf-03
+    year_group: 8
+    stem: 'Which number is written in standard form?'
+    options:
+      A: '$70.5 \times 10^{5}$'
+      B: '$0.705 \times 10^{7}$'
+      C: '$7.05 \times 10^{6}$'
+      D: '$7.05 \times 100^{3}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Allows the first number to be 10 or more'
+        explanation: 'Thinks any number × a power of 10 is standard form.'
+      B:
+        label: 'Allows the first number to be less than 1'
+        explanation: 'The first number must be at least 1.'
+      D:
+        label: 'Thinks any power of 10 can be the base'
+        explanation: 'Standard form always uses 10 as the base.'
+    worked_answer:
+      option: D
+      steps:
+        - '$7.05$ is between $1$ and $10$'
+        - '$100 = 10^{2}$, so $100^{3}$ is still a power of ten'
+        - 'So this one is in standard form:'
+        - '$7.05 \times 100^{3}$'
+  - id: sf-04
+    year_group: 9
+    stem: 'Which number is the largest?'
+    options:
+      A: '$9.9 \times 10^{3}$'
+      B: '$2.1 \times 10^{4}$'
+      C: '$1.5 \times 10^{-5}$'
+      D: '$21\,000 \times 10^{-1}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Compares only the first numbers'
+        explanation: 'Sees 9.9 as biggest but ignores the power of 10.'
+      C:
+        label: 'Ignores the sign of the index'
+        explanation: 'Treats 10⁻⁵ as bigger than 10⁴ because 5 > 4.'
+      D:
+        label: 'Judges size by how long the number looks'
+        explanation: '21 000 × 10⁻¹ is only 2100.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Compare the indices: $3$, $4$, $-5$ and $-1$'
+        - 'The $5$ is the biggest number'
+        - 'Largest:'
+        - '$1.5 \times 10^{-5}$'
+  - id: sf-05
+    year_group: 9
+    stem: 'Work out $(3 \times 10^{4}) \times (2 \times 10^{5})$'
+    options:
+      A: '$6 \times 10^{9}$'
+      B: '$6 \times 10^{20}$'
+      C: '$5 \times 10^{9}$'
+      D: '$6 \times 100^{9}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Multiplies the powers of 10'
+        explanation: '10⁴ × 10⁵ = 10⁹: add the indices.'
+      C:
+        label: 'Adds the first numbers instead of multiplying'
+        explanation: 'Has done 3 + 2 = 5.'
+      D:
+        label: 'Multiplies the bases 10 × 10 as well'
+        explanation: 'The base stays 10; only the indices are added.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3 \times 2 = 6$'
+        - '$10^{4} \times 10^{5} = 10^{20}$'
+        - '$6 \times 10^{20}$'

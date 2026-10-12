@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} · Present{% endblock %}
+{% block body_class %}mode-present{% endblock %}
+{% block header %}{% endblock %}
+{% block main_class %}present{% endblock %}
+{% block content %}
+{% include "questions/_present_body.html" %}
+
+{{ questions_data|json_script:"questions-data" }}
+<script>
+  window.PRESENT = {
+    start: {{ start }},
+    quizSet: {{ quiz_set_id|default:"null" }}
+  };
+</script>
+{{ dq_env|json_script:"dq-env" }}
+{% endblock %}
+{% block scripts %}{% load static %}<script src="{% static 'js/env-server.js' %}"></script><script src="{% static 'js/present.js' %}"></script>{% endblock %}

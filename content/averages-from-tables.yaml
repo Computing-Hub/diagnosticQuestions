@@ -1,0 +1,129 @@
+strand: Statistics
+topic: Averages from tables
+order: 3
+questions:
+  - id: tab-01
+    year_group: 8
+    stem: 'The table shows goals scored in some football matches. What is the mode? $$\begin{array}{|l|c|c|c|c|c|}\hline \text{Goals} & 0 & 1 & 2 & 3 & 4\\\hline \text{Frequency} & 1 & 8 & 6 & 5 & 4\\\hline\end{array}$$'
+    options:
+      A: '$8$'
+      B: '$4$'
+      C: '$2$'
+      D: '$1$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Gives the highest frequency, not the value'
+        explanation: '8 is how many matches had the most common score; the mode is that score, 1 goal.'
+      B:
+        label: 'Thinks the mode is the largest value'
+        explanation: 'Picks the largest number of goals, 4.'
+      C:
+        label: 'Confuses mode with median'
+        explanation: '2 is the median (and the middle of the Goals row); the mode is the most common value.'
+    worked_answer:
+      option: A
+      steps:
+        - 'The biggest number in the frequency row is $8$'
+        - '$8$'
+  - id: tab-02
+    year_group: 8
+    stem: 'The table shows how many pets 20 students have. What is the median? $$\begin{array}{|l|c|c|c|c|c|}\hline \text{Pets} & 0 & 1 & 2 & 3 & 4\\\hline \text{Frequency} & 6 & 5 & 4 & 3 & 2\\\hline\end{array}$$'
+    options:
+      A: '$1$'
+      B: '$2$'
+      C: '$4$'
+      D: '$10.5$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Takes the middle of the values row'
+        explanation: 'Picks 2 because it is in the middle of 0–4, ignoring the frequencies.'
+      C:
+        label: 'Finds the median of the frequencies'
+        explanation: 'Finds the middle frequency (4) instead of the middle student.'
+      D:
+        label: 'Gives the position, not the value'
+        explanation: '(20 + 1) ÷ 2 = 10.5 is where the median is; the 10th and 11th students both have 1 pet.'
+    worked_answer:
+      option: D
+      steps:
+        - 'There are $20$ students'
+        - 'Median $= (20 + 1) \div 2 = 10.5$'
+        - '$10.5$'
+  - id: tab-03
+    year_group: 8
+    stem: 'The table shows the scores of 20 students. What is the mean score? $$\begin{array}{|l|c|c|c|c|}\hline \text{Score} & 1 & 2 & 3 & 4\\\hline \text{Frequency} & 2 & 5 & 8 & 5\\\hline\end{array}$$'
+    options:
+      A: '$14$'
+      B: '$2.5$'
+      C: '$2.8$'
+      D: '$5$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Divides by the number of rows, not the total frequency'
+        explanation: 'Total score 56 divided by 4 categories instead of by 20 students.'
+      B:
+        label: 'Averages the values, ignoring frequencies'
+        explanation: 'Works out (1 + 2 + 3 + 4) ÷ 4 = 2.5 as if each score happened once.'
+      D:
+        label: 'Finds the mean of the frequencies'
+        explanation: 'Works out (2 + 5 + 8 + 5) ÷ 4 = 5.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Scores are $1, 2, 3, 4$'
+        - '$(1 + 2 + 3 + 4) \div 4 = 10 \div 4$'
+        - '$2.5$'
+  - id: tab-04
+    year_group: 8
+    stem: 'The table shows the shoe sizes of some students. What is the range of the shoe sizes? $$\begin{array}{|l|c|c|c|c|c|c|}\hline \text{Size} & 3 & 4 & 5 & 6 & 7 & 8\\\hline \text{Frequency} & 0 & 5 & 9 & 7 & 3 & 0\\\hline\end{array}$$'
+    options:
+      A: '$5$'
+      B: '$3$'
+      C: '$9$'
+      D: '$4$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Includes values with a frequency of 0'
+        explanation: 'Works out 8 − 3 = 5, but nobody wears size 3 or 8; range is 7 − 4 = 3.'
+      C:
+        label: 'Finds the range of the frequencies'
+        explanation: 'Works out 9 − 0 = 9 from the frequency row.'
+      D:
+        label: 'Counts how many different values appear'
+        explanation: 'Counts the 4 sizes that students wear (4, 5, 6, 7) instead of subtracting.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Biggest frequency is $9$, smallest is $0$'
+        - '$9 - 0 = 9$'
+        - '$9$'
+  - id: tab-05
+    year_group: 9
+    stem: 'The table shows how long 20 students took to get to school. Estimate the mean time. $$\begin{array}{|l|c|}\hline \text{Time } t \text{ (minutes)} & \text{Frequency}\\\hline 0 < t \le 10 & 4\\\hline 10 < t \le 20 & 10\\\hline 20 < t \le 30 & 6\\\hline\end{array}$$'
+    options:
+      A: '$21$ minutes'
+      B: '$15$ minutes'
+      C: '$106.7$ minutes'
+      D: '$16$ minutes'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Uses the upper class boundary, not the midpoint'
+        explanation: 'Uses 10, 20, 30: (40 + 200 + 180) ÷ 20 = 21. Midpoints 5, 15, 25 give 320 ÷ 20 = 16.'
+      B:
+        label: 'Gives the midpoint of the modal class'
+        explanation: '15 is the middle of the group with the highest frequency, not the estimated mean.'
+      C:
+        label: 'Divides by the number of groups'
+        explanation: 'Works out 320 ÷ 3 ≈ 106.7 instead of dividing by the 20 students.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Use $10$, $20$ and $30$ minutes for the groups'
+        - '$10 \times 4 + 20 \times 10 + 30 \times 6 = 420$'
+        - '$420 \div 20 = 21$'
+        - '$21$ minutes'
