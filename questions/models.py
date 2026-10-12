@@ -2,9 +2,13 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 LETTERS = ("A", "B", "C", "D")
-YEAR_GROUPS = (7, 8, 9)
+YEAR_GROUPS = (7, 8, 9, 10, 11)
 
-# Fixed order of the KS3 strands on the home page.
+KEY_STAGES = {"KS3": "Key Stage 3", "KS4": "Key Stage 4 (GCSE)"}
+# GCSE tier of a KS4 topic: "foundation" content is on both papers, "higher" is Higher only.
+TIERS = {"foundation": "Foundation & Higher", "higher": "Higher only"}
+
+# Fixed order of the strands on the home page.
 STRANDS = (
     "Number",
     "Algebra",
@@ -20,9 +24,11 @@ class Topic(models.Model):
     name = models.CharField(max_length=120)
     strand = models.CharField(max_length=60, choices=[(s, s) for s in STRANDS])
     order = models.PositiveIntegerField(default=0, help_text="Position within the strand.")
+    key_stage = models.CharField(max_length=3, choices=list(KEY_STAGES.items()), default="KS3")
+    tier = models.CharField(max_length=10, choices=list(TIERS.items()), blank=True, help_text="KS4 topics only.")
 
     class Meta:
-        ordering = ["order", "name"]
+        ordering = ["key_stage", "order", "name"]
 
     def __str__(self):
         return self.name
@@ -30,6 +36,30 @@ class Topic(models.Model):
     @property
     def strand_index(self):
         return STRANDS.index(self.strand) if self.strand in STRANDS else len(STRANDS)
+
+    @property
+    def tier_label(self):
+        return TIERS.get(self.tier, "")
+
+
+def group_topics(topics):
+    """[(key_stage, key_stage_name, [(strand, [topics])])] in curriculum order.
+
+    Works for Topic objects and for the plain dicts in questions.js, so the Django
+    pages and the USB export group topics the same way.
+    """
+    get = lambda t, k: t[k] if isinstance(t, dict) else getattr(t, k)
+    out = []
+    for ks, ks_name in KEY_STAGES.items():
+        strands = []
+        for strand in STRANDS:
+            ts = sorted((t for t in topics if get(t, "key_stage") == ks and get(t, "strand") == strand),
+                        key=lambda t: (get(t, "order"), get(t, "name")))
+            if ts:
+                strands.append((strand, ts))
+        if strands:
+            out.append((ks, ks_name, strands))
+    return out
 
 
 class Question(models.Model):

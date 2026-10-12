@@ -11,9 +11,9 @@ import yaml
 from django.conf import settings
 from django.db import transaction
 
-from .models import LETTERS, STRANDS, YEAR_GROUPS, Question, Topic
+from .models import KEY_STAGES, LETTERS, STRANDS, TIERS, YEAR_GROUPS, Question, Topic
 
-FILE_KEYS = {"strand", "topic", "order", "questions"}
+FILE_KEYS = {"strand", "topic", "order", "questions", "key_stage", "tier"}
 QUESTION_KEYS = {"id", "year_group", "stem", "image", "image_alt", "options", "correct", "misconceptions", "worked_answer"}
 REQUIRED_QUESTION_KEYS = {"id", "year_group", "stem", "options", "correct", "misconceptions"}
 
@@ -31,6 +31,8 @@ class TopicData:
     strand: str
     order: int
     source: str
+    key_stage: str = "KS3"
+    tier: str = ""
     questions: list = field(default_factory=list)
 
 
@@ -62,13 +64,21 @@ def validate_topic_file(path, static_dirs=None):
     if not isinstance(order, int) or isinstance(order, bool):
         errors.append(f"{where}: order must be a whole number")
         order = 0
+    key_stage = data.get("key_stage", "KS3")
+    tier = data.get("tier", "")
+    if key_stage not in KEY_STAGES:
+        errors.append(f"{where}: key_stage must be one of {list(KEY_STAGES)}, got {key_stage!r}")
+    elif key_stage == "KS4" and tier not in TIERS:
+        errors.append(f"{where}: KS4 topics need tier: {' or '.join(TIERS)}, got {tier!r}")
+    elif key_stage == "KS3" and tier:
+        errors.append(f"{where}: tier is only for KS4 topics")
     questions = data.get("questions")
     if not isinstance(questions, list) or not questions:
         errors.append(f"{where}: questions must be a non-empty list")
         questions = []
 
     topic = TopicData(slug=path.stem, name=str(data.get("topic", "")), strand=str(data.get("strand", "")),
-                      order=order, source=path.name)
+                      order=order, source=path.name, key_stage=str(key_stage), tier=str(tier or ""))
 
     for index, q in enumerate(questions, start=1):
         q_errors, clean = validate_question(q, f"{where} question {index}", static_dirs)
@@ -100,7 +110,7 @@ def validate_question(q, where, static_dirs=None):
 
     year = q.get("year_group")
     if year not in YEAR_GROUPS or isinstance(year, bool):
-        errors.append(f"{where}: year_group must be 7, 8 or 9, got {year!r}")
+        errors.append(f"{where}: year_group must be one of {list(YEAR_GROUPS)}, got {year!r}")
 
     if not _is_text(q.get("stem")):
         errors.append(f"{where}: stem is empty")
@@ -221,7 +231,8 @@ def load_content(content_dir=None, static_dirs=None, prune=True):
     loaded_ids = set()
     for t in topics:
         topic_obj, _ = Topic.objects.update_or_create(
-            slug=t.slug, defaults={"name": t.name, "strand": t.strand, "order": t.order}
+            slug=t.slug, defaults={"name": t.name, "strand": t.strand, "order": t.order,
+                                    "key_stage": t.key_stage, "tier": t.tier}
         )
         for q in t.questions:
             fields = dict(q)

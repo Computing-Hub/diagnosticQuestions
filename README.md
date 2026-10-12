@@ -1,6 +1,6 @@
-# KS3 Maths diagnostic questions
+# KS3 & KS4 Maths diagnostic questions
 
-Original KS3 (England) maths diagnostic questions for whole-class use on a projector.
+Original KS3 and GCSE (KS4, England) maths diagnostic questions for whole-class use on a projector.
 Students have no devices: they answer A/B/C/D with their hands or printed answer cards.
 
 Each question has one correct answer and three wrong ones. Each wrong answer is designed
@@ -228,7 +228,8 @@ error (file, question id and what is wrong) and loads nothing. It checks for:
 - a misconception label and explanation for each of the three wrong options, all different,
   and none for the correct option;
 - unique ids across all files;
-- year group 7, 8 or 9;
+- year group 7 to 11;
+- a key stage of KS3 or KS4, and a GCSE tier for every KS4 topic (and only for KS4 topics);
 - four different, quoted option texts;
 - a known strand;
 - image files that exist and have alt text;
@@ -243,10 +244,10 @@ YAML-loaded questions are overwritten on the next load, so make lasting changes 
 ```yaml
 strand: Number                 # Number | Algebra | Ratio & proportion | Geometry & measures | Probability | Statistics
 topic: Negative numbers        # display name
-order: 2                       # position within the strand
+order: 2                       # position within the strand (and key stage)
 questions:
   - id: neg-06                 # unique across all files
-    year_group: 7              # 7, 8 or 9 (kept for reference; the site does not show or filter by it)
+    year_group: 7              # 7 to 11 (kept for reference; the site does not show or filter by it)
     stem: 'What is $-4 - 3$?'  # LaTeX between $...$ or $$...$$ (KaTeX)
     image: diagrams/neg-06.svg # optional, path under static/
     image_alt: 'A number line from -10 to 10'   # required if image is set
@@ -289,6 +290,15 @@ Rules of thumb:
 - Diagrams go in `static/diagrams/` as SVG. Use black on white, large labels, and "Not drawn to scale" where relevant.
 
 To add a new topic, create a new YAML file. It appears on the home page after the next `load_questions`.
+
+**KS4 (GCSE) topics** add two lines after `topic:`. Topics without them are KS3.
+
+```yaml
+key_stage: KS4                 # KS3 (default) | KS4
+tier: higher                   # KS4 only: foundation (on both papers) | higher (Higher only)
+```
+
+The home page, quiz builder and game list KS3 and KS4 separately, and KS4 topics show their tier.
 
 ## Admin
 

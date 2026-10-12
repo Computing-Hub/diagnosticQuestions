@@ -1,7 +1,7 @@
 {% extends "static_site/base.html" %}
-{% block title %}{{ topic.name }} · KS3 Maths{% endblock %}
+{% block title %}{{ topic.name }} · KS3 & KS4 Maths{% endblock %}
 {% block content %}
-<p class="crumbs"><a href="index.html">Topics</a> › {{ topic.strand }}</p>
+<p class="crumbs"><a href="index.html">Topics</a> › {{ topic.key_stage }} › {{ topic.strand }}{% if topic.tier_label %} · <span class="tier tier-{{ topic.tier }}">{{ topic.tier_label }}</span>{% endif %}</p>
 <h1>{{ topic.name }}</h1>
 
 <div class="toolbar-row">

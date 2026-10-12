@@ -90,6 +90,12 @@ form.inline { display: inline; }
 .topic-card:hover { background: var(--panel); }
 .topic-name { font-weight: 700; }
 .count { color: var(--muted); font-size: .9rem; }
+.key-stage { margin-top: 2rem; }
+.key-stage > h2 { font-size: 1.6rem; border-bottom: 3px solid var(--line); padding-bottom: .25rem; }
+.ks-jump { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.ks-jump a { padding: .3rem .8rem; border: 2px solid var(--line); border-radius: 999px; font-weight: 700; text-decoration: none; }
+.tier { font-weight: 700; color: var(--fg); }
+.tier-higher { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .chips a { display: inline-block; padding: .3rem .7rem; border: 2px solid var(--line); border-radius: 999px; }
 

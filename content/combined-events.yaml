@@ -1,0 +1,136 @@
+strand: Probability
+topic: Combined events
+key_stage: KS4
+tier: foundation
+order: 1
+questions:
+  - id: comb-01
+    year_group: 10
+    stem: 'A fair coin is flipped and a fair six-sided dice is rolled. What is the probability of getting a head and a 6?'
+    options:
+      A: '$\frac{2}{3}$'
+      B: '$\frac{2}{8}$'
+      C: '$\frac{1}{8}$'
+      D: '$\frac{1}{12}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Adds the probabilities for "and"'
+        explanation: 'Works out $\frac{1}{2} + \frac{1}{6}$; for independent events "and" means multiply: $\frac{1}{2} \times \frac{1}{6} = \frac{1}{12}$.'
+      B:
+        label: 'Adds numerators and denominators'
+        explanation: 'Works out $\frac{1 + 1}{2 + 6}$; fractions are not combined this way.'
+      C:
+        label: 'Adds the numbers of outcomes'
+        explanation: 'Counts $2 + 6 = 8$ outcomes; there are $2 \times 6 = 12$ equally likely pairs.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Coin has $2$ outcomes, dice has $6$'
+        - '$2 + 6 = 8$ outcomes, and one of them is a head and a 6'
+        - '$\frac{1}{8}$'
+
+  - id: comb-02
+    year_group: 10
+    stem: 'A spinner can land on red, blue or green. $P(\text{red}) = 0.3$ and $P(\text{blue}) = 0.25$. What is the probability it lands on red or blue?'
+    options:
+      A: '$0.075$'
+      B: '$0.45$'
+      C: '$0.55$'
+      D: '$0.475$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies for "or"'
+        explanation: 'Works out $0.3 \times 0.25$; the spinner cannot land on both, so "or" means add.'
+      B:
+        label: 'Finds the probability of neither'
+        explanation: 'Works out $1 - 0.55$, which is the probability of green.'
+      D:
+        label: 'Subtracts P(both) when the events cannot both happen'
+        explanation: 'Works out $0.3 + 0.25 - 0.3 \times 0.25$; the spinner cannot land on red and blue at once, so just add: $0.55$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Red or blue: $0.3 \times 0.25$'
+        - '$= 0.075$'
+        - '$0.075$'
+
+  - id: comb-03
+    year_group: 11
+    stem: 'A bag has 5 red counters and 3 blue counters. Two counters are taken at random without replacement. What is the probability that both are red?'
+    options:
+      A: '$\frac{25}{64}$'
+      B: '$\frac{5}{14}$'
+      C: '$\frac{20}{64}$'
+      D: '$\frac{25}{56}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Treats the draws as with replacement'
+        explanation: 'Works out $\frac{5}{8} \times \frac{5}{8}$; after one red is taken there are 4 red out of 7.'
+      C:
+        label: 'Reduces the red count but not the total'
+        explanation: 'Works out $\frac{5}{8} \times \frac{4}{8}$; there are only 7 counters left for the second draw.'
+      D:
+        label: 'Reduces the total but not the red count'
+        explanation: 'Works out $\frac{5}{8} \times \frac{5}{7}$; after one red is taken only 4 reds are left: $\frac{5}{8} \times \frac{4}{7} = \frac{5}{14}$.'
+    worked_answer:
+      option: C
+      steps:
+        - 'First red: $\frac{5}{8}$'
+        - 'Second red: $\frac{4}{8}$'
+        - '$\frac{5}{8} \times \frac{4}{8} = \frac{20}{64}$'
+        - '$\frac{20}{64}$'
+
+  - id: comb-04
+    year_group: 11
+    stem: 'The probability that a bus is late on any day is $0.2$, independently of other days. What is the probability that it is late on at least one of two days?'
+    options:
+      A: '$0.36$'
+      B: '$0.4$'
+      C: '$0.04$'
+      D: '$0.64$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Adds the probabilities for each day'
+        explanation: 'Works out $0.2 + 0.2$; this counts "late both days" twice. Use $1 - P(\text{not late both days}) = 1 - 0.8^2$.'
+      C:
+        label: 'Finds the probability of late on both days'
+        explanation: 'Works out $0.2 \times 0.2$; "at least one" also includes late on just one day.'
+      D:
+        label: 'Forgets to subtract from 1'
+        explanation: '$0.8 \times 0.8 = 0.64$ is the probability it is never late; at least once is $1 - 0.64$.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Not late on a day: $1 - 0.2 = 0.8$'
+        - '$0.8 \times 0.8 = 0.64$'
+        - '$0.64$'
+
+  - id: comb-05
+    year_group: 10
+    stem: 'The probability of rain on Saturday is $0.3$. The probability of rain on Sunday is $0.4$. The two events are independent. What is the probability that it rains on Saturday but not on Sunday?'
+    options:
+      A: '$0.12$'
+      B: '$0.9$'
+      C: '$0.18$'
+      D: '$0.28$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Ignores the "not"'
+        explanation: 'Works out $0.3 \times 0.4$, rain on both days; no rain on Sunday has probability $0.6$.'
+      B:
+        label: 'Adds for "and"'
+        explanation: 'Works out $0.3 + 0.6$; for independent events, multiply: $0.3 \times 0.6 = 0.18$.'
+      D:
+        label: 'Applies "not" to the wrong day'
+        explanation: 'Works out $0.7 \times 0.4$, which is no rain on Saturday and rain on Sunday.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Not rain: $1 - 0.3 = 0.7$'
+        - '$0.7 \times 0.4 = 0.28$'
+        - '$0.28$'

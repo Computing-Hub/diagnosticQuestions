@@ -1,7 +1,7 @@
 {% extends "static_site/base.html" %}
 {% block content %}
 <section class="intro">
-  <h1>KS3 Maths diagnostic questions</h1>
+  <h1>KS3 & KS4 Maths diagnostic questions</h1>
   <p>{{ total }} original questions. Every wrong answer points to one specific misconception.
      Project a question, students answer A, B, C or D with their hands or answer cards.</p>
   <p class="actions">
@@ -17,19 +17,7 @@
   <ul class="chips"></ul>
 </section>
 
-{% for strand, topics in strands %}
-<section class="strand">
-  <h2>{{ strand }}</h2>
-  <ul class="topic-grid">
-    {% for t in topics %}
-    <li><a class="topic-card" href="topic-{{ t.slug }}.html">
-      <span class="topic-name">{{ t.name }}</span>
-      <span class="count">{{ t.count }} question{{ t.count|pluralize }}</span>
-    </a></li>
-    {% endfor %}
-  </ul>
-</section>
-{% endfor %}
+{% include "questions/_topic_groups.html" with static_site=True %}
 {% endblock %}
 {% block scripts %}
 <script>

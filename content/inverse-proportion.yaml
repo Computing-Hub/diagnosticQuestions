@@ -1,0 +1,136 @@
+strand: Ratio & proportion
+topic: Inverse proportion
+key_stage: KS4
+tier: foundation
+order: 1
+questions:
+  - id: inv-01
+    year_group: 10
+    stem: '4 workers take 6 days to build a wall. How long would 3 workers take, working at the same rate?'
+    options:
+      A: '$4.5$ days'
+      B: '$24$ days'
+      C: '$7$ days'
+      D: '$8$ days'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Uses direct proportion'
+        explanation: 'Thinks fewer workers take less time. With fewer workers the job takes longer: $4 \times 6 = 24$ worker-days, then $24 \div 3$.'
+      B:
+        label: 'Finds the total work but does not share it between the workers'
+        explanation: '$4 \times 6 = 24$ is the number of days one worker would take; $3$ workers take $24 \div 3$.'
+      C:
+        label: 'Thinks one fewer worker means one more day'
+        explanation: 'Inverse proportion is about multiplying, not adding: the total $4 \times 6$ must stay the same.'
+    worked_answer:
+      option: A
+      steps:
+        - '$6 \div 4 = 1.5$ days per worker'
+        - '$1.5 \times 3 = 4.5$'
+        - '$4.5$ days'
+
+  - id: inv-02
+    year_group: 11
+    stem: '$y$ is inversely proportional to $x$. When $x$ is doubled, what happens to $y$?'
+    options:
+      A: '$y$ is halved'
+      B: '$y$ is doubled'
+      C: '$y$ decreases by $2$'
+      D: '$y$ becomes $\frac{1}{y}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Confuses inverse proportion with direct proportion'
+        explanation: 'In direct proportion $y$ doubles; in inverse proportion $xy$ stays the same, so $y$ halves.'
+      C:
+        label: 'Thinks inverse proportion means subtracting'
+        explanation: 'Inverse proportion works by multiplying and dividing: if $x$ is multiplied by $2$, $y$ is divided by $2$.'
+      D:
+        label: 'Thinks "inverse" means take the reciprocal of $y$'
+        explanation: 'Inverse proportion means $xy$ stays the same; if $x$ doubles, $y$ halves.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Proportional means they change in the same way'
+        - '$x$ doubles, so $y$ doubles'
+        - '$y$ is doubled'
+
+  - id: inv-03
+    year_group: 11
+    stem: '$y$ is inversely proportional to $x$. When $x = 4$, $y = 10$. Find $y$ when $x = 5$.'
+    options:
+      A: '$12.5$'
+      B: '$9$'
+      C: '$8$'
+      D: '$0.5$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Uses direct proportion'
+        explanation: 'Uses $y = 2.5x$; for inverse proportion $y = \frac{k}{x}$, so $k = 4 \times 10 = 40$.'
+      B:
+        label: 'Thinks $x$ up by $1$ means $y$ down by $1$'
+        explanation: 'Inverse proportion is about multiplying, not adding: $x \times y$ stays the same.'
+      D:
+        label: 'Finds $k$ by dividing instead of multiplying'
+        explanation: 'Works out $k = 10 \div 4$; in $y = \frac{k}{x}$, $k = xy = 40$.'
+    worked_answer:
+      option: D
+      steps:
+        - '$k = 10 \div 4 = 2.5$'
+        - '$y = \frac{k}{x} = \frac{2.5}{5}$'
+        - '$0.5$'
+
+  - id: inv-04
+    year_group: 10
+    stem: 'Which equation shows that $y$ is inversely proportional to $x$?'
+    options:
+      A: '$y = 12x$'
+      B: '$y = \frac{12}{x}$'
+      C: '$y = 12 - x$'
+      D: '$y = \frac{x}{12}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Confuses inverse proportion with direct proportion'
+        explanation: '$y = 12x$ is direct proportion: when $x$ doubles, $y$ doubles.'
+      C:
+        label: 'Thinks any decreasing relationship is inverse proportion'
+        explanation: 'In $y = 12 - x$, $y$ goes down as $x$ goes up, but doubling $x$ does not halve $y$.'
+      D:
+        label: 'Thinks dividing makes it inverse proportion'
+        explanation: '$y = \frac{x}{12}$ is direct proportion: doubling $x$ doubles $y$.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Inverse proportion: as $x$ goes up, $y$ goes down'
+        - 'In $y = 12 - x$, $y$ goes down when $x$ goes up'
+        - '$y = 12 - x$'
+
+  - id: inv-05
+    year_group: 10
+    stem: '$y$ is inversely proportional to $x$. Find the missing value. $$\begin{array}{|l|c|c|}\hline x & 2 & 6\\\hline y & 15 & ?\\\hline\end{array}$$'
+    options:
+      A: '$5$'
+      B: '$45$'
+      C: '$11$'
+      D: '$30$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses direct proportion'
+        explanation: 'Multiplies $15$ by $3$ because $x$ was multiplied by $3$; in inverse proportion $y$ is divided by $3$.'
+      C:
+        label: 'Thinks $x$ up by $4$ means $y$ down by $4$'
+        explanation: 'Inverse proportion is about multiplying, not adding: $x \times y$ stays the same.'
+      D:
+        label: 'Stops at the constant of proportionality'
+        explanation: 'Finds $k = 2 \times 15 = 30$ but does not divide by $6$.'
+    worked_answer:
+      option: C
+      steps:
+        - '$x$ goes from $2$ to $6$, up by $4$'
+        - 'So $y$ goes down by $4$'
+        - '$15 - 4 = 11$'
+        - '$11$'

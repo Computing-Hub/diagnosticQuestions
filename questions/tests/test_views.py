@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 
-from questions.models import QuizSet, Tally
+from questions.models import QuizSet, Tally, Topic
 
 from .test_game import make_question
 
@@ -23,6 +23,16 @@ class PageTests(TestCase):
                     reverse("set_list"), reverse("set_new"), reverse("set_detail", args=[s.pk]), reverse("game_setup")]:
             with self.subTest(url=url):
                 self.assertEqual(self.client.get(url).status_code, 200)
+
+    def test_home_groups_topics_by_key_stage_with_tier(self):
+        surds = Topic.objects.create(slug="surds", name="Surds", strand="Number", key_stage="KS4", tier="higher")
+        make_question("s-01", topic=surds)
+        r = self.client.get(reverse("home"))
+        html = r.content.decode()
+        self.assertLess(html.index("Key Stage 3"), html.index("Key Stage 4 (GCSE)"))
+        self.assertContains(r, "Higher only")
+        self.assertContains(self.client.get(reverse("topic", args=["surds"])), "KS4 › Number")
+        self.assertContains(self.client.get(reverse("set_new")), "Key Stage 4 (GCSE)")
 
     def test_topic_page_has_no_year_filter(self):
         r = self.client.get(reverse("topic", args=["t"]))

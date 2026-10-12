@@ -1,0 +1,140 @@
+strand: Geometry & measures
+topic: Right-angled trigonometry
+key_stage: KS4
+tier: foundation
+order: 1
+questions:
+  - id: trig-01
+    year_group: 10
+    stem: 'In triangle $ABC$, angle $B = 90^\circ$, angle $A = 35^\circ$ and $AC = 12\text{ cm}$. Work out the length of $BC$, to 1 decimal place.'
+    options:
+      A: '$9.8\text{ cm}$'
+      B: '$20.9\text{ cm}$'
+      C: '$6.9\text{ cm}$'
+      D: '$8.4\text{ cm}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Uses cosine for the side opposite the angle'
+        explanation: 'Works out $12 \times \cos 35^\circ$; $BC$ is opposite angle $A$ and $AC$ is the hypotenuse, so use $\sin$: $12 \times \sin 35^\circ = 6.9$.'
+      B:
+        label: 'Divides by the ratio instead of multiplying'
+        explanation: 'Works out $12 \div \sin 35^\circ$; from $\sin 35^\circ = \frac{BC}{12}$, multiply both sides by $12$.'
+      D:
+        label: 'Uses tangent with the hypotenuse'
+        explanation: 'Works out $12 \times \tan 35^\circ$; tangent links the opposite and adjacent sides, not the hypotenuse.'
+    worked_answer:
+      option: A
+      steps:
+        - '$BC$ is next to the angle, $AC$ is the hypotenuse'
+        - '$\cos 35^\circ = \frac{BC}{12}$'
+        - '$BC = 12 \times \cos 35^\circ = 9.829\ldots$'
+        - '$9.8\text{ cm}$'
+
+  - id: trig-02
+    year_group: 10
+    stem: 'In triangle $PQR$, angle $Q = 90^\circ$, $PQ = 8\text{ cm}$ and $QR = 5\text{ cm}$. Work out angle $P$, to 1 decimal place.'
+    options:
+      A: '$32.0^\circ$'
+      B: '$58.0^\circ$'
+      C: '$38.7^\circ$'
+      D: '$51.3^\circ$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Swaps the opposite and adjacent sides'
+        explanation: 'Works out $\tan^{-1}\left(\frac{8}{5}\right)$; $QR$ is opposite angle $P$, so $\tan P = \frac{5}{8}$. $58.0^\circ$ is angle $R$.'
+      C:
+        label: 'Treats the longest given side as the hypotenuse'
+        explanation: 'Uses $\sin P = \frac{5}{8}$; the hypotenuse is $PR$, opposite the right angle, which is not given.'
+      D:
+        label: 'Uses cosine for the opposite and adjacent sides'
+        explanation: 'Works out $\cos^{-1}\left(\frac{5}{8}\right)$; cosine links adjacent and hypotenuse. Opposite and adjacent need tan: $\tan^{-1}\left(\frac{5}{8}\right) = 32.0^\circ$.'
+    worked_answer:
+      option: C
+      steps:
+        - 'The hypotenuse is the longest side, $8\text{ cm}$'
+        - '$\sin P = \frac{5}{8}$'
+        - '$P = \sin^{-1}(0.625) = 38.68\ldots$'
+        - '$38.7^\circ$'
+
+  - id: trig-03
+    year_group: 11
+    stem: 'Without a calculator, what is the exact value of $\tan 60^\circ$?'
+    options:
+      A: '$\frac{1}{\sqrt{3}}$'
+      B: '$\frac{\sqrt{3}}{2}$'
+      C: '$\frac{1}{2}$'
+      D: '$\sqrt{3}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Divides cos by sin instead of sin by cos'
+        explanation: 'Works out $\cos 60^\circ \div \sin 60^\circ = \frac{1}{\sqrt{3}}$, which is $\tan 30^\circ$; $\tan 60^\circ = \frac{\sqrt{3}}{2} \div \frac{1}{2} = \sqrt{3}$.'
+      B:
+        label: 'Gives $\sin 60^\circ$ instead of $\tan 60^\circ$'
+        explanation: '$\frac{\sqrt{3}}{2}$ is $\sin 60^\circ$; tan is sin divided by cos.'
+      C:
+        label: 'Gives $\cos 60^\circ$ instead of $\tan 60^\circ$'
+        explanation: '$\frac{1}{2}$ is $\cos 60^\circ$ (and $\sin 30^\circ$), not $\tan 60^\circ$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\sin 60^\circ = \frac{\sqrt{3}}{2}$ and $\cos 60^\circ = \frac{1}{2}$'
+        - '$\tan 60^\circ = \frac{1}{2} \div \frac{\sqrt{3}}{2}$'
+        - '$= \frac{1}{2} \times \frac{2}{\sqrt{3}}$'
+        - '$\frac{1}{\sqrt{3}}$'
+
+  - id: trig-04
+    year_group: 11
+    stem: 'In triangle $XYZ$, angle $Y = 90^\circ$, angle $X = 40^\circ$ and $XY = 7\text{ cm}$. Work out the length of the hypotenuse $XZ$, to 1 decimal place.'
+    options:
+      A: '$5.4\text{ cm}$'
+      B: '$9.1\text{ cm}$'
+      C: '$10.9\text{ cm}$'
+      D: '$8.3\text{ cm}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Multiplies when the unknown is on the bottom'
+        explanation: 'From $\cos 40^\circ = \frac{7}{XZ}$, works out $7 \times \cos 40^\circ$; the unknown is the denominator, so $XZ = 7 \div \cos 40^\circ$. A hypotenuse must be the longest side.'
+      C:
+        label: 'Uses sine for the side next to the angle'
+        explanation: 'Works out $7 \div \sin 40^\circ$; $XY$ touches angle $X$, so it is the adjacent side and the ratio is cosine.'
+      D:
+        label: 'Uses tangent when the hypotenuse is involved'
+        explanation: 'Works out $7 \div \tan 40^\circ$; tangent links opposite and adjacent, so it cannot find the hypotenuse.'
+    worked_answer:
+      option: A
+      steps:
+        - '$XY$ is adjacent, $XZ$ is the hypotenuse, so use cos'
+        - '$\cos 40^\circ = \frac{7}{XZ}$'
+        - '$XZ = 7 \times \cos 40^\circ = 5.362\ldots$'
+        - '$5.4\text{ cm}$'
+
+  - id: trig-05
+    year_group: 10
+    stem: 'In triangle $DEF$, angle $E = 90^\circ$, $DF = 10\text{ cm}$ and $EF = 7\text{ cm}$. Work out angle $D$, to 1 decimal place.'
+    options:
+      A: '$44.4^\circ$'
+      B: '$45.6^\circ$'
+      C: '$35.0^\circ$'
+      D: '$0.8^\circ$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Takes the opposite side as the adjacent side'
+        explanation: 'Uses $\cos D = \frac{7}{10}$; $EF$ does not touch angle $D$, so it is opposite: $\sin D = \frac{7}{10}$. $45.6^\circ$ is angle $F$.'
+      C:
+        label: 'Uses tangent with the hypotenuse'
+        explanation: 'Uses $\tan D = \frac{7}{10}$; $10\text{ cm}$ is the hypotenuse, so the ratio is sine.'
+      D:
+        label: 'Calculator set to radians, not degrees'
+        explanation: '$\sin^{-1}\left(\frac{7}{10}\right)$ in radians mode gives $0.775\ldots$; in degrees mode it gives $44.4^\circ$.'
+    worked_answer:
+      option: B
+      steps:
+        - '$DF$ is the hypotenuse and $EF$ is the adjacent'
+        - '$\cos D = \frac{7}{10}$'
+        - '$D = \cos^{-1}(0.7) = 45.57\ldots$'
+        - '$45.6^\circ$'

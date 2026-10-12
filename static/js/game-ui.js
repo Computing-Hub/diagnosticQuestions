@@ -1,7 +1,7 @@
 /* Vote -> Argue -> Revote: the game screens, driven by DQGame (engine.js).
  *
  * Runs the same on the Django site and the USB copy. Needs window.QUESTIONS, TOPICS,
- * STRANDS (questions.js) and window.DQ_ENV (env-server.js or env-static.js).
+ * STRANDS, KEY_STAGES (questions.js) and window.DQ_ENV (env-server.js or env-static.js).
  * The game lives in sessionStorage in this browser tab only and is discarded at the end.
  *
  * Keys: Space / → next step, V votes, A argue timer, R reveal, T timer, M notes, F full screen.
@@ -158,12 +158,14 @@
         return '<option value="set:' + esc(s.id) + '"' + (kind === "set" && key === String(s.id) ? " selected" : "") + ">" + esc(s.name) + "</option>";
       }).join("") + "</optgroup>";
     }
-    window.STRANDS.forEach(function (strand) {
-      var topics = window.TOPICS.filter(function (t) { return t.strand === strand; });
-      if (!topics.length) return;
-      options += '<optgroup label="' + esc(strand) + '">' + topics.map(function (t) {
-        return '<option value="topic:' + esc(t.slug) + '"' + (kind === "topic" && key === t.slug ? " selected" : "") + ">" + esc(t.name) + " (" + t.count + ")</option>";
-      }).join("") + "</optgroup>";
+    Object.keys(window.KEY_STAGES).forEach(function (ks) {
+      window.STRANDS.forEach(function (strand) {
+        var topics = window.TOPICS.filter(function (t) { return t.key_stage === ks && t.strand === strand; });
+        if (!topics.length) return;
+        options += '<optgroup label="' + esc(ks + " · " + strand) + '">' + topics.map(function (t) {
+          return '<option value="topic:' + esc(t.slug) + '"' + (kind === "topic" && key === t.slug ? " selected" : "") + ">" + esc(t.name) + " (" + t.count + (t.tier === "higher" ? ", Higher" : "") + ")</option>";
+        }).join("") + "</optgroup>";
+      });
     });
     var radios = function (name, items) {
       return Object.keys(items).map(function (v, i) {

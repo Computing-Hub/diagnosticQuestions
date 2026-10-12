@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-KS3 (England) maths diagnostic multiple-choice questions for whole-class projector use. Django 5.1 + SQLite, plain browser JS (no bundler, no npm). README.md is the user-facing manual (present keys, game rules, YAML format) — read it before changing behaviour it documents, and keep it in sync.
+KS3 and GCSE/KS4 (England) maths diagnostic multiple-choice questions for whole-class projector use. Django 5.1 + SQLite, plain browser JS (no bundler, no npm). README.md is the user-facing manual (present keys, game rules, YAML format) — read it before changing behaviour it documents, and keep it in sync.
 
 ## Commands
 
@@ -31,7 +31,7 @@ Settings are env vars prefixed `DQ_` (see `config/settings.py` and the README ta
 
 **Content flow: YAML → DB → `questions.js` → browser.**
 - `content/<slug>.yaml` (one topic per file; filename = topic slug) is the source of truth. `questions/loader.py` validates *every* file before writing anything (all-or-nothing) and prunes DB questions no longer in YAML (`--keep-missing` to keep). Admin edits to YAML-loaded questions are overwritten on the next load.
-- `questions/models.py`: `Topic`, `Question` (options/misconceptions stored as flat `option_a..d`, `misconception_a..d`, `explanation_a..d` columns; `Question.options()` assembles them), `QuizSet`, `Tally`. `STRANDS` fixes strand order.
+- `questions/models.py`: `Topic` (with `key_stage` KS3/KS4 and, for KS4, GCSE `tier` foundation/higher; `group_topics()` groups topics by key stage then strand for every page, Django and USB), `Question` (options/misconceptions stored as flat `option_a..d`, `misconception_a..d`, `explanation_a..d` columns; `Question.options()` assembles them), `QuizSet`, `Tally`. `STRANDS` fixes strand order.
 - `questions/export.py` turns the DB into a JS file defining `window.QUESTIONS`, `TOPICS`, `STRANDS` (and `DEFAULT_SETS` for the export). It is a script, not JSON, because `fetch()` is blocked over `file://`. Django serves it at `/data/questions.js`; `build_static` writes the same output into the export.
 
 **Two runtimes, one front end.** The same JS (`static/js/`) runs both under Django and from the USB export. Environment differences are isolated behind `window.DQ_ENV`:

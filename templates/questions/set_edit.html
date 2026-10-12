@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{% if quiz_set %}Edit {{ quiz_set.name }}{% else %}New quiz set{% endif %} · KS3 Maths{% endblock %}
+{% block title %}{% if quiz_set %}Edit {{ quiz_set.name }}{% else %}New quiz set{% endif %} · KS3 & KS4 Maths{% endblock %}
 {% block content %}
 <h1>{% if quiz_set %}Edit “{{ quiz_set.name }}”{% else %}New quiz set{% endif %}</h1>
 <form method="post" class="builder">
@@ -10,11 +10,13 @@
     <p><strong id="picked-count">0</strong> ticked</p>
     <button class="btn btn-primary" type="submit">Save set</button>
   </div>
+  {% for ks, ks_name, strands in key_stages %}
+  <h2>{{ ks_name }}</h2>
   {% for strand, topics in strands %}
-  <h2>{{ strand }}</h2>
+  <h3>{{ strand }}</h3>
   {% for t in topics %}
   <details class="builder-topic">
-    <summary>{{ t.name }} <span class="hint">({{ t.questions.all|length }})</span></summary>
+    <summary>{{ t.name }} <span class="hint">({{ t.questions.all|length }}{% if t.tier_label %} · {{ t.tier_label }}{% endif %})</span></summary>
     <ul>
       {% for q in t.questions.all %}
       <li><label>
@@ -24,6 +26,7 @@
       {% endfor %}
     </ul>
   </details>
+  {% endfor %}
   {% endfor %}
   {% endfor %}
 </form>

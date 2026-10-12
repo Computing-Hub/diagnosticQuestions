@@ -1,0 +1,137 @@
+strand: Statistics
+topic: Histograms
+key_stage: KS4
+tier: higher
+order: 1
+questions:
+  - id: hist-01
+    year_group: 11
+    stem: 'The table shows the times some people waited. Hana is drawing a histogram. What is the frequency density for the class $10 < t \le 30$? Give answers to 2 decimal places where needed. $$\begin{array}{|l|c|}\hline \text{Time } t \text{ (minutes)} & \text{Frequency}\\\hline 0 < t \le 10 & 6\\\hline 10 < t \le 30 & 16\\\hline 30 < t \le 35 & 9\\\hline\end{array}$$'
+    options:
+      A: '$0.8$'
+      B: '$320$'
+      C: '$1.25$'
+      D: '$0.53$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Multiplies frequency by class width'
+        explanation: 'Works out $16 \times 20$; frequency density is frequency ÷ class width, $16 \div 20 = 0.8$.'
+      C:
+        label: 'Divides class width by frequency'
+        explanation: 'Works out $20 \div 16$; the division is the other way round.'
+      D:
+        label: 'Divides by the upper class boundary, not the width'
+        explanation: 'Works out $16 \div 30$; the class width is $30 - 10 = 20$.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The class goes up to $30$'
+        - '$16 \div 30 = 0.533\ldots$'
+        - '$0.53$'
+
+  - id: hist-02
+    year_group: 11
+    stem: 'The table gives the frequency densities from a histogram of masses. How many items are in the class $20 < m \le 35$? $$\begin{array}{|l|c|}\hline \text{Mass } m \text{ (g)} & \text{Frequency density}\\\hline 0 < m \le 20 & 1.2\\\hline 20 < m \le 35 & 3\\\hline 35 < m \le 50 & 2\\\hline\end{array}$$'
+    options:
+      A: '$3$'
+      B: '$45$'
+      C: '$0.2$'
+      D: '$105$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Reads frequency density as frequency'
+        explanation: 'The height of the bar is frequency density, not frequency; frequency = $3 \times 15 = 45$.'
+      C:
+        label: 'Divides frequency density by class width'
+        explanation: 'Works out $3 \div 15$; frequency = frequency density × class width.'
+      D:
+        label: 'Multiplies by the upper class boundary, not the width'
+        explanation: 'Works out $3 \times 35$; the class width is $35 - 20 = 15$.'
+    worked_answer:
+      option: D
+      steps:
+        - 'The class goes up to $35$'
+        - '$3 \times 35 = 105$'
+        - '$105$'
+
+  - id: hist-03
+    year_group: 11
+    stem: 'A histogram is drawn for this data. Which class has the tallest bar? $$\begin{array}{|l|c|}\hline \text{Time } t \text{ (seconds)} & \text{Frequency}\\\hline 0 < t \le 10 & 14\\\hline 10 < t \le 15 & 9\\\hline 15 < t \le 30 & 24\\\hline 30 < t \le 60 & 21\\\hline\end{array}$$'
+    options:
+      A: '$0 < t \le 10$'
+      B: '$15 < t \le 30$'
+      C: '$30 < t \le 60$'
+      D: '$10 < t \le 15$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Divides by the upper class boundary, not the width'
+        explanation: 'Works out $14 \div 10$, $9 \div 15$, $24 \div 30$ and $21 \div 60$; the widths are $10, 5, 15, 30$, giving densities $1.4, 1.8, 1.6, 0.7$.'
+      B:
+        label: 'Thinks the tallest bar has the highest frequency'
+        explanation: 'In a histogram, bar height is frequency density; $24 \div 15 = 1.6$ is less than $9 \div 5 = 1.8$.'
+      C:
+        label: 'Multiplies frequency by class width'
+        explanation: 'Works out $21 \times 30 = 630$ as the height; frequency density is frequency ÷ class width.'
+    worked_answer:
+      option: B
+      steps:
+        - 'The tallest bar is the class with the most values'
+        - 'Biggest frequency is $24$'
+        - '$15 < t \le 30$'
+
+  - id: hist-04
+    year_group: 10
+    stem: 'The table gives the frequency densities from a histogram. What is the total frequency? $$\begin{array}{|l|c|}\hline \text{Length } x \text{ (cm)} & \text{Frequency density}\\\hline 0 < x \le 10 & 2\\\hline 10 < x \le 30 & 1.5\\\hline 30 < x \le 40 & 3\\\hline\end{array}$$'
+    options:
+      A: '$6.5$'
+      B: '$185$'
+      C: '$80$'
+      D: '$65$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the frequency densities'
+        explanation: 'Works out $2 + 1.5 + 3$; each density must be multiplied by its class width: $20 + 30 + 30 = 80$.'
+      B:
+        label: 'Multiplies by the upper class boundaries, not the widths'
+        explanation: 'Works out $2 \times 10 + 1.5 \times 30 + 3 \times 40$; the widths are $10, 20, 10$.'
+      D:
+        label: 'Assumes all the classes have the same width'
+        explanation: 'Uses a width of $10$ for every class; the middle class is $20$ wide.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Frequency = frequency density × $10$'
+        - '$2 \times 10 = 20$, $1.5 \times 10 = 15$, $3 \times 10 = 30$'
+        - '$20 + 15 + 30 = 65$'
+        - '$65$'
+
+  - id: hist-05
+    year_group: 10
+    stem: 'The table gives the frequency densities from a histogram. Estimate how many values are in the interval $20 < t \le 25$. $$\begin{array}{|l|c|}\hline \text{Time } t \text{ (minutes)} & \text{Frequency density}\\\hline 0 < t \le 20 & 0.5\\\hline 20 < t \le 40 & 1.6\\\hline 40 < t \le 50 & 2.2\\\hline\end{array}$$'
+    options:
+      A: '$1.6$'
+      B: '$8$'
+      C: '$40$'
+      D: '$32$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Reads frequency density as frequency'
+        explanation: 'Gives the bar height; the frequency is the area, $1.6 \times 5 = 8$.'
+      C:
+        label: 'Multiplies by the upper boundary, not the width'
+        explanation: 'Works out $1.6 \times 25$; the interval $20 < t \le 25$ is $5$ minutes wide.'
+      D:
+        label: 'Uses the whole class, not the part asked for'
+        explanation: 'Works out $1.6 \times 20$, the frequency for all of $20 < t \le 40$; only $5$ minutes of that class is wanted.'
+    worked_answer:
+      option: D
+      steps:
+        - '$20 < t \le 25$ is in the class $20 < t \le 40$'
+        - 'Class width $= 40 - 20 = 20$'
+        - '$1.6 \times 20 = 32$'
+        - '$32$'

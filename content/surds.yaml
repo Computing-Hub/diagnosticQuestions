@@ -1,0 +1,137 @@
+strand: Number
+topic: Surds
+key_stage: KS4
+tier: higher
+order: 1
+questions:
+  - id: surd-01
+    year_group: 10
+    stem: 'Write $\sqrt{48}$ in its simplest form.'
+    options:
+      A: '$16\sqrt{3}$'
+      B: '$8\sqrt{3}$'
+      C: '$4\sqrt{3}$'
+      D: '$3\sqrt{16}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Moves the square factor outside without square-rooting it'
+        explanation: 'Writes $\sqrt{16 \times 3}$ as $16\sqrt{3}$; the $16$ must be square-rooted on its way out: $\sqrt{16} = 4$.'
+      B:
+        label: 'Halves the square factor instead of square-rooting it'
+        explanation: 'Takes $\sqrt{16}$ as $8$; the square root of $16$ is $4$, because $4 \times 4 = 16$.'
+      D:
+        label: 'Puts the non-square factor outside the root'
+        explanation: 'Writes $\sqrt{16 \times 3}$ as $3\sqrt{16}$, which equals $12$. The square factor $16$ is the one that comes out, as $4$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\sqrt{48} = \sqrt{16 \times 3}$'
+        - '$16$ is a square number, so it comes outside the root'
+        - '$16\sqrt{3}$'
+
+  - id: surd-02
+    year_group: 10
+    stem: 'Work out $2\sqrt{3} \times 4\sqrt{3}$'
+    options:
+      A: '$24$'
+      B: '$8\sqrt{3}$'
+      C: '$6\sqrt{3}$'
+      D: '$72$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks $\sqrt{3} \times \sqrt{3} = \sqrt{3}$'
+        explanation: 'Multiplies $2 \times 4 = 8$ but keeps one $\sqrt{3}$; $\sqrt{3} \times \sqrt{3} = 3$, so the answer is $8 \times 3$.'
+      C:
+        label: 'Adds the surds instead of multiplying'
+        explanation: 'Works out $2\sqrt{3} + 4\sqrt{3} = 6\sqrt{3}$; the question asks for a product.'
+      D:
+        label: 'Thinks $\sqrt{3} \times \sqrt{3} = 9$'
+        explanation: 'Squares the $3$ instead of seeing that $\sqrt{3} \times \sqrt{3} = (\sqrt{3})^2 = 3$.'
+    worked_answer:
+      option: B
+      steps:
+        - '$2 \times 4 = 8$'
+        - '$\sqrt{3} \times \sqrt{3} = \sqrt{3}$'
+        - '$8\sqrt{3}$'
+
+  - id: surd-03
+    year_group: 11
+    stem: 'Rationalise the denominator of $\frac{6}{\sqrt{2}}$ and simplify.'
+    options:
+      A: '$6\sqrt{2}$'
+      B: '$3$'
+      C: '$\frac{3\sqrt{2}}{2}$'
+      D: '$3\sqrt{2}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies only the numerator by $\sqrt{2}$'
+        explanation: 'Multiplies the top by $\sqrt{2}$ but not the bottom, which changes the value. Multiply by $\frac{\sqrt{2}}{\sqrt{2}}$ to get $\frac{6\sqrt{2}}{2}$.'
+      B:
+        label: 'Treats $\sqrt{2}$ as $2$'
+        explanation: 'Works out $6 \div 2 = 3$; $\sqrt{2}$ is about $1.41$, not $2$.'
+      C:
+        label: 'Thinks $\sqrt{2} \times \sqrt{2} = 4$'
+        explanation: 'Gets a denominator of $4$; $\sqrt{2} \times \sqrt{2} = 2$, so the fraction is $\frac{6\sqrt{2}}{2} = 3\sqrt{2}$.'
+    worked_answer:
+      option: C
+      steps:
+        - '$\frac{6}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}}$'
+        - '$\frac{6\sqrt{2}}{4}$'
+        - '$\frac{3\sqrt{2}}{2}$'
+
+  - id: surd-04
+    year_group: 11
+    stem: 'Simplify $\sqrt{50} + \sqrt{18}$'
+    options:
+      A: '$\sqrt{68}$'
+      B: '$8\sqrt{2}$'
+      C: '$8\sqrt{4}$'
+      D: '$34\sqrt{2}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks $\sqrt{a} + \sqrt{b} = \sqrt{a + b}$'
+        explanation: 'Adds the numbers under the roots. Simplify each surd first: $5\sqrt{2} + 3\sqrt{2}$.'
+      C:
+        label: 'Adds the numbers under the roots as well as the coefficients'
+        explanation: 'Writes $5\sqrt{2} + 3\sqrt{2} = 8\sqrt{4}$. Like surds add like algebraic terms: $5$ lots of $\sqrt{2}$ plus $3$ lots of $\sqrt{2}$ is $8\sqrt{2}$.'
+      D:
+        label: 'Moves square factors outside without square-rooting them'
+        explanation: 'Writes $\sqrt{25 \times 2}$ as $25\sqrt{2}$ and $\sqrt{9 \times 2}$ as $9\sqrt{2}$; they should be $5\sqrt{2}$ and $3\sqrt{2}$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$\sqrt{50} + \sqrt{18}$'
+        - '$= \sqrt{50 + 18}$'
+        - '$\sqrt{68}$'
+
+  - id: surd-05
+    year_group: 10
+    stem: 'Expand and simplify $(3 + \sqrt{5})(3 - \sqrt{5})$'
+    options:
+      A: '$4$'
+      B: '$14$'
+      C: '$-16$'
+      D: '$9 - \sqrt{5}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks $\sqrt{5} \times (-\sqrt{5}) = +5$'
+        explanation: 'Gets the sign wrong on the last term. A positive times a negative is negative, so the product is $9 - 5$.'
+      C:
+        label: 'Thinks $\sqrt{5} \times \sqrt{5} = 25$'
+        explanation: 'Squares the $5$; $\sqrt{5} \times \sqrt{5} = 5$, so the last term is $-5$, not $-25$.'
+      D:
+        label: 'Thinks $\sqrt{5} \times \sqrt{5} = \sqrt{5}$'
+        explanation: 'Keeps the root after multiplying; $\sqrt{5} \times \sqrt{5} = 5$.'
+    worked_answer:
+      option: C
+      steps:
+        - '$3 \times 3 = 9$'
+        - '$3 \times (-\sqrt{5}) + \sqrt{5} \times 3 = 0$'
+        - '$\sqrt{5} \times (-\sqrt{5}) = -25$'
+        - '$9 - 25 = -16$'
+        - '$-16$'

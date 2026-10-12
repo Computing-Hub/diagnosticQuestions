@@ -1,0 +1,22 @@
+{% comment %}Topic cards grouped by key stage, then strand. static_site=True links to the USB copy's files.{% endcomment %}
+{% if key_stages|length > 1 %}
+<nav class="ks-jump" aria-label="Key stages">{% for ks, ks_name, strands in key_stages %}<a href="#{{ ks|lower }}">{{ ks_name }}</a>{% endfor %}</nav>
+{% endif %}
+{% for ks, ks_name, strands in key_stages %}
+<section class="key-stage" id="{{ ks|lower }}">
+  <h2>{{ ks_name }}</h2>
+  {% for strand, topics in strands %}
+  <section class="strand">
+    <h3>{{ strand }}</h3>
+    <ul class="topic-grid">
+      {% for t in topics %}
+      <li><a class="topic-card" href="{% if static_site %}topic-{{ t.slug }}.html{% else %}{% url 'topic' t.slug %}{% endif %}">
+        <span class="topic-name">{{ t.name }}</span>
+        <span class="count">{{ t.count }} question{{ t.count|pluralize }}{% if t.tier_label %} · <span class="tier tier-{{ t.tier }}">{{ t.tier_label }}</span>{% endif %}</span>
+      </a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</section>
+{% endfor %}

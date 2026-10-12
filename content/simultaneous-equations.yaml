@@ -1,0 +1,143 @@
+strand: Algebra
+topic: Simultaneous equations
+key_stage: KS4
+tier: foundation
+order: 1
+questions:
+  - id: sim-01
+    year_group: 10
+    stem: 'Solve the simultaneous equations $2x + y = 13$ and $x + y = 8$'
+    options:
+      A: '$x = 5, y = 3$'
+      B: '$x = 3, y = 5$'
+      C: '$x = 7, y = 1$'
+      D: '$x = 5, y = 13$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Swaps the values of $x$ and $y$'
+        explanation: 'Finds $5$ and $3$ but gives them to the wrong letters. Check: $2 \times 3 + 5 = 11$, not $13$.'
+      C:
+        label: 'Adds the equations when the $y$ terms have the same sign'
+        explanation: 'Adding gives $3x + 2y = 21$, so $y$ is not eliminated. Both $y$ terms are $+y$, so subtract the equations.'
+      D:
+        label: 'Adds instead of subtracting when finding $y$'
+        explanation: 'From $5 + y = 8$, works out $y = 8 + 5$; subtract $5$ from both sides to get $y = 3$.'
+    worked_answer:
+      option: C
+      steps:
+        - '$(2x + y) + (x + y) = 13 + 8$'
+        - '$3x = 21$'
+        - '$x = 7$'
+        - '$7 + y = 8$, so $y = 1$'
+        - '$x = 7, y = 1$'
+
+  - id: sim-02
+    year_group: 10
+    stem: '$y = 2x$ and $x + y = 12$. What is the value of $x$?'
+    options:
+      A: '$6$'
+      B: '$5$'
+      C: '$4$'
+      D: '$8$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks $x + 2x = 2x$'
+        explanation: 'After substituting, $x + 2x = 3x$, so $3x = 12$.'
+      B:
+        label: 'Treats $2x$ as $x + 2$'
+        explanation: 'Writes $x + x + 2 = 12$; $2x$ means $2 \times x$, not $x + 2$.'
+      D:
+        label: 'Gives the value of $y$ instead of $x$'
+        explanation: 'Correctly finds $x = 4$ and $y = 8$, but the question asks for $x$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x + 2x = 12$'
+        - '$2x = 12$'
+        - '$x = 6$'
+        - '$6$'
+
+  - id: sim-03
+    year_group: 11
+    stem: '$5x + 2y = 20$ and $3x + 2y = 16$. What is the value of $y$?'
+    options:
+      A: '$10$'
+      B: '$5$'
+      C: '$11$'
+      D: '$7$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Stops at $2y$ instead of finding $y$'
+        explanation: 'Gets $2y = 10$ but does not divide by $2$.'
+      C:
+        label: 'Adds instead of subtracting when rearranging'
+        explanation: 'From $6 + 2y = 16$, works out $2y = 16 + 6$; subtract $6$ from both sides: $2y = 10$.'
+      D:
+        label: 'Replaces $3x$ with the value of $x$'
+        explanation: 'Substitutes $x = 2$ as $2 + 2y = 16$; $3x$ means $3 \times 2 = 6$.'
+    worked_answer:
+      option: C
+      steps:
+        - 'Subtract: $2x = 4$, so $x = 2$'
+        - '$3 \times 2 + 2y = 16$'
+        - '$2y = 16 + 6 = 22$'
+        - '$y = 11$'
+        - '$11$'
+
+  - id: sim-04
+    year_group: 11
+    stem: 'Two adult tickets and one child ticket cost £26. One adult ticket and one child ticket cost £17. How much is one child ticket?'
+    options:
+      A: '£9'
+      B: '£8.50'
+      C: '£4'
+      D: '£8'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Thinks subtracting the equations gives the child price'
+        explanation: '$26 - 17 = 9$ is the cost of the extra adult ticket, so £9 is the adult price; the child ticket is £17 − £9.'
+      B:
+        label: 'Assumes adult and child tickets cost the same'
+        explanation: 'Works out £17 ÷ 2; the two prices are different, so use both facts.'
+      C:
+        label: 'Ignores the child ticket in the first statement'
+        explanation: 'Works out £26 ÷ 2 = £13 for an adult, but the £26 also includes a child ticket.'
+    worked_answer:
+      option: A
+      steps:
+        - '$2a + c = 26$'
+        - '$a + c = 17$'
+        - 'Subtract: $c = 26 - 17 = 9$'
+        - '£9'
+
+  - id: sim-05
+    year_group: 10
+    stem: 'Which pair of values satisfies both $x + y = 9$ and $2x - y = 3$?'
+    options:
+      A: '$x = 5, y = 4$'
+      B: '$x = 12, y = -3$'
+      C: '$x = 4, y = 5$'
+      D: '$x = 4, y = -5$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Swaps the values of $x$ and $y$'
+        explanation: 'Gives $4$ and $5$ to the wrong letters. Check: $2 \times 5 - 4 = 6$, not $3$.'
+      B:
+        label: 'Does not multiply every term in the bracket by the minus sign'
+        explanation: 'Substitutes $y = 9 - x$ and writes $2x - (9 - x)$ as $2x - 9 - x$. The minus sign applies to both terms: $2x - 9 + x = 3$, so $3x = 12$.'
+      D:
+        label: 'Loses a negative sign when solving for $y$'
+        explanation: 'From $-y = -5$, writes $y = -5$; dividing both sides by $-1$ gives $y = 5$.'
+    worked_answer:
+      option: D
+      steps:
+        - 'Add: $3x = 12$, so $x = 4$'
+        - '$2 \times 4 - y = 3$'
+        - '$-y = -5$'
+        - '$y = -5$'
+        - '$x = 4, y = -5$'

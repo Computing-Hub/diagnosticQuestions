@@ -124,9 +124,19 @@ class IdAndYearTests(LoaderTestCase):
         self.assertIn("duplicate id t-01", self.errors_for(VALID + body))
 
     def test_invalid_year_group(self):
-        for bad in ("6", "10", "'7'", "true"):
+        for bad in ("6", "12", "'7'", "true"):
             with self.subTest(year=bad):
-                self.assertIn("year_group must be 7, 8 or 9", self.errors_for(VALID.replace("year_group: 7", f"year_group: {bad}")))
+                self.assertIn("year_group must be one of", self.errors_for(VALID.replace("year_group: 7", f"year_group: {bad}")))
+
+    def test_key_stage_and_tier(self):
+        ks4 = VALID.replace("strand: Number", "strand: Number\nkey_stage: KS4\ntier: higher").replace("year_group: 7", "year_group: 10")
+        self.write("topic.yaml", ks4)
+        load_content(self.dir, static_dirs=[])
+        t = Topic.objects.get()
+        self.assertEqual((t.key_stage, t.tier, t.tier_label), ("KS4", "higher", "Higher only"))
+        self.assertIn("KS4 topics need tier", self.errors_for(ks4.replace("tier: higher\n", "")))
+        self.assertIn("tier is only for KS4", self.errors_for(ks4.replace("key_stage: KS4", "key_stage: KS3")))
+        self.assertIn("key_stage must be one of", self.errors_for(ks4.replace("key_stage: KS4", "key_stage: KS5")))
 
     def test_unknown_strand(self):
         self.assertIn("strand must be one of", self.errors_for(VALID.replace("strand: Number", "strand: Calculus")))

@@ -32,18 +32,61 @@
   function renderEdit(set) {
     var selected = {};
     (set ? set.question_ids : []).forEach(function (id) { selected[id] = true; });
-    var groups = window.STRANDS.map(function (strand) {
-      var topics = window.TOPICS.filter(function (t) { return t.strand === strand; });
+    var groups = Object.keys(window.KEY_STAGES).map(function (ks) {
+      var inKs = window.TOPICS.filter(function (t) { return t.key_stage === ks; });
+      if (!inKs.length) return "";
+      return "<h2>" + esc(window.KEY_STAGES[ks]) + "</h2>" + window.STRANDS.map(function (strand) {
+        var topics = inKs.filter(function (t) { return t.strand === strand; });
+        if (!topics.length) return "";
+        return "<h3>" + esc(strand) + "</h3>" + topics.map(function (t) {
+          var qs = window.QUESTIONS.filter(function (q) { return q.topic === t.slug; });
+          var open = qs.some(function (q) { return selected[q.id]; });
+          return '<details class="builder-topic"' + (open ? " open" : "") + "><summary>" + esc(t.name) +
+            ' <span class="hint">(' + qs.length + (t.tier_label ? " · " + esc(t.tier_label) : "") + ")</span></summary><ul>" +
+            qs.map(function (q) {
+              return '<li><label><input type="checkbox" name="q" value="' + esc(q.id) + '"' + (selected[q.id] ? " checked" : "") + "> " +
+                '<span class="math">' + esc(q.stem) + "</span></label></li>";
+            }).join("") + "</ul></details>";
+        }).join("");
+      }).join("");
+    }).join("");
+    app.innerHTML = "<h1>Quiz sets</h1>" + (notice ? '<p class="msg msg-success" role="status">' + esc(notice) + "</p>" : "") +
+      '<p><button type="button" class="btn btn-primary" data-new>+ New quiz set</button></p>' +
+      '<p class="hint">Sets are kept in your data file. After making changes, click <b>Download data</b> and keep the file on the USB stick.</p>' +
+      '<ul class="set-list">' + (sets.length ? sets.map(function (s) {
+        var key = encodeURIComponent(s.id);
+        var missing = s.question_ids.filter(function (id) { return !byId[id]; }).length;
+        return '<li id="set-' + esc(s.id) + '"' + (focus === s.id ? ' class="is-focus"' : "") + '><span class="set-name">' + esc(s.name) + "</span>" +
+          '<span class="hint">' + s.question_ids.length + " questions" + (s.created ? " · " + esc(s.created) : "") +
+          (missing ? " · " + missing + " no longer in the bank" : "") + '</span><span class="actions">' +
+          link("present.html?kind=set&key=" + key, "Present") + link("print.html?kind=set&key=" + key, "Print") +
+          link("game.html?kind=set&key=" + key, "Play") +
+          '<button type="button" class="btn btn-small" data-edit="' + esc(s.id) + '">Edit</button>' +
+          '<button type="button" class="btn btn-small btn-danger" data-delete="' + esc(s.id) + '">' +
+          (confirming === s.id ? "Click again to delete" : "Delete") + "</button></span></li>";
+      }).join("") : "<li>No quiz sets yet. Make one, or use <b>Load data</b> to open a file you saved before.</li>") + "</ul>";
+    notice = "";
+  }
+
+  function renderEdit(set) {
+    var selected = {};
+    (set ? set.question_ids : []).forEach(function (id) { selected[id] = true; });
+    var groups = Object.keys(window.KEY_STAGES).map(function (ks) {
+      var inKs = window.TOPICS.filter(function (t) { return t.key_stage === ks; });
+      if (!inKs.length) return "";
+      return "<h2>" + esc(window.KEY_STAGES[ks]) + "</h2>" + window.STRANDS.map(function (strand) {
+      var topics = inKs.filter(function (t) { return t.strand === strand; });
       if (!topics.length) return "";
-      return "<h2>" + esc(strand) + "</h2>" + topics.map(function (t) {
+      return "<h3>" + esc(strand) + "</h3>" + topics.map(function (t) {
         var qs = window.QUESTIONS.filter(function (q) { return q.topic === t.slug; });
         var open = qs.some(function (q) { return selected[q.id]; });
-        return '<details class="builder-topic"' + (open ? " open" : "") + "><summary>" + esc(t.name) + ' <span class="hint">(' + qs.length + ")</span></summary><ul>" +
+        return '<details class="builder-topic"' + (open ? " open" : "") + "><summary>" + esc(t.name) + ' <span class="hint">(' + qs.length + (t.tier_label ? " · " + esc(t.tier_label) : "") + ")</span></summary><ul>" +
           qs.map(function (q) {
             return '<li><label><input type="checkbox" name="q" value="' + esc(q.id) + '"' + (selected[q.id] ? " checked" : "") + "> " +
               '<span class="math">' + esc(q.stem) + "</span></label></li>";
           }).join("") + "</ul></details>";
       }).join("");
+    }).join("");
     }).join("");
     app.innerHTML = "<h1>" + (set ? "Edit “" + esc(set.name) + "”" : "New quiz set") + "</h1>" +
       '<form class="builder" data-builder><p class="msg msg-error" role="alert" data-error hidden></p><div class="builder-head">' +

@@ -12,7 +12,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_GET, require_POST
 
 from .export import questions_js as questions_js_source
-from .models import LETTERS, STRANDS, Question, QuizSet, Tally, Topic
+from .models import LETTERS, Question, QuizSet, Tally, Topic, group_topics
 
 # --- helpers -------------------------------------------------------------------
 
@@ -31,20 +31,16 @@ def _source(request, kind, key):
     raise Http404
 
 
-def _strands():
-    """[(strand, [topics with .count])] in curriculum order."""
-    topics = Topic.objects.annotate(count=Count("questions")).order_by("order", "name")
-    grouped = {s: [] for s in STRANDS}
-    for t in topics:
-        grouped.setdefault(t.strand, []).append(t)
-    return [(s, ts) for s, ts in grouped.items() if ts]
+def _key_stages():
+    """[(key_stage, name, [(strand, [topics with .count])])] in curriculum order."""
+    return group_topics(list(Topic.objects.annotate(count=Count("questions")).filter(count__gt=0)))
 
 
 # --- browsing -----------------------------------------------------------------
 
 def home(request):
     return render(request, "questions/home.html", {
-        "strands": _strands(),
+        "key_stages": _key_stages(),
         "total": Question.objects.count(),
         "sets": QuizSet.objects.all()[:6],
     })
@@ -171,13 +167,9 @@ def set_edit(request, pk=None):
         name = quiz_set.name if quiz_set else ""
         selected = set(quiz_set.question_ids) if quiz_set else set()
 
-    topics = Topic.objects.prefetch_related("questions").order_by("order", "name")
-    grouped = {s: [] for s in STRANDS}
-    for t in topics:
-        grouped.setdefault(t.strand, []).append(t)
     return render(request, "questions/set_edit.html", {
         "quiz_set": quiz_set, "name": name, "selected": selected, "error": error,
-        "strands": [(s, ts) for s, ts in grouped.items() if ts],
+        "key_stages": group_topics(list(Topic.objects.prefetch_related("questions"))),
     })
 
 

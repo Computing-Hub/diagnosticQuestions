@@ -16,12 +16,12 @@ from django.db.models import Count
 from django.template.loader import render_to_string
 
 from questions.export import questions_js, topics_data
-from questions.models import STRANDS, Question, Topic
+from questions.models import Question, Topic, group_topics
 
 MARKER = ".ks3-maths-usb"
 PAGES = ["present.html", "print.html", "sets.html", "game.html"]
 
-README = """KS3 Maths diagnostic questions: portable copy
+README = """KS3 & KS4 Maths diagnostic questions: portable copy
 =============================================
 
 Open index.html (double-click it, or drag it into Chrome or Edge).
@@ -66,10 +66,9 @@ class Command(BaseCommand):
         for old in out.glob("topic-*.html"):  # topics removed since the last export
             old.unlink()
         topics = topics_data()
-        grouped = [(s, [t for t in topics if t["strand"] == s]) for s in STRANDS]
         total = sum(t["count"] for t in topics)
         self._write(out / "index.html", "static_site/index.html",
-                    {"strands": [(s, ts) for s, ts in grouped if ts], "total": total})
+                    {"key_stages": group_topics(topics), "total": total})
         for topic in Topic.objects.annotate(n=Count("questions")).filter(n__gt=0):
             questions = list(topic.questions.select_related("topic"))
             self._write(out / f"topic-{topic.slug}.html", "static_site/topic.html",

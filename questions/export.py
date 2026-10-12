@@ -8,7 +8,7 @@ import json
 
 from django.db.models import Count
 
-from .models import STRANDS, Question, QuizSet, Topic
+from .models import KEY_STAGES, STRANDS, Question, QuizSet, Topic
 
 
 def question_data(q):
@@ -31,8 +31,10 @@ def question_data(q):
 def topics_data():
     topics = Topic.objects.annotate(count=Count("questions"))
     return sorted(
-        [{"slug": t.slug, "name": t.name, "strand": t.strand, "order": t.order, "count": t.count} for t in topics if t.count],
-        key=lambda t: (STRANDS.index(t["strand"]) if t["strand"] in STRANDS else 99, t["order"], t["name"]),
+        [{"slug": t.slug, "name": t.name, "strand": t.strand, "order": t.order, "count": t.count,
+          "key_stage": t.key_stage, "tier": t.tier, "tier_label": t.tier_label} for t in topics if t.count],
+        key=lambda t: (list(KEY_STAGES).index(t["key_stage"]),
+                       STRANDS.index(t["strand"]) if t["strand"] in STRANDS else 99, t["order"], t["name"]),
     )
 
 
@@ -55,8 +57,9 @@ def questions_js(include_sets=False):
         return json.dumps(value, ensure_ascii=True, separators=(",", ":")).replace("</", "<\\/")
 
     lines = [
-        "/* KS3 Maths diagnostic questions: generated, do not edit. Edit content/*.yaml instead. */",
+        "/* KS3 & KS4 Maths diagnostic questions: generated, do not edit. Edit content/*.yaml instead. */",
         f"window.STRANDS = {dump(list(STRANDS))};",
+        f"window.KEY_STAGES = {dump(KEY_STAGES)};",
         f"window.TOPICS = {dump(topics_data())};",
         f"window.QUESTIONS = {dump([question_data(q) for q in questions])};",
     ]

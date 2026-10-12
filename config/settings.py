@@ -1,5 +1,5 @@
 """
-Django settings for the KS3 Maths diagnostic questions site.
+Django settings for the KS3 & KS4 Maths diagnostic questions site.
 
 Designed to run on a teacher's laptop. Everything that might change when
 moving to a school server is read from environment variables (prefix DQ_).

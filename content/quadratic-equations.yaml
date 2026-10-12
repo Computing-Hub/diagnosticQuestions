@@ -1,0 +1,136 @@
+strand: Algebra
+topic: Quadratic equations
+key_stage: KS4
+tier: foundation
+order: 2
+questions:
+  - id: quad-01
+    year_group: 10
+    stem: 'Solve $x^2 + 5x + 6 = 0$'
+    options:
+      A: '$x = 2$ or $x = 3$'
+      B: '$x = -2$ or $x = -3$'
+      C: '$x = -1$ or $x = -6$'
+      D: '$x = -1$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Uses the numbers in the brackets as the solutions'
+        explanation: 'From $(x + 2)(x + 3) = 0$, gives $2$ and $3$. Solve each bracket: $x + 2 = 0$ gives $x = -2$.'
+      C:
+        label: 'Uses a factor pair that multiplies to $6$ but does not add to $5$'
+        explanation: '$(x + 1)(x + 6)$ expands to $x^2 + 7x + 6$. The pair must multiply to $6$ and add to $5$: $2$ and $3$.'
+      D:
+        label: 'Treats $x^2$ as $x$'
+        explanation: 'Collects $x^2 + 5x$ as $6x$; $x^2$ and $x$ are not like terms, so factorise instead.'
+    worked_answer:
+      option: A
+      steps:
+        - '$(x + 2)(x + 3) = 0$'
+        - '$x = 2$ or $x = 3$'
+
+  - id: quad-02
+    year_group: 11
+    stem: 'Solve $x^2 = 3x$'
+    options:
+      A: '$x = 3$'
+      B: '$x = 0$ or $x = -3$'
+      C: '$x = 3$ or $x = -3$'
+      D: '$x = 0$ or $x = 3$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Divides both sides by $x$'
+        explanation: 'Dividing by $x$ loses the solution $x = 0$. Rearrange to $x^2 - 3x = 0$ and factorise: $x(x - 3) = 0$.'
+      B:
+        label: 'Gets the sign wrong when moving $3x$ across'
+        explanation: 'Writes $x^2 + 3x = 0$; subtracting $3x$ from both sides gives $x^2 - 3x = 0$.'
+      C:
+        label: 'Thinks every quadratic has a positive and a negative solution'
+        explanation: 'Check: $(-3)^2 = 9$ but $3 \times (-3) = -9$, so $x = -3$ does not work. Factorise $x(x - 3) = 0$ to find the solutions.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x^2 = 3x$'
+        - 'Divide both sides by $x$'
+        - '$x = 3$'
+
+  - id: quad-03
+    year_group: 10
+    stem: 'Solve $x^2 - 49 = 0$'
+    options:
+      A: '$x = 7$ or $x = -7$'
+      B: '$x = 7$'
+      C: '$x = 24.5$'
+      D: '$x = 49$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Forgets the negative solution'
+        explanation: '$(-7)^2 = 49$ too. Factorising $(x + 7)(x - 7) = 0$ shows both solutions.'
+      C:
+        label: 'Thinks $x^2$ means $2x$'
+        explanation: 'Halves $49$; $x^2$ means $x \times x$, so take the square root.'
+      D:
+        label: 'Forgets to square root'
+        explanation: 'Stops at $x^2 = 49$; that gives the value of $x^2$, not $x$.'
+    worked_answer:
+      option: B
+      steps:
+        - '$x^2 = 49$'
+        - '$x = \sqrt{49}$'
+        - '$x = 7$'
+
+  - id: quad-04
+    year_group: 10
+    stem: 'Which factorisation can be used to solve $x^2 - 16 = 0$?'
+    options:
+      A: '$(x - 4)(x - 4)$'
+      B: '$(x + 8)(x - 8)$'
+      C: '$(x + 4)(x - 4)$'
+      D: '$x(x - 16)$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks both brackets take the minus sign'
+        explanation: '$(x - 4)(x - 4) = x^2 - 8x + 16$. For a difference of two squares, one bracket has $+$ and one has $-$, so the $x$ terms cancel.'
+      B:
+        label: 'Halves $16$ instead of square-rooting it'
+        explanation: '$(x + 8)(x - 8) = x^2 - 64$. The number in each bracket is $\sqrt{16} = 4$.'
+      D:
+        label: 'Takes out $x$ as a common factor when one term has no $x$'
+        explanation: '$x(x - 16) = x^2 - 16x$. The $16$ has no $x$, so $x$ is not a common factor.'
+    worked_answer:
+      option: A
+      steps:
+        - '$x^2 - 16$'
+        - '$\sqrt{16} = 4$'
+        - 'The sign is minus, so both brackets have minus'
+        - '$(x - 4)(x - 4)$'
+
+  - id: quad-05
+    year_group: 11
+    stem: '$2x^2 + 7x + 3 = (2x + 1)(x + 3)$. Solve $2x^2 + 7x + 3 = 0$'
+    options:
+      A: '$x = -1$ or $x = -3$'
+      B: '$x = -\frac{1}{2}$ or $x = -3$'
+      C: '$x = \frac{1}{2}$ or $x = 3$'
+      D: '$x = -2$ or $x = -3$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Ignores the coefficient of $x$ in $2x + 1$'
+        explanation: 'From $2x + 1 = 0$, gives $x = -1$; that solves $x + 1 = 0$. Here $2x = -1$, so $x = -\frac{1}{2}$.'
+      C:
+        label: 'Does not change the sign when moving the number across'
+        explanation: 'From $2x + 1 = 0$, writes $2x = 1$. Subtract $1$ from both sides: $2x = -1$, so $x = -\frac{1}{2}$; likewise $x = -3$.'
+      D:
+        label: 'Divides the wrong way round'
+        explanation: 'From $2x = -1$, works out $2 \div (-1) = -2$; divide both sides by $2$: $x = -1 \div 2 = -\frac{1}{2}$.'
+    worked_answer:
+      option: D
+      steps:
+        - '$(2x + 1)(x + 3) = 0$'
+        - '$2x + 1 = 0$ gives $2x = -1$, so $x = -2$'
+        - '$x + 3 = 0$ gives $x = -3$'
+        - '$x = -2$ or $x = -3$'

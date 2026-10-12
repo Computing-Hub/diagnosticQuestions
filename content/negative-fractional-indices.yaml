@@ -1,0 +1,135 @@
+strand: Number
+topic: Negative & fractional indices
+key_stage: KS4
+tier: higher
+order: 2
+questions:
+  - id: ind-01
+    year_group: 10
+    stem: 'Work out $5^{-2}$'
+    options:
+      A: '$-25$'
+      B: '$\frac{1}{25}$'
+      C: '$-10$'
+      D: '$\frac{1}{10}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Thinks a negative index makes the answer negative'
+        explanation: 'A negative index means "one over": $5^{-2} = \frac{1}{5^2}$, which is positive.'
+      C:
+        label: 'Multiplies the base by the index'
+        explanation: 'Works out $5 \times (-2)$; an index tells you how many times to multiply the base by itself.'
+      D:
+        label: 'Multiplies the base by the index, then takes the reciprocal'
+        explanation: 'Works out $\frac{1}{5 \times 2}$; the reciprocal is right but $5^2 = 25$, not $10$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$5^{-2}$'
+        - '$5^2 = 25$'
+        - 'The power is negative, so the answer is negative: $-25$'
+
+  - id: ind-02
+    year_group: 10
+    stem: 'Work out $8^{\frac{1}{3}}$'
+    options:
+      A: '$\frac{8}{3}$'
+      B: '$512$'
+      C: '$2\sqrt{2}$'
+      D: '$2$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Multiplies the base by the index'
+        explanation: 'Works out $8 \times \frac{1}{3}$; an index of $\frac{1}{3}$ means the cube root.'
+      B:
+        label: 'Cubes instead of cube-rooting'
+        explanation: 'Works out $8^3$; the $3$ is in the denominator, so it means the cube root: $\sqrt[3]{8} = 2$.'
+      C:
+        label: 'Thinks any fractional index means square root'
+        explanation: 'Works out $\sqrt{8}$; the denominator $3$ means the cube root, not the square root.'
+    worked_answer:
+      option: A
+      steps:
+        - '$8^{\frac{1}{3}} = 8 \times \frac{1}{3}$'
+        - '$\frac{8}{3}$'
+
+  - id: ind-03
+    year_group: 11
+    stem: 'Work out $64^{\frac{2}{3}}$'
+    options:
+      A: '$\frac{128}{3}$'
+      B: '$4$'
+      C: '$16$'
+      D: '$512$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies the base by the index'
+        explanation: 'Works out $64 \times \frac{2}{3}$; $64^{\frac{2}{3}}$ means the cube root of $64$, squared.'
+      B:
+        label: 'Ignores the numerator of the index'
+        explanation: 'Finds $\sqrt[3]{64} = 4$ but stops; the numerator $2$ means the result must then be squared: $4^2 = 16$.'
+      D:
+        label: 'Swaps the roles of the numerator and denominator'
+        explanation: 'Takes the square root and then cubes. The denominator gives the root (cube root) and the numerator gives the power (square).'
+    worked_answer:
+      option: D
+      steps:
+        - '$64^{\frac{2}{3}}$'
+        - 'Square root, then cube: $(\sqrt{64})^3$'
+        - '$8^3$'
+        - '$512$'
+
+  - id: ind-04
+    year_group: 11
+    stem: 'Work out $9^{-\frac{1}{2}}$'
+    options:
+      A: '$\frac{1}{3}$'
+      B: '$-3$'
+      C: '$3$'
+      D: '$-\frac{9}{2}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Thinks a negative index makes the answer negative'
+        explanation: 'Finds $\sqrt{9} = 3$ and makes it negative; the negative index means the reciprocal: $\frac{1}{3}$.'
+      C:
+        label: 'Ignores the negative sign in the index'
+        explanation: 'Works out $9^{\frac{1}{2}} = 3$; the negative sign means you then take the reciprocal.'
+      D:
+        label: 'Multiplies the base by the index'
+        explanation: 'Works out $9 \times \left(-\frac{1}{2}\right)$; an index is not a multiplier.'
+    worked_answer:
+      option: B
+      steps:
+        - '$9^{\frac{1}{2}} = \sqrt{9} = 3$'
+        - 'The power is negative, so make the answer negative'
+        - '$-3$'
+
+  - id: ind-05
+    year_group: 10
+    stem: 'Work out $\left(\frac{2}{3}\right)^{-2}$'
+    options:
+      A: '$\frac{4}{9}$'
+      B: '$\frac{9}{4}$'
+      C: '$-\frac{4}{9}$'
+      D: '$\frac{3}{2}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Ignores the negative sign in the index'
+        explanation: 'Works out $\left(\frac{2}{3}\right)^2$; the negative index means the fraction must also be flipped.'
+      C:
+        label: 'Thinks a negative index makes the answer negative'
+        explanation: 'Squares to get $\frac{4}{9}$ and makes it negative; a negative index means the reciprocal, not a negative number.'
+      D:
+        label: 'Thinks a negative index only means take the reciprocal'
+        explanation: 'Flips the fraction but forgets the power of $2$: $\left(\frac{3}{2}\right)^2 = \frac{9}{4}$.'
+    worked_answer:
+      option: D
+      steps:
+        - '$\left(\frac{2}{3}\right)^{-2}$'
+        - 'A negative power means flip the fraction'
+        - '$\frac{3}{2}$'

@@ -1,0 +1,135 @@
+strand: Number
+topic: Error intervals & bounds
+key_stage: KS4
+tier: foundation
+order: 3
+questions:
+  - id: bnd-01
+    year_group: 10
+    stem: 'A length, $l$ cm, is $7$ cm correct to the nearest centimetre. Which is the error interval for $l$?'
+    options:
+      A: '$6.5 < l \le 7.5$'
+      B: '$6 \le l < 8$'
+      C: '$6.5 \le l \le 7.4$'
+      D: '$6.5 \le l < 7.5$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Puts the inequality signs the wrong way round'
+        explanation: '$6.5$ rounds up to $7$, so it is included ($\le$); $7.5$ rounds up to $8$, so it is not ($<$).'
+      B:
+        label: 'Goes a whole unit either side'
+        explanation: 'Uses $7 \pm 1$; the bounds are half a unit either side: $7 \pm 0.5$.'
+      C:
+        label: 'Uses the largest 1 d.p. value that rounds to $7$ as the upper bound'
+        explanation: 'Values such as $7.45$ also round to $7$. The upper bound is $7.5$, written with $<$ because $7.5$ itself is not included.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Nearest centimetre, so go $1$ cm either way'
+        - '$7 - 1 = 6$ and $7 + 1 = 8$'
+        - '$6 \le l < 8$'
+
+  - id: bnd-02
+    year_group: 10
+    stem: 'The mass of a parcel is $340$ g, correct to the nearest $10$ g. What is the lower bound of the mass?'
+    options:
+      A: '$339.5$ g'
+      B: '$335$ g'
+      C: '$330$ g'
+      D: '$345$ g'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Always takes off $0.5$'
+        explanation: 'Uses half of $1$; the mass is rounded to the nearest $10$ g, so take off half of $10$ g, which is $5$ g.'
+      C:
+        label: 'Takes off the whole unit of rounding'
+        explanation: 'Works out $340 - 10$; the lower bound is half a unit below: $340 - 5$.'
+      D:
+        label: 'Gives the upper bound instead of the lower bound'
+        explanation: 'Works out $340 + 5$; the lower bound is the smallest value that rounds to $340$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Lower bound $= 340 - 0.5$'
+        - '$339.5$ g'
+
+  - id: bnd-03
+    year_group: 11
+    stem: 'A number $x$ is truncated to 1 decimal place. The result is $4.3$. Which is the error interval for $x$?'
+    options:
+      A: '$4.3 \le x < 4.4$'
+      B: '$4.25 \le x < 4.35$'
+      C: '$4.2 < x \le 4.3$'
+      D: '$4.3 \le x \le 4.39$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Treats truncating as rounding'
+        explanation: 'Truncating chops off the extra digits, so $4.39$ truncates to $4.3$ but $4.25$ truncates to $4.2$.'
+      C:
+        label: 'Thinks truncating rounds up'
+        explanation: 'Truncating never makes a number bigger, so $x$ is $4.3$ or a little more, not a little less.'
+      D:
+        label: 'Uses the largest 2 d.p. value as the upper bound'
+        explanation: 'Values such as $4.395$ also truncate to $4.3$. The upper bound is $4.4$, written with $<$ because $4.4$ itself truncates to $4.4$.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Half of $0.1$ is $0.05$'
+        - '$4.3 - 0.05 = 4.25$ and $4.3 + 0.05 = 4.35$'
+        - '$4.25 \le x < 4.35$'
+
+  - id: bnd-04
+    year_group: 11
+    stem: 'A number $n$ is $3600$ when rounded to 2 significant figures. Which is the error interval for $n$?'
+    options:
+      A: '$3595 \le n < 3605$'
+      B: '$3500 \le n < 3700$'
+      C: '$3550 \le n < 3650$'
+      D: '$3599.5 \le n < 3600.5$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Treats 2 significant figures as the nearest $10$'
+        explanation: 'The 2nd significant figure of $3600$ is the $6$, in the hundreds column, so $n$ was rounded to the nearest $100$.'
+      B:
+        label: 'Goes a whole unit either side'
+        explanation: 'Uses $3600 \pm 100$; the bounds are half a unit either side: $3600 \pm 50$.'
+      D:
+        label: 'Treats 2 significant figures as the nearest whole number'
+        explanation: 'Uses $\pm 0.5$; $3600$ to 2 significant figures means the nearest $100$, so use $\pm 50$.'
+    worked_answer:
+      option: D
+      steps:
+        - '$3600$ is a whole number'
+        - 'Half of $1$ is $0.5$'
+        - '$3600 - 0.5 = 3599.5$ and $3600 + 0.5 = 3600.5$'
+        - '$3599.5 \le n < 3600.5$'
+
+  - id: bnd-05
+    year_group: 10
+    stem: 'A length is $2.4$ m, correct to 1 decimal place. What is the upper bound of the length?'
+    options:
+      A: '$2.44$ m'
+      B: '$2.5$ m'
+      C: '$2.9$ m'
+      D: '$2.45$ m'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Thinks the upper bound must round to the given value'
+        explanation: 'Values such as $2.449$ also round to $2.4$. The upper bound is $2.45$, even though $2.45$ itself would round up.'
+      B:
+        label: 'Adds the whole unit of rounding'
+        explanation: 'Adds $0.1$; the upper bound is half of $0.1$ above: $2.4 + 0.05$.'
+      C:
+        label: 'Always adds $0.5$'
+        explanation: 'Adds half of $1$; the length is rounded to the nearest $0.1$ m, so add half of $0.1$, which is $0.05$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Values up to $2.44$ round to $2.4$'
+        - '$2.45$ rounds up to $2.5$'
+        - 'Upper bound is $2.44$ m'
