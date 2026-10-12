@@ -55,6 +55,44 @@ Present and Game mode have large touch buttons as well as keyboard shortcuts.
 | `DQ_THINKING_SECONDS` | `30` | Default thinking time in Present mode |
 | `DQ_GAME_THINKING_SECONDS` | `45` | Default thinking time in the game |
 | `DQ_ARGUE_SECONDS` | `90` | Default Argue timer |
+| `DQ_CSRF_TRUSTED_ORIGINS` | none | Comma-separated `https://…` origins, needed behind HTTPS on a custom domain |
+| `DQ_SSL_REDIRECT` | `true` | With `DQ_DEBUG=false`, redirect plain HTTP to HTTPS |
+| `DQ_HSTS_SECONDS` | `0` | With `DQ_DEBUG=false`, HSTS lifetime. Raise only once HTTPS is working on your final domain |
+
+On Railway, `RAILWAY_PUBLIC_DOMAIN` is added to the allowed hosts and trusted origins automatically.
+
+### Teacher logins
+
+Presenting, printing, topic pages and the game are open to anyone with the link. Building, editing or
+deleting quiz sets, and **Save tally**, need a teacher login ("Teacher log in" in the header).
+Create logins in `/admin/` under **Users → Add user**. Leave *Staff status* off for teachers;
+only people who edit the questions in the admin need it.
+
+## Deploying to Railway (public website)
+
+The repo includes `railway.json`. Each deploy runs `migrate`, `load_questions` (so the live site
+always matches `content/*.yaml`), `collectstatic`, then gunicorn. Static files are served by WhiteNoise.
+The database is SQLite on a Railway volume, so it must be on the volume or it is wiped on every deploy.
+
+1. Push this repo to GitHub (a private repo is fine).
+2. In Railway: **New Project → Deploy from GitHub repo**, and pick it.
+3. On the service, **add a volume** with mount path `/data`.
+4. Under **Variables**, set:
+   - `DQ_DEBUG` = `false`
+   - `DQ_SECRET_KEY` = a long random string (e.g. `python -c "import secrets; print(secrets.token_urlsafe(50))"`)
+   - `DQ_DB_PATH` = `/data/db.sqlite3`
+5. Under **Settings → Networking**, click **Generate Domain** (or add your own domain; for a custom
+   domain also set `DQ_CSRF_TRUSTED_ORIGINS=https://your.domain`).
+6. Once it's deployed, create the admin login from a shell on the service
+   (`railway ssh`, or the service's shell in the dashboard):
+   ```bash
+   python manage.py createsuperuser
+   ```
+7. Log in at `/admin/` and add a user for each teacher.
+
+To update questions, edit the YAML, commit and push: Railway redeploys and reloads the content.
+Because content is reloaded on every deploy, edits made in the admin to YAML-loaded questions are lost
+on the next deploy. Make lasting changes in the YAML.
 
 ## Using it
 
@@ -254,7 +292,8 @@ To add a new topic, create a new YAML file. It appears on the home page after th
 
 ## Admin
 
-`/admin/` (log in with the superuser) lets you edit topics, questions and quiz sets, and view or delete saved tallies.
+`/admin/` (log in with the superuser) lets you edit topics, questions and quiz sets, view or delete saved tallies,
+and add or remove teacher logins.
 
 ## Answer-card scanner hook
 

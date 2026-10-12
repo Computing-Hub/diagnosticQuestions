@@ -12,11 +12,12 @@ are files in `static/`, so pages make no requests beyond the site itself.
 | Quiz sets | A name (e.g. "Y8 starter wk 6"), a list of question ids and the creation date | When a teacher saves a set |
 | Tallies (optional) | Date, quiz set (if any), question id, and whole-class counts for A/B/C/D (in the game, for Vote 1 and Vote 2) | Only when the teacher clicks **Save tally** |
 | Admin account | One superuser login, used only to edit content | Created by the teacher with `createsuperuser` |
+| Teacher logins | A username and a hashed password per teacher (no email needed), used to change quiz sets and save tallies | Created by the admin under Users |
 
 ## What is not stored
 
 - No student names, numbers, answers or results. Tallies are anonymous class totals and are never linked to a person.
-- No teacher accounts apart from the single admin superuser, and no email addresses.
+- No accounts apart from the admin superuser and any teacher logins, and no email addresses are required.
 - No game data. Team names (e.g. "Red", "Blue"), bets, votes and scores are kept in the browser tab's
   `sessionStorage`, never sent to the server or the database. They are deleted when the teacher clicks
   "Finish and discard", starts a new game, or closes the tab.
@@ -26,11 +27,17 @@ are files in `static/`, so pages make no requests beyond the site itself.
 
 - `csrftoken`: Django's protection against cross-site form submission. It is set on pages with a form,
   and on Present and game pages, which can save a tally.
-- `sessionid`: a signed cookie used only for the admin login. It expires when the browser closes.
+- `sessionid`: a signed cookie used only for teacher and admin logins. It expires when the browser closes.
 - `sessionStorage` key `dq-game`: the game in progress (see above). It never leaves the browser tab.
 - `messages`: short-lived notices such as "Saved", removed once they have been shown.
 - `localStorage` key `dq-prefs`: this device's display choices (dyslexia-friendly font,
   dark theme). It never leaves the browser.
+
+## Public hosting (e.g. Railway)
+
+When the site runs on a public host, the app itself still writes no request or IP logs, but the
+hosting provider keeps its own access and platform logs under its own privacy policy. On a public site,
+only logged-in teachers can change quiz sets or save tallies.
 
 ## Portable USB copy
 

@@ -129,7 +129,7 @@
     var q = questions[index], c = currentCounts();
     window.DQ_ENV.saveTallies([{ question_id: q.id, counts: [c.A, c.B, c.C, c.D], vote2: null }], cfg.quizSet)
       .then(function (msg) { $("tally-status").textContent = msg; })
-      .catch(function () { $("tally-status").textContent = "Could not save."; });
+      .catch(function (err) { $("tally-status").textContent = err.message || "Could not save."; });
   });
 
   // --- Controls --------------------------------------------------------------

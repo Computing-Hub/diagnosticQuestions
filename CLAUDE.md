@@ -23,7 +23,9 @@ python manage.py build_static --out ~/Desktop/ks3-maths       # portable file://
 node tests/e2e/usb_check.mjs ~/Desktop/ks3-maths --browser chrome   # offline browser smoke test of an export (Node 22+, no npm)
 ```
 
-Settings are env vars prefixed `DQ_` (see `config/settings.py` and the README table).
+Settings are env vars prefixed `DQ_` (see `config/settings.py` and the README table). `DQ_DEBUG=false` switches on the production path: WhiteNoise middleware, HTTPS-only cookies, SSL redirect behind a proxy.
+
+**Deployment:** Railway, configured by `railway.json` (start command runs `migrate`, `load_questions`, `collectstatic`, then gunicorn). SQLite lives on a Railway volume via `DQ_DB_PATH=/data/db.sqlite3`; `RAILWAY_PUBLIC_DOMAIN` is added to `ALLOWED_HOSTS`/`CSRF_TRUSTED_ORIGINS` automatically. Steps are in the README.
 
 ## Architecture
 
@@ -45,5 +47,6 @@ Third-party assets (KaTeX, fonts) are vendored under `static/vendor/` — no CDN
 
 ## Constraints
 
+- **Access:** reading, Present, Print and the game are public. Creating, editing and deleting quiz sets (`@login_required`) and `save_tally` (403 JSON when anonymous) need a teacher login (`/accounts/login/`, non-staff users made in the admin). Templates hide write actions from anonymous users. The USB export has no logins.
 - **Privacy (see PRIVACY.md):** no student names or personal data anywhere. Sessions are signed cookies; game scores stay in the browser. A saved tally is only date, quiz set, question id and anonymous A/B/C/D counts. Teams use colour/animal names.
 - **Question content rules** (enforced by the loader and tests): exactly one correct option; each of the three wrong options has a distinct misconception label + explanation; correct answers spread across A–D; optional `worked_answer` must end at a wrong option with 2–6 steps and show the error without naming it. In YAML, single-quote every option and any text containing `\`; `$...$` is KaTeX, so write money as `£`. Diagrams are SVGs in `static/diagrams/` and need `image_alt`.

@@ -6,5 +6,6 @@ admin.site.site_title = "Diagnostic questions admin"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
     path("", include("questions.urls")),
 ]

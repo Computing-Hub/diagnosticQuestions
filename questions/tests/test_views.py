@@ -1,5 +1,6 @@
 import json
 
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 
@@ -11,6 +12,8 @@ from .test_game import make_question
 class PageTests(TestCase):
     def setUp(self):
         self.q = make_question("v-01", correct="C")
+        self.teacher = User.objects.create_user("teacher")
+        self.client.force_login(self.teacher)
 
     def test_pages_render(self):
         s = QuizSet.objects.create(name="Y8 starter", question_ids=["v-01", "gone"])
@@ -44,6 +47,26 @@ class PageTests(TestCase):
         self.assertRedirects(r, reverse("set_detail", args=[s.pk]))
         self.assertEqual(s.question_ids, ["v-01"])
 
+    def test_visitors_cannot_change_quiz_sets(self):
+        self.client.logout()
+        s = QuizSet.objects.create(name="Keep me", question_ids=["v-01"])
+        login = reverse("login")
+        for url in [reverse("set_new"), reverse("set_edit", args=[s.pk]), reverse("set_delete", args=[s.pk])]:
+            with self.subTest(url=url):
+                self.assertRedirects(self.client.post(url, {"name": "Changed", "q": ["v-01"]}), f"{login}?next={url}")
+        s.refresh_from_db()
+        self.assertEqual(s.name, "Keep me")
+        self.assertEqual(QuizSet.objects.count(), 1)
+
+    def test_visitors_see_no_edit_buttons(self):
+        s = QuizSet.objects.create(name="Y8 starter", question_ids=["v-01"])
+        self.client.logout()
+        r = self.client.get(reverse("set_detail", args=[s.pk]))
+        self.assertNotContains(r, reverse("set_delete", args=[s.pk]))
+        self.assertContains(self.client.get(reverse("set_list")), "Log in")
+        self.assertEqual(self.client.get(reverse("login")).status_code, 200)
+
     def test_no_cookies_on_plain_pages(self):
+        self.client.logout()
         r = self.client.get(reverse("home"))
         self.assertEqual(list(r.cookies.keys()), [])

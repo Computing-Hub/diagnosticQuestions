@@ -25,6 +25,7 @@
         credentials: "same-origin",
         body: JSON.stringify({ quiz_set: setId || null, tallies: records }),
       }).then(function (r) {
+        if (r.status === 403) throw new Error("Log in to save tallies.");
         if (!r.ok) throw new Error("Could not save.");
         return "Saved (anonymous counts only).";
       });

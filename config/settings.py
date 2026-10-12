@@ -30,6 +30,12 @@ def _secret_key():
 SECRET_KEY = _secret_key()
 DEBUG = _env_bool("DQ_DEBUG", True)
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get("DQ_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]").split(",") if h.strip()]
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.environ.get("DQ_CSRF_TRUSTED_ORIGINS", "").split(",") if o.strip()]
+
+# Railway sets RAILWAY_PUBLIC_DOMAIN to the app's *.up.railway.app (or custom) domain.
+if os.environ.get("RAILWAY_PUBLIC_DOMAIN"):
+    ALLOWED_HOSTS.append(os.environ["RAILWAY_PUBLIC_DOMAIN"])
+    CSRF_TRUSTED_ORIGINS.append("https://" + os.environ["RAILWAY_PUBLIC_DOMAIN"])
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -49,6 +55,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+if not DEBUG:
+    # Serve collected static files from the app itself (Railway has no separate web server).
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
 ROOT_URLCONF = "config.urls"
 
@@ -110,6 +120,22 @@ LOGGING = {
     "handlers": {"console": {"class": "logging.StreamHandler"}},
     "root": {"handlers": ["console"], "level": "WARNING"},
 }
+
+# --- Logins --------------------------------------------------------------------
+# Viewing, presenting, printing and the game are open; changing quiz sets and saving
+# tallies need a teacher login (created in the admin).
+LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = "set_list"
+LOGOUT_REDIRECT_URL = "home"
+
+# --- HTTPS (public hosting) ---------------------------------------------------------
+# With DEBUG off, assume a host such as Railway that terminates HTTPS at a proxy.
+if not DEBUG:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_SSL_REDIRECT = _env_bool("DQ_SSL_REDIRECT", True)
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = int(os.environ.get("DQ_HSTS_SECONDS", 0))
 
 # --- App settings ------------------------------------------------------------
 DQ_CONTENT_DIR = Path(os.environ.get("DQ_CONTENT_DIR", BASE_DIR / "content"))

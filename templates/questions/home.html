@@ -5,7 +5,7 @@
   <p>{{ total }} original questions. Every wrong answer points to one specific misconception.
      Project a question, students answer A, B, C or D with their hands or answer cards.</p>
   <p class="actions">
-    <a class="btn" href="{% url 'set_new' %}">Build a quiz set</a>
+    {% if user.is_authenticated %}<a class="btn" href="{% url 'set_new' %}">Build a quiz set</a>{% endif %}
     <a class="btn" href="{% url 'game_setup' %}">Start a team game</a>
   </p>
 </section>

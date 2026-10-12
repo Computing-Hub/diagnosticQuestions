@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Teacher log in · KS3 Maths{% endblock %}
+{% block content %}
+<h1>Teacher log in</h1>
+<p class="hint">Logging in lets you build, edit and delete quiz sets and save tallies. Presenting, printing and the game work without logging in.</p>
+<form method="post" class="login">
+  {% csrf_token %}
+  {% if form.errors %}<p class="msg msg-error" role="alert">That username and password don’t match. Try again.</p>{% endif %}
+  <p><label>Username <input type="text" name="username" autocomplete="username" required autofocus value="{{ form.username.value|default:'' }}"></label></p>
+  <p><label>Password <input type="password" name="password" autocomplete="current-password" required></label></p>
+  <input type="hidden" name="next" value="{{ next }}">
+  <button class="btn btn-primary" type="submit">Log in</button>
+</form>
+<p class="hint">No login? Ask whoever runs this site to create one for you in the admin.</p>
+{% endblock %}

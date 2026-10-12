@@ -3,6 +3,7 @@ from datetime import date
 
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -113,7 +114,10 @@ def save_tally(request):
     """Store anonymous A/B/C/D counts. Only called when the teacher clicks Save tally.
 
     Body: {"quiz_set": id | null, "tallies": [{"question_id", "counts": [4], "vote2": [4] | null}]}
+    Teachers must be logged in; a 403 tells the page to show "Log in to save tallies."
     """
+    if not request.user.is_authenticated:
+        return JsonResponse({"error": "login"}, status=403)
     def counts(value, allow_none=False):
         if value is None and allow_none:
             return None
@@ -162,6 +166,7 @@ def set_detail(request, pk):
     })
 
 
+@login_required
 def set_edit(request, pk=None):
     quiz_set = get_object_or_404(QuizSet, pk=pk) if pk else None
     error = ""
@@ -195,6 +200,7 @@ def set_edit(request, pk=None):
     })
 
 
+@login_required
 @require_POST
 def set_delete(request, pk):
     quiz_set = get_object_or_404(QuizSet, pk=pk)

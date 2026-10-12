@@ -10,6 +10,7 @@ import subprocess
 from pathlib import Path
 
 from django.conf import settings
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 
@@ -43,6 +44,8 @@ class GamePageTests(TestCase):
     def setUp(self):
         self.q = make_question("g-01")
         self.set = QuizSet.objects.create(name="Y8 starter", question_ids=["g-01"])
+        self.teacher = User.objects.create_user("teacher")
+        self.client.force_login(self.teacher)
 
     def test_game_page_loads_engine_and_sets(self):
         r = self.client.get(reverse("game_setup") + "?kind=topic&key=t")
@@ -71,11 +74,19 @@ class GamePageTests(TestCase):
 
     def test_save_tally_works_with_csrf_checks_on(self):
         client = self.client_class(enforce_csrf_checks=True)
+        client.force_login(self.teacher)
         client.get(reverse("game_setup"))  # sets the csrftoken cookie for the JavaScript POST
         token = client.cookies["csrftoken"].value
         body = {"tallies": [{"question_id": "g-01", "counts": [1, 2, 3, 4]}]}
         r = client.post(reverse("save_tally"), json.dumps(body), content_type="application/json", HTTP_X_CSRFTOKEN=token)
         self.assertEqual(r.status_code, 200)
+
+    def test_save_tally_needs_login(self):
+        self.client.logout()
+        body = {"tallies": [{"question_id": "g-01", "counts": [1, 2, 3, 4]}]}
+        r = self.client.post(reverse("save_tally"), json.dumps(body), content_type="application/json")
+        self.assertEqual(r.status_code, 403)
+        self.assertFalse(Tally.objects.exists())
 
     def test_save_tally_rejects_bad_input(self):
         for body in ({"tallies": [{"question_id": "nope", "counts": [1, 1, 1, 1]}]},

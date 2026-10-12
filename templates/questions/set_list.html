@@ -2,7 +2,8 @@
 {% block title %}Quiz sets · KS3 Maths{% endblock %}
 {% block content %}
 <h1>Quiz sets</h1>
-<p><a class="btn btn-primary" href="{% url 'set_new' %}">+ New quiz set</a></p>
+{% if user.is_authenticated %}<p><a class="btn btn-primary" href="{% url 'set_new' %}">+ New quiz set</a></p>
+{% else %}<p class="hint"><a href="{% url 'login' %}?next={{ request.path|urlencode }}">Log in</a> to build, edit or delete quiz sets.</p>{% endif %}
 <ul class="set-list">
   {% for s in sets %}
   <li>

@@ -70,6 +70,8 @@ form.inline { display: inline; }
 .brand span { font-weight: 400; color: var(--muted); }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 1rem; flex: 1; }
 .site-header nav a { font-weight: 700; }
+.link-button { font: inherit; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; padding: 0; cursor: pointer; }
+.login label { display: flex; flex-direction: column; gap: .25rem; max-width: 22rem; }
 .prefs { display: flex; gap: .4rem; }
 .page { max-width: 1100px; margin: 0 auto; padding: 1rem 16px 3rem; }
 .messages { max-width: 1100px; margin: .5rem auto 0; padding: 0 16px; }
