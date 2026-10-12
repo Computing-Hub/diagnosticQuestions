@@ -128,3 +128,30 @@ questions:
         - 'Count the decimal places: $3.7$ has 1, $3.65$ has 2, $3.802$ has 3'
         - 'Fewest places first'
         - '$3.7,\ 3.65,\ 3.802$'
+
+  - id: pv-06
+    year_group: 8
+    stem: 'Work out $0.6 \div 0.02$'
+    options:
+      A: '$30$'
+      B: '$0.3$'
+      C: '$0.012$'
+      D: '$3$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Divides the digits and keeps the decimal places of the first number'
+        explanation: 'Works out $6 \div 2 = 3$ and gives it one decimal place like $0.6$. Dividing by a number less than 1 makes the answer bigger.'
+      C:
+        label: 'Multiplies instead of dividing'
+        explanation: 'Works out $0.6 \times 0.02 = 0.012$.'
+      D:
+        label: 'Multiplies the two numbers by different powers of 10'
+        explanation: 'Changes $0.6$ to $6$ (×10) but $0.02$ to $2$ (×100). Both must be multiplied by the same amount: $60 \div 2 = 30$.'
+    worked_answer:
+      option: B
+      steps:
+        - '$0.6 \div 0.02$'
+        - '$6 \div 2 = 3$'
+        - '$0.6$ has 1 decimal place, so the answer has 1 decimal place'
+        - '$0.3$'

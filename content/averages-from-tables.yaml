@@ -127,3 +127,29 @@ questions:
         - '$10 \times 4 + 20 \times 10 + 30 \times 6 = 420$'
         - '$420 \div 20 = 21$'
         - '$21$ minutes'
+
+  - id: tab-06
+    year_group: 7
+    stem: 'The table shows how many books some students read last month. How many students are in the table? $$\begin{array}{|l|c|c|c|c|c|}\hline \text{Books} & 1 & 2 & 3 & 4 & 5\\\hline \text{Frequency} & 3 & 7 & 4 & 2 & 1\\\hline\end{array}$$'
+    options:
+      A: '$15$'
+      B: '$5$'
+      C: '$17$'
+      D: '$7$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the values row instead of the frequencies'
+        explanation: 'Works out $1 + 2 + 3 + 4 + 5 = 15$; the number of students is the total of the Frequency row.'
+      B:
+        label: 'Counts the columns in the table'
+        explanation: 'Counts the 5 different numbers of books; each column holds several students.'
+      D:
+        label: 'Gives the highest frequency'
+        explanation: '7 is how many students read 2 books, not the total number of students.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Add up the numbers in the table'
+        - '$1 + 2 + 3 + 4 + 5 = 15$'
+        - '$15$'

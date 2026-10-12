@@ -1,0 +1,135 @@
+strand: Ratio & proportion
+topic: Percentage change
+order: 6
+questions:
+  - id: pch-01
+    year_group: 8
+    stem: 'The price of a ticket rises from £40 to £50. What is the percentage increase?'
+    options:
+      A: '$20\%$'
+      B: '$10\%$'
+      C: '$125\%$'
+      D: '$25\%$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Divides the change by the new amount'
+        explanation: 'Works out $\frac{10}{50}$; percentage change compares the change with the original amount, $\frac{10}{40}$.'
+      B:
+        label: 'Gives the actual change as the percentage'
+        explanation: 'The price went up by £10, but £10 is not $10\%$ of £40.'
+      C:
+        label: 'Gives the new amount as a percentage of the original'
+        explanation: 'Works out $\frac{50}{40} = 125\%$; the increase is $125\% - 100\% = 25\%$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Increase = £50 − £40 = £10'
+        - '$\frac{10}{50} \times 100$'
+        - '$20\%$'
+
+  - id: pch-02
+    year_group: 9
+    stem: 'After a $20\%$ increase, a coat costs £60. What was the price before the increase?'
+    options:
+      A: '£48'
+      B: '£72'
+      C: '£50'
+      D: '£40'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Takes $20\%$ of the new price off'
+        explanation: 'Works out £60 − $20\%$ of £60. The $20\%$ was of the original price, so £60 is $120\%$: £60 ÷ 1.2.'
+      B:
+        label: 'Applies the increase again instead of undoing it'
+        explanation: 'Works out £60 × 1.2; to go back to the original, divide by 1.2.'
+      D:
+        label: 'Treats $20\%$ as £20'
+        explanation: 'Subtracts £20 from £60; a percentage is a fraction of an amount, not a number of pounds.'
+    worked_answer:
+      option: A
+      steps:
+        - '$20\%$ of £60 = £12'
+        - '£60 − £12 = £48'
+        - '£48'
+
+  - id: pch-03
+    year_group: 9
+    stem: '£200 is invested at $5\%$ compound interest per year. How much is it worth after 2 years?'
+    options:
+      A: '£220.50'
+      B: '£220'
+      C: '£20.50'
+      D: '£210'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses simple interest instead of compound'
+        explanation: 'Adds £10 each year; with compound interest the second year earns $5\%$ of £210, which is £10.50.'
+      C:
+        label: 'Gives only the interest'
+        explanation: 'Works out the interest, £20.50, but not the total value: £200 + £20.50.'
+      D:
+        label: 'Works out only one year'
+        explanation: 'Stops after the first year; the question asks for 2 years.'
+    worked_answer:
+      option: B
+      steps:
+        - '$5\%$ of £200 = £10'
+        - '2 years: £10 × 2 = £20'
+        - '£200 + £20 = £220'
+        - '£220'
+
+  - id: pch-04
+    year_group: 8
+    stem: 'Which calculation increases £80 by $3.5\%$?'
+    options:
+      A: '£80 × 1.35'
+      B: '£80 × 1.035'
+      C: '£80 × 0.035'
+      D: '£80 × 3.5'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Writes $3.5\%$ as $0.35$'
+        explanation: '$3.5\% = 3.5 \div 100 = 0.035$, so the multiplier is $1 + 0.035 = 1.035$.'
+      C:
+        label: 'Uses the multiplier for the increase only'
+        explanation: '£80 × 0.035 gives the increase (£2.80), not the new amount.'
+      D:
+        label: 'Uses the percentage as the multiplier'
+        explanation: 'Multiplies by 3.5, which makes the amount 3.5 times bigger.'
+    worked_answer:
+      option: A
+      steps:
+        - '$3.5\% = 0.35$'
+        - '$1 + 0.35 = 1.35$'
+        - '£80 × 1.35'
+
+  - id: pch-05
+    year_group: 9
+    stem: 'A car loses $10\%$ of its value each year. What is the total percentage decrease after 2 years?'
+    options:
+      A: '$20\%$'
+      B: '$81\%$'
+      C: '$19\%$'
+      D: '$1\%$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Adds the percentage changes'
+        explanation: 'The second $10\%$ is taken from a smaller value, so the total drop is less than $20\%$: $0.9 \times 0.9 = 0.81$.'
+      B:
+        label: 'Gives the remaining value as the decrease'
+        explanation: 'The car is worth $81\%$ of its value after 2 years, so it has lost $100\% - 81\% = 19\%$.'
+      D:
+        label: 'Multiplies the percentages'
+        explanation: 'Works out $10\% \times 10\% = 1\%$; the multipliers $0.9 \times 0.9$ should be used instead.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Year 1: $10\%$ off'
+        - 'Year 2: another $10\%$ off'
+        - '$10\% + 10\% = 20\%$'
+        - '$20\%$'

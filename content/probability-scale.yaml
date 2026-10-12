@@ -133,3 +133,29 @@ questions:
         - '3 red and 1 blue'
         - 'P(red) $= \frac{3}{1}$'
         - '$\frac{3}{1}$'
+
+  - id: psc-06
+    year_group: 8
+    stem: 'A spinner can land on red, blue or green. $P(\text{red}) = 0.35$ and $P(\text{blue}) = 0.4$. What is $P(\text{green})$?'
+    options:
+      A: '$0.25$'
+      B: '$0.75$'
+      C: '$0.65$'
+      D: '$0.05$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Gives the total of the known probabilities'
+        explanation: 'Works out $0.35 + 0.4 = 0.75$ and stops; that is $P(\text{red or blue})$, so green is $1 - 0.75$.'
+      C:
+        label: 'Subtracts only one probability from 1'
+        explanation: 'Works out $1 - 0.35 = 0.65$, forgetting that blue also has to be taken away.'
+      D:
+        label: 'Finds the difference between the two probabilities'
+        explanation: 'Works out $0.4 - 0.35 = 0.05$; the three probabilities must add up to 1.'
+    worked_answer:
+      option: C
+      steps:
+        - '$P(\text{green}) = 1 - P(\text{red})$'
+        - '$1 - 0.35 = 0.65$'
+        - '$0.65$'

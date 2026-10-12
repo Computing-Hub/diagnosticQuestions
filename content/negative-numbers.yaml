@@ -129,3 +129,30 @@ questions:
         - '$20 \div 4 = 5$'
         - 'Both numbers are negative, so the answer is negative'
         - '$-5$'
+
+  - id: neg-06
+    year_group: 9
+    stem: 'Find the value of $3x^2$ when $x = -2$.'
+    options:
+      A: '$36$'
+      B: '$-12$'
+      C: '$-6$'
+      D: '$12$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Squares $3x$ instead of just $x$'
+        explanation: 'Works out $(3 \times -2)^2 = (-6)^2 = 36$; the power applies only to $x$, so it is $3 \times (-2)^2$.'
+      B:
+        label: 'Thinks a negative number squared is negative'
+        explanation: 'Works out $(-2)^2 = -4$, then $3 \times -4 = -12$; $(-2) \times (-2) = +4$.'
+      C:
+        label: 'Ignores the power'
+        explanation: 'Works out $3 \times -2 = -6$ without squaring $x$ at all.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3 \times (-2)^2$'
+        - '$(-2)^2 = -4$'
+        - '$3 \times (-4) = -12$'
+        - '$-12$'

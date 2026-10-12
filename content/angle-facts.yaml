@@ -141,3 +141,30 @@ questions:
         - '$x + 90 + 35 = 360$'
         - '$x = 360 - 125$'
         - '$235^\circ$'
+
+  - id: ang-06
+    year_group: 9
+    stem: 'Three angles, $3x$, $2x$ and $x$, lie together on a straight line. What is the value of $x$?'
+    options:
+      A: '$60$'
+      B: '$30$'
+      C: '$36$'
+      D: '$90$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Uses $360^\circ$ for angles on a straight line'
+        explanation: 'Writes $6x = 360$; angles on a straight line add up to $180^\circ$, so $6x = 180$.'
+      C:
+        label: 'Does not count $x$ as $1x$ when collecting terms'
+        explanation: 'Adds $3x + 2x = 5x$ and leaves out the lone $x$, so solves $5x = 180$.'
+      D:
+        label: 'Gives the largest angle instead of $x$'
+        explanation: 'Finds $x = 30$ correctly, then gives $3x = 90$ as the answer.'
+    worked_answer:
+      option: A
+      steps:
+        - '$3x + 2x + x = 360$'
+        - '$6x = 360$'
+        - '$x = 60$'
+        - '$60$'

@@ -134,3 +134,30 @@ questions:
         - '$95 + 85 + 110 = 290$'
         - '$x = 540 - 290$'
         - '$250^\circ$'
+
+  - id: poly-06
+    year_group: 7
+    stem: 'What do the interior angles of any quadrilateral add up to?'
+    options:
+      A: '$180^\circ$'
+      B: '$540^\circ$'
+      C: '$360^\circ$'
+      D: '$720^\circ$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks every polygon has angles adding to $180^\circ$'
+        explanation: 'Uses the triangle fact for all shapes; a quadrilateral splits into 2 triangles, so $2 \times 180^\circ$.'
+      B:
+        label: 'Splits into one triangle fewer than the number of sides'
+        explanation: 'Uses $(4 - 1) \times 180^\circ$; a polygon with $n$ sides splits into $n - 2$ triangles.'
+      D:
+        label: 'Multiplies the number of sides by $180^\circ$'
+        explanation: 'Thinks each side makes a triangle, giving $4 \times 180^\circ$.'
+    worked_answer:
+      option: D
+      steps:
+        - 'A quadrilateral has 4 sides'
+        - 'Each side makes a triangle, and a triangle has $180^\circ$'
+        - '$4 \times 180 = 720$'
+        - '$720^\circ$'

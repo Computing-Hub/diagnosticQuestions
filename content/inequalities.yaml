@@ -1,0 +1,134 @@
+strand: Algebra
+topic: Inequalities
+order: 8
+questions:
+  - id: ineq-01
+    year_group: 7
+    stem: '$x$ is an integer and $-2 < x \le 3$. Which list shows all the possible values of $x$?'
+    options:
+      A: '$-2, -1, 0, 1, 2, 3$'
+      B: '$-1, 0, 1, 2, 3$'
+      C: '$-1, 0, 1, 2$'
+      D: '$0, 1, 2, 3$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Includes the end value of a strict inequality'
+        explanation: 'Includes $-2$, but $<$ means "less than", so $x$ cannot equal $-2$.'
+      C:
+        label: 'Leaves out the end value of $\le$'
+        explanation: 'Leaves out $3$, but $\le$ means "less than or equal to", so $x$ can be $3$.'
+      D:
+        label: 'Leaves out the negative integers'
+        explanation: 'Starts at $0$, forgetting that $-1$ is an integer greater than $-2$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$-2 < x \le 3$'
+        - 'Start at $-2$ and count up to $3$'
+        - '$-2, -1, 0, 1, 2, 3$'
+
+  - id: ineq-02
+    year_group: 8
+    stem: 'Solve $3x + 4 > 19$'
+    options:
+      A: '$x = 5$'
+      B: '$x < 5$'
+      C: '$x > \frac{23}{3}$'
+      D: '$x > 5$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Treats the inequality as an equation'
+        explanation: 'Solves $3x + 4 = 19$. The answer to an inequality is a range of values, not one value.'
+      B:
+        label: 'Reverses the sign when dividing by a positive number'
+        explanation: 'Flips $>$ to $<$ when dividing by $3$; the sign only reverses when multiplying or dividing by a negative.'
+      C:
+        label: 'Adds instead of subtracting to undo $+4$'
+        explanation: 'Works out $19 + 4 = 23$, then divides by $3$. To undo $+4$, subtract $4$ from both sides.'
+    worked_answer:
+      option: B
+      steps:
+        - '$3x + 4 > 19$'
+        - '$3x > 15$'
+        - 'Dividing flips the sign: $x < 5$'
+        - '$x < 5$'
+
+  - id: ineq-03
+    year_group: 9
+    stem: 'Solve $-2x < 8$'
+    options:
+      A: '$x > -4$'
+      B: '$x < -4$'
+      C: '$x < 4$'
+      D: '$x > -16$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Keeps the sign when dividing by a negative'
+        explanation: 'Divides by $-2$ but does not reverse $<$. Check: $x = -5$ gives $-2 \times -5 = 10$, which is not less than $8$.'
+      C:
+        label: 'Ignores the negative coefficient'
+        explanation: 'Treats $-2x$ as $2x$ and divides $8$ by $2$.'
+      D:
+        label: 'Multiplies by the coefficient instead of dividing'
+        explanation: 'Works out $8 \times (-2) = -16$ and reverses the sign; to undo $\times(-2)$, divide by $-2$.'
+    worked_answer:
+      option: B
+      steps:
+        - '$-2x < 8$'
+        - 'Divide both sides by $-2$'
+        - '$x < -4$'
+
+  - id: ineq-04
+    year_group: 7
+    stem: 'Which inequality means "$x$ is at least $6$"?'
+    options:
+      A: '$x > 6$'
+      B: '$x \le 6$'
+      C: '$x \ge 6$'
+      D: '$x = 6$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Thinks "at least" leaves out the number itself'
+        explanation: '"At least 6" includes 6, so the sign is $\ge$, not $>$.'
+      B:
+        label: 'Thinks "at least" means "no more than"'
+        explanation: '"At least 6" means 6 or more; $x \le 6$ means 6 or less.'
+      D:
+        label: 'Thinks "at least 6" means exactly 6'
+        explanation: '$x$ can be 6 or any number bigger than 6.'
+    worked_answer:
+      option: A
+      steps:
+        - '"At least 6" means more than 6'
+        - '$x > 6$'
+
+  - id: ineq-05
+    year_group: 8
+    stem: '$n$ is an integer and $2n + 1 \le 9$. What is the largest possible value of $n$?'
+    options:
+      A: '$5$'
+      B: '$4$'
+      C: '$3$'
+      D: '$8$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Adds instead of subtracting to undo $+1$'
+        explanation: 'Gets $2n \le 10$; subtracting 1 from both sides gives $2n \le 8$.'
+      C:
+        label: 'Thinks $\le$ leaves out the end value'
+        explanation: 'Solves $n \le 4$ but thinks $n$ must be less than 4; $\le$ allows $n = 4$.'
+      D:
+        label: 'Forgets to divide by the coefficient'
+        explanation: 'Stops at $2n \le 8$ and gives 8; that is the largest value of $2n$, not $n$.'
+    worked_answer:
+      option: A
+      steps:
+        - '$2n + 1 \le 9$'
+        - '$2n \le 10$'
+        - '$n \le 5$'
+        - '$5$'

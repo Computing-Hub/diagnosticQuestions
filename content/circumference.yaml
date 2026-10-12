@@ -1,0 +1,135 @@
+strand: Geometry & measures
+topic: Circumference
+order: 4
+questions:
+  - id: cfr-01
+    year_group: 8
+    stem: 'A circle has diameter $10\text{ cm}$. What is its circumference, in terms of $\pi$?'
+    options:
+      A: '$10\pi\text{ cm}$'
+      B: '$20\pi\text{ cm}$'
+      C: '$5\pi\text{ cm}$'
+      D: '$25\pi\text{ cm}$'
+    correct: A
+    misconceptions:
+      B:
+        label: 'Uses the diameter as the radius in $2\pi r$'
+        explanation: 'Works out $2 \times \pi \times 10$; the radius is $5$, so $2\pi r = \pi d = 10\pi$.'
+      C:
+        label: 'Multiplies $\pi$ by the radius'
+        explanation: 'Works out $\pi \times 5$; circumference is $\pi \times$ diameter, or $2 \times \pi \times$ radius.'
+      D:
+        label: 'Uses the area formula'
+        explanation: 'Works out $\pi r^2 = \pi \times 5^2$, which is the area, not the distance round the edge.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Circumference $= 2\pi r$'
+        - '$r = 10$'
+        - '$2 \times \pi \times 10 = 20\pi$'
+        - '$20\pi\text{ cm}$'
+
+  - id: cfr-02
+    year_group: 8
+    stem: 'A circle has radius $4\text{ cm}$. Using $\pi = 3.14$, what is its circumference?'
+    options:
+      A: '$12.56\text{ cm}$'
+      B: '$50.24\text{ cm}$'
+      C: '$25.12\text{ cm}$'
+      D: '$8\text{ cm}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies $\pi$ by the radius instead of the diameter'
+        explanation: 'Works out $3.14 \times 4$; the diameter is $8$, so $3.14 \times 8 = 25.12$.'
+      B:
+        label: 'Uses the area formula'
+        explanation: 'Works out $3.14 \times 4^2$, which is the area.'
+      D:
+        label: 'Gives the diameter instead of the circumference'
+        explanation: 'Doubles the radius to get the diameter, $8\text{ cm}$, but does not multiply by $\pi$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Circumference $= \pi \times r$'
+        - '$3.14 \times 4 = 12.56$'
+        - '$12.56\text{ cm}$'
+
+  - id: cfr-03
+    year_group: 9
+    stem: 'A circle has circumference $18\pi\text{ cm}$. What is its radius?'
+    options:
+      A: '$18\text{ cm}$'
+      B: '$9\text{ cm}$'
+      C: '$36\text{ cm}$'
+      D: '$\sqrt{18}\text{ cm}$'
+    correct: B
+    misconceptions:
+      A:
+        label: 'Gives the diameter instead of the radius'
+        explanation: '$\pi d = 18\pi$ gives $d = 18$; the radius is half of that.'
+      C:
+        label: 'Doubles instead of halving'
+        explanation: 'Thinks the radius is twice the diameter; the radius is half the diameter.'
+      D:
+        label: 'Treats the circumference as an area and square roots'
+        explanation: 'Uses $\pi r^2 = 18\pi$; that formula is for area, not circumference.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Circumference $= \pi \times 18$'
+        - 'So the radius is $18$'
+        - '$18\text{ cm}$'
+
+  - id: cfr-04
+    year_group: 9
+    stem: 'A semicircle has diameter $12\text{ cm}$. What is its perimeter, in terms of $\pi$?'
+    options:
+      A: '$6\pi\text{ cm}$'
+      B: '$(6\pi + 6)\text{ cm}$'
+      C: '$(12\pi + 12)\text{ cm}$'
+      D: '$(6\pi + 12)\text{ cm}$'
+    correct: D
+    misconceptions:
+      A:
+        label: 'Forgets the straight edge'
+        explanation: 'Finds the curved part, $6\pi$, but the perimeter also includes the diameter, $12\text{ cm}$.'
+      B:
+        label: 'Uses the radius for the straight edge'
+        explanation: 'The straight edge of a semicircle is the whole diameter, $12\text{ cm}$, not the radius.'
+      C:
+        label: 'Uses the circumference of the whole circle'
+        explanation: 'Uses $12\pi$ for the curved part; a semicircle has half of it, $6\pi$.'
+    worked_answer:
+      option: A
+      steps:
+        - 'Circumference of the whole circle $= 12\pi$'
+        - 'Half of it is $6\pi$'
+        - '$6\pi\text{ cm}$'
+
+  - id: cfr-05
+    year_group: 8
+    stem: 'A bicycle wheel has diameter $70\text{ cm}$. How far does the bicycle travel when the wheel turns once? Use $\pi = \frac{22}{7}$.'
+    options:
+      A: '$110\text{ cm}$'
+      B: '$440\text{ cm}$'
+      C: '$220\text{ cm}$'
+      D: '$3850\text{ cm}$'
+    correct: C
+    misconceptions:
+      A:
+        label: 'Multiplies $\pi$ by the radius'
+        explanation: 'Works out $\frac{22}{7} \times 35$; one turn is the circumference, $\pi \times 70$.'
+      B:
+        label: 'Uses $2\pi$ with the diameter'
+        explanation: 'Works out $2 \times \frac{22}{7} \times 70$; the formula $2\pi r$ uses the radius, not the diameter.'
+      D:
+        label: 'Finds the area instead of the distance round the edge'
+        explanation: 'Works out $\frac{22}{7} \times 35^2$, which is the area of the wheel.'
+    worked_answer:
+      option: B
+      steps:
+        - 'Circumference $= 2\pi r$'
+        - 'Using the diameter: $2 \times \frac{22}{7} \times 70$'
+        - '$= 440$'
+        - '$440\text{ cm}$'
