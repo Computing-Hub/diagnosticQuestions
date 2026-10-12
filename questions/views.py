@@ -12,30 +12,19 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_GET, require_POST
 
 from .export import questions_js as questions_js_source
-from .models import LETTERS, STRANDS, YEAR_GROUPS, Question, QuizSet, Tally, Topic
+from .models import LETTERS, STRANDS, Question, QuizSet, Tally, Topic
 
 # --- helpers -------------------------------------------------------------------
 
-def _year(request):
-    try:
-        year = int(request.GET.get("year", ""))
-    except ValueError:
-        return None
-    return year if year in YEAR_GROUPS else None
-
-
-def _topic_questions(topic, year=None):
-    qs = topic.questions.select_related("topic")
-    return list(qs.filter(year_group=year) if year else qs)
+def _topic_questions(topic):
+    return list(topic.questions.select_related("topic"))
 
 
 def _source(request, kind, key):
     """Resolve (title, questions, quiz_set) for a topic slug or quiz-set id."""
     if kind == "topic":
         topic = get_object_or_404(Topic, slug=key)
-        year = _year(request)
-        title = f"{topic.name} (Year {year})" if year else topic.name
-        return title, _topic_questions(topic, year), None
+        return topic.name, _topic_questions(topic), None
     if kind == "set":
         quiz_set = get_object_or_404(QuizSet, pk=key)
         return quiz_set.name, quiz_set.questions(), quiz_set

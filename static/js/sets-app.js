@@ -40,24 +40,19 @@
         var open = qs.some(function (q) { return selected[q.id]; });
         return '<details class="builder-topic"' + (open ? " open" : "") + "><summary>" + esc(t.name) + ' <span class="hint">(' + qs.length + ")</span></summary><ul>" +
           qs.map(function (q) {
-            return '<li data-year="' + q.year_group + '"><label><input type="checkbox" name="q" value="' + esc(q.id) + '"' + (selected[q.id] ? " checked" : "") + "> " +
-              '<span class="tag">Y' + q.year_group + '</span> <span class="math">' + esc(q.stem) + "</span></label></li>";
+            return '<li><label><input type="checkbox" name="q" value="' + esc(q.id) + '"' + (selected[q.id] ? " checked" : "") + "> " +
+              '<span class="math">' + esc(q.stem) + "</span></label></li>";
           }).join("") + "</ul></details>";
       }).join("");
     }).join("");
     app.innerHTML = "<h1>" + (set ? "Edit “" + esc(set.name) + "”" : "New quiz set") + "</h1>" +
       '<form class="builder" data-builder><p class="msg msg-error" role="alert" data-error hidden></p><div class="builder-head">' +
       '<label>Set name <input type="text" name="name" value="' + esc(set ? set.name : "") + '" maxlength="120" required placeholder="e.g. Y8 starter wk 6"></label>' +
-      '<fieldset class="filter" aria-label="Show year groups"><legend>Show</legend>' + [7, 8, 9].map(function (y) {
-        return '<label><input type="checkbox" data-year-filter value="' + y + '" checked> Y' + y + "</label>";
-      }).join("") + "</fieldset>" +
-      '<p><strong data-count>0</strong> ticked</p><button class="btn btn-primary" type="submit">Save set</button>' +
+            '<p><strong data-count>0</strong> ticked</p><button class="btn btn-primary" type="submit">Save set</button>' +
       '<button class="btn" type="button" data-cancel>Cancel</button></div>' + groups + "</form>";
     var form = app.querySelector("[data-builder]");
     function update() {
       form.querySelector("[data-count]").textContent = form.querySelectorAll("input[name=q]:checked").length;
-      var years = Array.prototype.map.call(form.querySelectorAll("[data-year-filter]:checked"), function (c) { return c.value; });
-      form.querySelectorAll("li[data-year]").forEach(function (li) { li.hidden = years.indexOf(li.dataset.year) < 0; });
     }
     form.addEventListener("change", update);
     form.querySelector("[data-cancel]").addEventListener("click", function () { history.replaceState(null, "", "sets.html"); renderList(); });

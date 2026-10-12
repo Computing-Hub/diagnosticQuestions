@@ -1,15 +1,15 @@
 /* Print view for the USB copy: builds the A4 worksheet and answer key in the browser.
-   Address: print.html?kind=topic&key=<slug>[&year=7] or print.html?kind=set&key=<id>. */
+   Address: print.html?kind=topic&key=<slug> or print.html?kind=set&key=<id>. */
 (function () {
   "use strict";
   function esc(t) { return String(t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
-  var p = new URLSearchParams(location.search), kind = p.get("kind"), key = p.get("key"), year = parseInt(p.get("year"), 10) || null;
+  var p = new URLSearchParams(location.search), kind = p.get("kind"), key = p.get("key");
   var byId = {}, list = [], title = "Worksheet";
   window.QUESTIONS.forEach(function (q) { byId[q.id] = q; });
   if (kind === "topic") {
     var topic = window.TOPICS.filter(function (t) { return t.slug === key; })[0];
-    list = window.QUESTIONS.filter(function (q) { return q.topic === key && (!year || q.year_group === year); });
-    title = topic ? topic.name + (year ? " (Year " + year + ")" : "") : "Topic";
+    list = window.QUESTIONS.filter(function (q) { return q.topic === key; });
+    title = topic ? topic.name : "Topic";
   } else if (kind === "set") {
     var set = DQStore.getSet(key);
     list = set ? set.question_ids.map(function (id) { return byId[id]; }).filter(Boolean) : [];

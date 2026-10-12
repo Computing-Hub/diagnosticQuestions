@@ -16,7 +16,7 @@
 {% if missing %}<p class="notice">{{ missing }} question{{ missing|pluralize }} in this set no longer exist{{ missing|pluralize:"s," }} and will be skipped.</p>{% endif %}
 <ol class="question-list compact">
   {% for q in questions %}
-  <li><span class="tag">Y{{ q.year_group }}</span> <span class="hint">{{ q.topic.name }}</span> <span class="math">{{ q.stem }}</span></li>
+  <li><span class="hint">{{ q.topic.name }}</span> <span class="math">{{ q.stem }}</span></li>
   {% endfor %}
 </ol>
 {% endblock %}

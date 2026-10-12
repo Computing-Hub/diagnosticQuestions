@@ -46,9 +46,9 @@
     return q.correct;
   }
 
-  function sourceQuestions(kind, key, year) {
+  function sourceQuestions(kind, key) {
     if (kind === "topic") {
-      return window.QUESTIONS.filter(function (q) { return q.topic === key && (!year || q.year_group === year); });
+      return window.QUESTIONS.filter(function (q) { return q.topic === key; });
     }
     if (kind === "set") {
       var set = ENV.getSets().filter(function (s) { return String(s.id) === String(key); })[0];
@@ -56,10 +56,10 @@
     }
     return [];
   }
-  function sourceTitle(kind, key, year) {
+  function sourceTitle(kind, key) {
     if (kind === "topic") {
       var t = window.TOPICS.filter(function (t) { return t.slug === key; })[0];
-      return t ? t.name + (year ? " (Year " + year + ")" : "") : key;
+      return t ? t.name : key;
     }
     var s = ENV.getSets().filter(function (s) { return String(s.id) === String(key); })[0];
     return s ? s.name : "Quiz set";
@@ -150,7 +150,7 @@
 
   // --- setup screen --------------------------------------------------------------
   function renderSetup() {
-    var kind = params.get("kind") || "", key = params.get("key") || "", year = parseInt(params.get("year"), 10) || null;
+    var kind = params.get("kind") || "", key = params.get("key") || "";
     var sets = ENV.getSets();
     var options = '<option value="">Choose…</option>';
     if (sets.length) {
@@ -183,8 +183,7 @@
       (inProgress && inProgress.phase !== "over" ? '<p class="notice">A game is in progress. ' + button("resume", "Return to it", { small: true }) + " or set up a new one below (this discards it).</p>" : "") +
       (message ? '<p class="msg msg-error" role="alert">' + esc(message) + "</p>" : "") +
       '<form class="game-setup" data-setup>' +
-      '<fieldset><legend>Questions</legend><label>Play from <select name="source" required>' + options + "</select></label>" +
-      (year ? '<p class="hint">Year ' + year + " questions only.</p>" : "") + "</fieldset>" +
+      '<fieldset><legend>Questions</legend><label>Play from <select name="source" required>' + options + "</select></label></fieldset>" +
       "<fieldset><legend>Input style</legend>" + radios("style", G.STYLES) +
       '<p class="hint">Class mode: you type how many students chose A, B, C and D (show of hands, answer cards or Four Corners). Nobody is scored.</p></fieldset>' +
       '<fieldset data-teams><legend>Teams (2–6). Use colours or animals, never student names.</legend><div class="team-inputs">' + teamInputs + "</div>" +
@@ -206,13 +205,12 @@
       var src = form.source.value.split(":"), skind = src[0], skey = src.slice(1).join(":");
       try {
         if (!skind || !skey) throw new G.GameError("Choose a quiz set or topic to play.");
-        var syear = skind === "topic" && skind === kind && skey === key ? year : null;
-        var qs = sourceQuestions(skind, skey, syear);
+        var qs = sourceQuestions(skind, skey);
         var state = G.newGame({
           style: form.style.value, qids: qs.map(function (q) { return q.id; }),
           teamNames: Array.prototype.map.call(form.querySelectorAll("[name=team]"), function (i) { return i.value; }),
           mix: form.mix.value, think: form.think.value, argue: form.argue.value,
-          title: sourceTitle(skind, skey, syear), setId: skind === "set" ? skey : null,
+          title: sourceTitle(skind, skey), setId: skind === "set" ? skey : null,
         });
         G.startRound(state, G.hasWorkedAnswer(byId[state.qids[0]]));
         save(state);

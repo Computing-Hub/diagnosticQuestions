@@ -246,7 +246,7 @@ topic: Negative numbers        # display name
 order: 2                       # position within the strand
 questions:
   - id: neg-06                 # unique across all files
-    year_group: 7              # 7, 8 or 9
+    year_group: 7              # 7, 8 or 9 (kept for reference; the site does not show or filter by it)
     stem: 'What is $-4 - 3$?'  # LaTeX between $...$ or $$...$$ (KaTeX)
     image: diagrams/neg-06.svg # optional, path under static/
     image_alt: 'A number line from -10 to 10'   # required if image is set

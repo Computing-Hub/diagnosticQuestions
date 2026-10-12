@@ -33,7 +33,6 @@
   function render() {
     var q = questions[index];
     $("counter").textContent = "Question " + (index + 1) + " / " + questions.length;
-    $("year").textContent = "Y" + q.year_group;
     stemEl.textContent = q.stem;
     if (q.image) {
       imgEl.src = staticUrl + q.image;
